@@ -36,16 +36,17 @@
         <div class="col-md-2"></div>
         <!-- <form action="<?php $_SERVER['PHP_SELF'] ?>" id="create" method="post">  -->
             <div class=col-md-4>
-                Upload Pokemon Sprite
+                <!-- Upload Pokemon Sprite
                 <p>
                     <input type="file" name="pokemonSprite" id="pokemonSprite">
-                </p>
+                </p> -->
             </div>
             <div class=col-md-4>
                 <input type="text" name="pokeName" class="form-control" id="pokeName" placeholder="Enter Pokemon name" autofocus required>
                 <div class="form-group">
-                    <label for="type1">Type 1</label>
+                    <!-- <label for="type1">Type 1</label> -->
                     <select class="form-control" id="type1" name="type1">
+                        <option value="None"></option>    
                         <option value="normal">Normal</option>
                         <option value="grass">Grass</option>
                         <option value="fire">Fire</option>
@@ -55,8 +56,9 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="type2">Type 2</label>
+                    <!-- <label for="type2">Type 2</label> -->
                     <select class="form-control" id="type2" name="type2">
+                        <option value="None"></option>
                         <option value="normal">Normal</option>
                         <option value="grass">Grass</option>
                         <option value="fire">Fire</option>
@@ -70,10 +72,14 @@
                 <input type="text" name="pokeWeight" class="form-control" id="pokeWeight" placeholder="Enter weight" required>
             </div>
         <!-- </form> -->
-        <div class="col-md-2"></div>
     </div>
-
-
+    <div class="row">
+        <div class="col-md-4"></div>    
+        <div class="col-md-4">
+            <button class="btn btn-light" type="submit" >Create</button>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
     <?php
         if($_SERVER['REQUEST_METHOD']=="POST" && strlen($_POST['search']) > 0) //maybe use if (touched)
         {
