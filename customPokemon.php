@@ -37,25 +37,18 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class=col-md-4>
-            <form action="<?php $_SERVER['PHP_SELF'] ?>" id="create" method="post"> 
+            <a href="createPokemon.php">
                 <button class="btn btn-lg btn-success box-button" type="submit" >Create a</br>Pokemon</button>
-            </form>
+            </a>
         </div>
         <div class=col-md-4>
-            <form action="<?php $_SERVER['PHP_SELF'] ?>" id="view" method="post">
+            <a href="myCustom.php">
                 <button class="btn btn-lg btn-primary box-button" type="submit" >My Custom<br>Pokemon</button>
-            </form>
+            </a>
         </div>
         <div class="col-md-2"></div>
     </div>
 
-    <?php
-        if($_SERVER['REQUEST_METHOD']=="POST")
-        {
-            header('Location: createPokemon.php');
-        }
-            
-    ?>
 
 
 </body>

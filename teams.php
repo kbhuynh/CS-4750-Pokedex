@@ -37,10 +37,14 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class=col-md-4>
-            <button class="btn btn-lg btn-success box-button" type="submit" >Create Team</button>
+            <a href="createTeam.php">
+                <button class="btn btn-lg btn-success box-button" type="submit" >Create Team</button>
+            </a>
         </div>
         <div class=col-md-4>
-            <button class="btn btn-lg btn-primary box-button" type="submit" >My Teams</button>
+            <a href="myTeams.php">
+                <button class="btn btn-lg btn-primary box-button" type="submit" >My Teams</button>
+            </a>
         </div>
         <div class="col-md-2"></div>
     </div>
