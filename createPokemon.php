@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <meta name="author" content="Grace Wu, April Xie, Kevin Huynh, Vinh Do">
-  <meta name="description" content="Custom Pokemon page for Pokedex Database">  
+  <meta name="description" content="Create Pokemon for Pokedex Database">  
     
   <link rel="shortcut icon" href="images/favicon.png" type="image/ico" />
   <title>Pokedex</title>
@@ -26,37 +26,30 @@
             <li><a href="customPokemon.php">Custom Pokemon</a></li>
         </ul>
     </header>
+
     <div class="row">
         <div class="col-md-3"></div>
-        <div class=col-md-6>
-            <h2>My Custom Pokemon</h2>
+        <div class="col-md-5">
+            <form class="needs-validation" action="<?php $_SERVER['PHP_SELF'] ?>" id="login" method="post"> 
+                <div class="form-group mx-sm-5 mb-2">
+                    <input type="text" name="search" class="form-control" id="search" placeholder="Enter a Pokemon name here" autofocus>
+                </div>    
+        </div>    
+            <div class="col-md-1">
+                <button class="btn btn-primary" type="submit" >Filters</button>
+            </div>    
+        </form>
         </div>
         <div class="col-md-3"></div>
     </div>
-</br>
-    <div class="row">
-        <div class="col-md-2"></div>
-        <div class=col-md-4>
-            <form action="<?php $_SERVER['PHP_SELF'] ?>" id="create" method="post"> 
-                <button class="btn btn-lg btn-success box-button" type="submit" >Create a</br>Pokemon</button>
-            </form>
-        </div>
-        <div class=col-md-4>
-            <form action="<?php $_SERVER['PHP_SELF'] ?>" id="view" method="post">
-                <button class="btn btn-lg btn-primary box-button" type="submit" >My Custom<br>Pokemon</button>
-            </form>
-        </div>
-        <div class="col-md-2"></div>
-    </div>
+
 
     <?php
-        if($_SERVER['REQUEST_METHOD']=="POST")
+        if($_SERVER['REQUEST_METHOD']=="POST" && strlen($_POST['search']) > 0) //maybe use if (touched)
         {
-            header('Location: createPokemon.php');
+            // do the things 
         }
-            
     ?>
-
 
 </body>
 </html>
