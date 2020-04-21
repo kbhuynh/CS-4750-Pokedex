@@ -29,3 +29,66 @@ body {
     text-align: center;
 }
 
+header {
+    margin-bottom: 4%;
+}
+
+h1 {
+    
+    font-size: 5vw;
+    text-align: center;
+    margin-top: 1%; 
+    margin-bottom: 3%;
+    color: rgb(0, 0, 0);
+    max-width: 20%;
+}
+
+h2 {
+    font-size: 4vw;
+    margin-bottom: 10%
+}
+
+.form-control {
+    margin-bottom: 2.5%;
+    border-radius: 10rem;
+}
+
+.btn-primary {
+    color: white;
+    border-radius: 10rem;
+}
+
+.box-button {
+    border-radius: 0.5rem;
+    font-size: 3rem;
+}
+
+/* Navbar help from https://www.w3schools.com/css/css_navbar_horizontal.asp */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+
+}
+  
+li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+  
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.5vw;
+}
+li a:hover {
+    background-color: rgb(240, 82, 82);
+    text-decoration: none;
+    color: white;
+}
+

@@ -19,11 +19,17 @@
 
 <body>  
     <header>
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-md-12">
-                <h1>Pokedex</h1>
+            <a href="home.php"><h1>Pokedex</h1></a>
             </div>
-        </div>
+        </div> -->
+        <ul>
+            <li><a href="home.php">Home</a></li>
+            <li><a href="profile.php">My Profile</a></li>
+            <li><a href="teams.php">Teams</a></li>
+            <li><a href="pokemon.php">Custom Pokemon</a></li>
+        </ul>
     </header>
 
     <div class="row">
