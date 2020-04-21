@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <meta name="author" content="Grace Wu, April Xie, Kevin Huynh, Vinh Do">
-  <meta name="description" content="Teams page for Pokedex Database">  
+  <meta name="description" content="Pokemon page for Pokedex Database">  
     
   <link rel="shortcut icon" href="images/favicon.png" type="image/ico" />
   <title>Pokedex</title>
@@ -29,7 +29,7 @@
     <div class="row">
         <div class="col-md-3"></div>
         <div class=col-md-6>
-            <h2>Teams</h2>
+            <h2>My Custom Pokemon</h2>
         </div>
         <div class="col-md-3"></div>
     </div>
@@ -37,10 +37,10 @@
     <div class="row">
         <div class="col-md-2"></div>
         <div class=col-md-4>
-            <button class="btn btn-lg btn-success box-button" type="submit" >Create Team</button>
+            <button class="btn btn-lg btn-success box-button" type="submit" >Create a</br>Pokemon</button>
         </div>
         <div class=col-md-4>
-            <button class="btn btn-lg btn-primary box-button" type="submit" >My Teams</button>
+            <button class="btn btn-lg btn-primary box-button" type="submit" >My Custom<br>Pokemon</button>
         </div>
         <div class="col-md-2"></div>
     </div>
