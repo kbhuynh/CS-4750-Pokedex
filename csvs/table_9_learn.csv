@@ -1,4 +1,3 @@
-Pokedex #,Name,Generation,Height (m),Weight (kg),Abilities,Classfication,isCustom
 1,Bulbasaur,1,0.7,6.9,"Overgrow, Chlorophyll ",Seed Pokemon,FALSE
 2,Ivysaur,1,1,13,"Overgrow, Chlorophyll ",Seed Pokemon,FALSE
 3,Venusaur,1,2,100,"Overgrow, Chlorophyll ",Seed Pokemon,FALSE
