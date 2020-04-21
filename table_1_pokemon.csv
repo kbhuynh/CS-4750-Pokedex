@@ -1,0 +1,802 @@
+Pokedex #,Name,Generation,Height (m),Weight (kg),Abilities,Classfication,isCustom
+1,Bulbasaur,1,0.7,6.9,"Overgrow, Chlorophyll ",Seed Pokemon,FALSE
+2,Ivysaur,1,1,13,"Overgrow, Chlorophyll ",Seed Pokemon,FALSE
+3,Venusaur,1,2,100,"Overgrow, Chlorophyll ",Seed Pokemon,FALSE
+4,Charmander,1,0.6,8.5,"Blaze, Solar Power ",Lizard Pokemon,FALSE
+5,Charmeleon,1,1.1,19,"Blaze, Solar Power ",Flame Pokemon,FALSE
+6,Charizard,1,1.7,90.5,"Blaze, Solar Power ",Flame Pokemon,FALSE
+7,Squirtle,1,0.5,9,"Torrent, Rain Dish ",Tiny Turtle Pokemon,FALSE
+8,Wartortle,1,1,22.5,"Torrent, Rain Dish ",Turtle Pokemon,FALSE
+9,Blastoise,1,1.6,85.5,"Torrent, Rain Dish ",Shellfish Pokemon,FALSE
+10,Caterpie,1,0.3,2.9,"Shield Dust, Run Away ",Worm Pokemon,FALSE
+11,Metapod,1,0.7,9.9,Shed Skin ,Cocoon Pokemon,FALSE
+12,Butterfree,1,1.1,32,"Compoundeyes, Tinted Lens ",Butterfly Pokemon,FALSE
+13,Weedle,1,0.3,3.2,"Shield Dust, Run Away ",Hairy Pokemon,FALSE
+14,Kakuna,1,0.6,10,Shed Skin ,Cocoon Pokemon,FALSE
+15,Beedrill,1,1,29.5,"Swarm, Sniper ",Poison Bee Pokemon,FALSE
+16,Pidgey,1,0.3,1.8,"Keen Eye, Tangled Feet, Big Pecks ",Tiny Bird Pokemon,FALSE
+17,Pidgeotto,1,1.1,30,"Keen Eye, Tangled Feet, Big Pecks ",Bird Pokemon,FALSE
+18,Pidgeot,1,1.5,39.5,"Keen Eye, Tangled Feet, Big Pecks ",Bird Pokemon,FALSE
+19,Rattata,1,0.3,3.5,"Run Away, Guts, Hustle, Gluttony, Hustle, Thick Fat ",Mouse Pokemon,FALSE
+20,Raticate,1,0.7,18.5,"Run Away, Guts, Hustle, Gluttony, Hustle, Thick Fat ",Mouse Pokemon,FALSE
+21,Spearow,1,0.3,2,"Keen Eye, Sniper ",Tiny Bird Pokemon,FALSE
+22,Fearow,1,1.2,38,"Keen Eye, Sniper ",Beak Pokemon,FALSE
+23,Ekans,1,2,6.9,"Intimidate, Shed Skin, Unnerve ",Snake Pokemon,FALSE
+24,Arbok,1,3.5,65,"Intimidate, Shed Skin, Unnerve ",Cobra Pokemon,FALSE
+25,Pikachu,1,0.4,6,"Static, Lightningrod ",Mouse Pokemon,FALSE
+26,Raichu,1,0.8,30,"Static, Lightningrod, Surge Surfer ",Mouse Pokemon,FALSE
+27,Sandshrew,1,0.6,12,"Sand Veil, Sand Rush, Snow Cloak, Slush Rush ",Mouse Pokemon,FALSE
+28,Sandslash,1,1,29.5,"Sand Veil, Sand Rush, Snow Cloak, Slush Rush ",Mouse Pokemon,FALSE
+29,Nidoranâ™€,1,0.4,7,"Poison Point, Rivalry, Hustle ",Poison Pin Pokemon,FALSE
+30,Nidorina,1,0.8,20,"Poison Point, Rivalry, Hustle ",Poison Pin Pokemon,FALSE
+31,Nidoqueen,1,1.3,60,"Poison Point, Rivalry, Sheer Force ",Drill Pokemon,FALSE
+32,Nidoranâ™‚,1,0.5,9,"Poison Point, Rivalry, Hustle ",Poison Pin Pokemon,FALSE
+33,Nidorino,1,0.9,19.5,"Poison Point, Rivalry, Hustle ",Poison Pin Pokemon,FALSE
+34,Nidoking,1,1.4,62,"Poison Point, Rivalry, Sheer Force ",Drill Pokemon,FALSE
+35,Clefairy,1,0.6,7.5,"Cute Charm, Magic Guard, Friend Guard ",Fairy Pokemon,FALSE
+36,Clefable,1,1.3,40,"Cute Charm, Magic Guard, Unaware ",Fairy Pokemon,FALSE
+37,Vulpix,1,0.6,9.9,"Flash Fire, Drought, Snow Cloak, Snow Warning ",Fox Pokemon,FALSE
+38,Ninetales,1,1.1,19.9,"Flash Fire, Drought, Snow Cloak, Snow Warning ",Fox Pokemon,FALSE
+39,Jigglypuff,1,0.5,5.5,"Cute Charm, Competitive, Friend Guard ",Balloon Pokemon,FALSE
+40,Wigglytuff,1,1,12,"Cute Charm, Competitive, Frisk ",Balloon Pokemon,FALSE
+41,Zubat,1,0.8,7.5,"Inner Focus, Infiltrator ",Bat Pokemon,FALSE
+42,Golbat,1,1.6,55,"Inner Focus, Infiltrator ",Bat Pokemon,FALSE
+43,Oddish,1,0.5,5.4,"Chlorophyll, Run Away ",Weed Pokemon,FALSE
+44,Gloom,1,0.8,8.6,"Chlorophyll, Stench ",Weed Pokemon,FALSE
+45,Vileplume,1,1.2,18.6,"Chlorophyll, Effect Spore ",Flower Pokemon,FALSE
+46,Paras,1,0.3,5.4,"Effect Spore, Dry Skin, Damp ",Mushroom Pokemon,FALSE
+47,Parasect,1,1,29.5,"Effect Spore, Dry Skin, Damp ",Mushroom Pokemon,FALSE
+48,Venonat,1,1,30,"Compoundeyes, Tinted Lens, Run Away ",Insect Pokemon,FALSE
+49,Venomoth,1,1.5,12.5,"Shield Dust, Tinted Lens, Wonder Skin  ",Poison Moth Pokemon,FALSE
+50,Diglett,1,0.2,0.8,"Sand Veil, Arena Trap, Sand Force, Sand Veil, Tangling Hair, Sand Force ",Mole Pokemon,FALSE
+51,Dugtrio,1,0.7,33.3,"Sand Veil, Arena Trap, Sand Force, Sand Veil, Tangling Hair, Sand Force ",Mole Pokemon,FALSE
+52,Meowth,1,0.4,4.2,"Pickup, Technician, Unnerve, Pickup, Technician, Rattled ",Scratch Cat Pokemon,FALSE
+53,Persian,1,1,32,"Limber, Technician, Unnerve, Fur Coat, Technician, Rattled ",Classy Cat Pokemon,FALSE
+54,Psyduck,1,0.8,19.6,"Damp, Cloud Nine, Swift Swim ",Duck Pokemon,FALSE
+55,Golduck,1,1.7,76.6,"Damp, Cloud Nine, Swift Swim ",Duck Pokemon,FALSE
+56,Mankey,1,0.5,28,"Vital Spirit, Anger Point, Defiant ",Pig Monkey Pokemon,FALSE
+57,Primeape,1,1,32,"Vital Spirit, Anger Point, Defiant ",Pig Monkey Pokemon,FALSE
+58,Growlithe,1,0.7,19,"Intimidate, Flash Fire, Justified ",Puppy Pokemon,FALSE
+59,Arcanine,1,1.9,155,"Intimidate, Flash Fire, Justified ",Legendary Pokemon,FALSE
+60,Poliwag,1,0.6,12.4,"Water Absorb, Damp, Swift Swim ",Tadpole Pokemon,FALSE
+61,Poliwhirl,1,1,20,"Water Absorb, Damp, Swift Swim ",Tadpole Pokemon,FALSE
+62,Poliwrath,1,1.3,54,"Water Absorb, Damp, Swift Swim ",Tadpole Pokemon,FALSE
+63,Abra,1,0.9,19.5,"Synchronize, Inner Focus, Magic Guard ",Psi Pokemon,FALSE
+64,Kadabra,1,1.3,56.5,"Synchronize, Inner Focus, Magic Guard ",Psi Pokemon,FALSE
+65,Alakazam,1,1.5,48,"Synchronize, Inner Focus, Magic Guard ",Psi Pokemon,FALSE
+66,Machop,1,0.8,19.5,"Guts, No Guard, Steadfast ",Superpower Pokemon,FALSE
+67,Machoke,1,1.5,70.5,"Guts, No Guard, Steadfast ",Superpower Pokemon,FALSE
+68,Machamp,1,1.6,130,"Guts, No Guard, Steadfast ",Superpower Pokemon,FALSE
+69,Bellsprout,1,0.7,4,"Chlorophyll, Gluttony ",Flower Pokemon,FALSE
+70,Weepinbell,1,1,6.4,"Chlorophyll, Gluttony ",Flycatcher Pokemon,FALSE
+71,Victreebel,1,1.7,15.5,"Chlorophyll, Gluttony ",Flycatcher Pokemon,FALSE
+72,Tentacool,1,0.9,45.5,"Clear Body, Liquid Ooze, Rain Dish ",Jellyfish Pokemon,FALSE
+73,Tentacruel,1,1.6,55,"Clear Body, Liquid Ooze, Rain Dish ",Jellyfish Pokemon,FALSE
+74,Geodude,1,0.4,20,"Rock Head, Sturdy, Sand Veil, Magnet Pull, Sturdy, Galvanize ",Rock Pokemon,FALSE
+75,Graveler,1,1,105,"Rock Head, Sturdy, Sand Veil, Magnet Pull, Sturdy, Galvanize ",Rock Pokemon,FALSE
+76,Golem,1,1.4,300,"Rock Head, Sturdy, Sand Veil, Magnet Pull, Sturdy, Galvanize ",Megaton Pokemon,FALSE
+77,Ponyta,1,1,30,"Run Away, Flash Fire, Flame Body ",Fire Horse Pokemon,FALSE
+78,Rapidash,1,1.7,95,"Run Away, Flash Fire, Flame Body ",Fire Horse Pokemon,FALSE
+79,Slowpoke,1,1.2,36,"Oblivious, Own Tempo, Regenerator ",Dopey Pokemon,FALSE
+80,Slowbro,1,1.6,78.5,"Oblivious, Own Tempo, Regenerator ",Hermit Crab Pokemon,FALSE
+81,Magnemite,1,0.3,6,"Magnet Pull, Sturdy, Analytic ",Magnet Pokemon,FALSE
+82,Magneton,1,1,60,"Magnet Pull, Sturdy, Analytic ",Magnet Pokemon,FALSE
+83,Farfetch'd,1,0.8,15,"Keen Eye, Inner Focus, Defiant ",Wild Duck Pokemon,FALSE
+84,Doduo,1,1.4,39.2,"Run Away, Early Bird, Tangled Feet ",Twin Bird Pokemon,FALSE
+85,Dodrio,1,1.8,85.2,"Run Away, Early Bird, Tangled Feet ",Triple Bird Pokemon,FALSE
+86,Seel,1,1.1,90,"Thick Fat, Hydration, Ice Body ",Sea Lion Pokemon,FALSE
+87,Dewgong,1,1.7,120,"Thick Fat, Hydration, Ice Body ",Sea Lion Pokemon,FALSE
+88,Grimer,1,0.9,30,"Stench, Sticky Hold, Poison Touch, Poison Touch, Gluttony, Power of Alchemy ",Sludge Pokemon,FALSE
+89,Muk,1,1.2,30,"Stench, Sticky Hold, Poison Touch, Poison Touch, Gluttony, Power of Alchemy ",Sludge Pokemon,FALSE
+90,Shellder,1,0.3,4,"Shell Armor, Skill Link, Overcoat ",Bivalve Pokemon,FALSE
+91,Cloyster,1,1.5,132.5,"Shell Armor, Skill Link, Overcoat ",Bivalve Pokemon,FALSE
+92,Gastly,1,1.3,0.1,Levitate ,Gas Pokemon,FALSE
+93,Haunter,1,1.6,0.1,Levitate ,Gas Pokemon,FALSE
+94,Gengar,1,1.5,40.5,Cursed Body ,Shadow Pokemon,FALSE
+95,Onix,1,8.8,210,"Rock Head, Sturdy, Weak Armor ",Rock Snake Pokemon,FALSE
+96,Drowzee,1,1,32.4,"Insomnia, Forewarn, Inner Focus ",Hypnosis Pokemon,FALSE
+97,Hypno,1,1.6,75.6,"Insomnia, Forewarn, Inner Focus ",Hypnosis Pokemon,FALSE
+98,Krabby,1,0.4,6.5,"Hyper Cutter, Shell Armor, Sheer Force ",River Crab Pokemon,FALSE
+99,Kingler,1,1.3,60,"Hyper Cutter, Shell Armor, Sheer Force ",Pincer Pokemon,FALSE
+100,Voltorb,1,0.5,10.4,"Soundproof, Static, Aftermath ",Ball Pokemon,FALSE
+101,Electrode,1,1.2,66.6,"Soundproof, Static, Aftermath ",Ball Pokemon,FALSE
+102,Exeggcute,1,0.4,2.5,"Chlorophyll, Harvest ",Egg Pokemon,FALSE
+103,Exeggutor,1,2,120,"Chlorophyll, Harvest, Frisk, Harvest ",Coconut Pokemon,FALSE
+104,Cubone,1,0.4,6.5,"Rock Head, Lightningrod, Battle Armor ",Lonely Pokemon,FALSE
+105,Marowak,1,1,45,"Rock Head, Lightningrod, Battle Armor, Cursed Body, Lightningrod, Rock Head ",Bone Keeper Pokemon,FALSE
+106,Hitmonlee,1,1.5,49.8,"Limber, Reckless, Unburden ",Kicking Pokemon,FALSE
+107,Hitmonchan,1,1.4,50.2,"Keen Eye, Iron Fist, Inner Focus ",Punching Pokemon,FALSE
+108,Lickitung,1,1.2,65.5,"Own Tempo, Oblivious, Cloud Nine ",Licking Pokemon,FALSE
+109,Koffing,1,0.6,1,Levitate ,Poison Gas Pokemon,FALSE
+110,Weezing,1,1.2,9.5,Levitate ,Poison Gas Pokemon,FALSE
+111,Rhyhorn,1,1,115,"Lightningrod, Rock Head, Reckless ",Spikes Pokemon,FALSE
+112,Rhydon,1,1.9,120,"Lightningrod, Rock Head, Reckless ",Drill Pokemon,FALSE
+113,Chansey,1,1.1,34.6,"Natural Cure, Serene Grace, Healer ",Egg Pokemon,FALSE
+114,Tangela,1,1,35,"Chlorophyll, Leaf Guard, Regenerator ",Vine Pokemon,FALSE
+115,Kangaskhan,1,2.2,80,"Early Bird, Scrappy, Inner Focus ",Parent Pokemon,FALSE
+116,Horsea,1,0.4,8,"Swift Swim, Sniper, Damp ",Dragon Pokemon,FALSE
+117,Seadra,1,1.2,25,"Poison Point, Sniper, Damp ",Dragon Pokemon,FALSE
+118,Goldeen,1,0.6,15,"Swift Swim, Water Veil, Lightningrod ",Goldfish Pokemon,FALSE
+119,Seaking,1,1.3,39,"Swift Swim, Water Veil, Lightningrod ",Goldfish Pokemon,FALSE
+120,Staryu,1,0.8,34.5,"Illuminate, Natural Cure, Analytic ",Starshape Pokemon,FALSE
+121,Starmie,1,1.1,80,"Illuminate, Natural Cure, Analytic ",Mysterious Pokemon,FALSE
+122,Mr. Mime,1,1.3,54.5,"Soundproof, Filter, Technician ",Barrier Pokemon,FALSE
+123,Scyther,1,1.5,56,"Swarm, Technician, Steadfast ",Mantis Pokemon,FALSE
+124,Jynx,1,1.4,40.6,"Oblivious, Forewarn, Dry Skin ",Humanshape Pokemon,FALSE
+125,Electabuzz,1,1.1,30,"Static, Vital Spirit ",Electric Pokemon,FALSE
+126,Magmar,1,1.3,44.5,"Flame Body, Vital Spirit ",Spitfire Pokemon,FALSE
+127,Pinsir,1,1.5,55,"Hyper Cutter, Mold Breaker, Moxie ",Stagbeetle Pokemon,FALSE
+128,Tauros,1,1.4,88.4,"Intimidate, Anger Point, Sheer Force ",Wild Bull Pokemon,FALSE
+129,Magikarp,1,0.9,10,"Swift Swim, Rattled ",Fish Pokemon,FALSE
+130,Gyarados,1,6.5,235,"Intimidate, Moxie ",Atrocious Pokemon,FALSE
+131,Lapras,1,2.5,220,"Water Absorb, Shell Armor, Hydration ",Transport Pokemon,FALSE
+132,Ditto,1,0.3,4,"Limber, Imposter ",Transform Pokemon,FALSE
+133,Eevee,1,0.3,6.5,"Run Away, Adaptability, Anticipation ",Evolution Pokemon,FALSE
+134,Vaporeon,1,1,29,"Water Absorb, Hydration ",Bubble Jet Pokemon,FALSE
+135,Jolteon,1,0.8,24.5,"Volt Absorb, Quick Feet ",Lightning Pokemon,FALSE
+136,Flareon,1,0.9,25,"Flash Fire, Guts ",Flame Pokemon,FALSE
+137,Porygon,1,0.8,36.5,"Trace, Download, Analytic ",Virtual Pokemon,FALSE
+138,Omanyte,1,0.4,7.5,"Swift Swim, Shell Armor, Weak Armor ",Spiral Pokemon,FALSE
+139,Omastar,1,1,35,"Swift Swim, Shell Armor, Weak Armor ",Spiral Pokemon,FALSE
+140,Kabuto,1,0.5,11.5,"Swift Swim, Battle Armor, Weak Armor ",Shellfish Pokemon,FALSE
+141,Kabutops,1,1.3,40.5,"Swift Swim, Battle Armor, Weak Armor ",Shellfish Pokemon,FALSE
+142,Aerodactyl,1,1.8,59,"Rock Head, Pressure, Unnerve ",Fossil Pokemon,FALSE
+143,Snorlax,1,2.1,460,"Immunity, Thick Fat, Gluttony ",Sleeping Pokemon,FALSE
+144,Articuno,1,1.7,55.4,"Pressure, Snow Cloak ",Freeze Pokemon,FALSE
+145,Zapdos,1,1.6,52.6,"Pressure, Static ",Electric Pokemon,FALSE
+146,Moltres,1,2,60,"Pressure, Flame Body ",Flame Pokemon,FALSE
+147,Dratini,1,1.8,3.3,"Shed Skin, Marvel Scale ",Dragon Pokemon,FALSE
+148,Dragonair,1,4,16.5,"Shed Skin, Marvel Scale ",Dragon Pokemon,FALSE
+149,Dragonite,1,2.2,210,"Inner Focus, Multiscale ",Dragon Pokemon,FALSE
+150,Mewtwo,1,2,122,"Pressure, Unnerve ",Genetic Pokemon,FALSE
+151,Mew,1,0.4,4,Synchronize ,New Species Pokemon,FALSE
+152,Chikorita,2,0.9,6.4,"Overgrow, Leaf Guard ",Leaf Pokemon,FALSE
+153,Bayleef,2,1.2,15.8,"Overgrow, Leaf Guard ",Leaf Pokemon,FALSE
+154,Meganium,2,1.8,100.5,"Overgrow, Leaf Guard ",Herb Pokemon,FALSE
+155,Cyndaquil,2,0.5,7.9,"Blaze, Flash Fire ",Fire Mouse Pokemon,FALSE
+156,Quilava,2,0.9,19,"Blaze, Flash Fire ",Volcano Pokemon,FALSE
+157,Typhlosion,2,1.7,79.5,"Blaze, Flash Fire ",Volcano Pokemon,FALSE
+158,Totodile,2,0.6,9.5,"Torrent, Sheer Force ",Big Jaw Pokemon,FALSE
+159,Croconaw,2,1.1,25,"Torrent, Sheer Force ",Big Jaw Pokemon,FALSE
+160,Feraligatr,2,2.3,88.8,"Torrent, Sheer Force ",Big Jaw Pokemon,FALSE
+161,Sentret,2,0.8,6,"Run Away, Keen Eye, Frisk ",Scout Pokemon,FALSE
+162,Furret,2,1.8,32.5,"Run Away, Keen Eye, Frisk ",Long Body Pokemon,FALSE
+163,Hoothoot,2,0.7,21.2,"Insomnia, Keen Eye, Tinted Lens ",Owl Pokemon,FALSE
+164,Noctowl,2,1.6,40.8,"Insomnia, Keen Eye, Tinted Lens ",Owl Pokemon,FALSE
+165,Ledyba,2,1,10.8,"Swarm, Early Bird, Rattled ",Five Star Pokemon,FALSE
+166,Ledian,2,1.4,35.6,"Swarm, Early Bird, Iron Fist ",Five Star Pokemon,FALSE
+167,Spinarak,2,0.5,8.5,"Swarm, Insomnia, Sniper ",String Spit Pokemon,FALSE
+168,Ariados,2,1.1,33.5,"Swarm, Insomnia, Sniper ",Long Leg Pokemon,FALSE
+169,Crobat,2,1.8,75,"Inner Focus, Infiltrator ",Bat Pokemon,FALSE
+170,Chinchou,2,0.5,12,"Volt Absorb, Illuminate, Water Absorb ",Angler Pokemon,FALSE
+171,Lanturn,2,1.2,22.5,"Volt Absorb, Illuminate, Water Absorb ",Light Pokemon,FALSE
+172,Pichu,2,0.3,2,"Static, Lightningrod ",Tiny Mouse Pokemon,FALSE
+173,Cleffa,2,0.3,3,"Cute Charm, Magic Guard, Friend Guard ",Star Shape Pokemon,FALSE
+174,Igglybuff,2,0.3,1,"Cute Charm, Competitive, Friend Guard ",Balloon Pokemon,FALSE
+175,Togepi,2,0.3,1.5,"Hustle, Serene Grace, Super Luck ",Spike Ball Pokemon,FALSE
+176,Togetic,2,0.6,3.2,"Hustle, Serene Grace, Super Luck ",Happiness Pokemon,FALSE
+177,Natu,2,0.2,2,"Synchronize, Early Bird, Magic Bounce ",Little Bird Pokemon,FALSE
+178,Xatu,2,1.5,15,"Synchronize, Early Bird, Magic Bounce ",Mystic Pokemon,FALSE
+179,Mareep,2,0.6,7.8,"Static, Plus ",Wool Pokemon,FALSE
+180,Flaaffy,2,0.8,13.3,"Static, Plus ",Wool Pokemon,FALSE
+181,Ampharos,2,1.4,61.5,"Static, Plus ",Light Pokemon,FALSE
+182,Bellossom,2,0.4,5.8,"Chlorophyll, Healer ",Flower Pokemon,FALSE
+183,Marill,2,0.4,8.5,"Thick Fat, Huge Power, Sap Sipper ",Aquamouse Pokemon,FALSE
+184,Azumarill,2,0.8,28.5,"Thick Fat, Huge Power, Sap Sipper ",Aquarabbit Pokemon,FALSE
+185,Sudowoodo,2,1.2,38,"Sturdy, Rock Head, Rattled ",Imitation Pokemon,FALSE
+186,Politoed,2,1.1,33.9,"Water Absorb, Damp, Drizzle ",Frog Pokemon,FALSE
+187,Hoppip,2,0.4,0.5,"Chlorophyll, Leaf Guard, Infiltrator ",Cottonweed Pokemon,FALSE
+188,Skiploom,2,0.6,1,"Chlorophyll, Leaf Guard, Infiltrator ",Cottonweed Pokemon,FALSE
+189,Jumpluff,2,0.8,3,"Chlorophyll, Leaf Guard, Infiltrator ",Cottonweed Pokemon,FALSE
+190,Aipom,2,0.8,11.5,"Run Away, Pickup, Skill Link ",Long Tail Pokemon,FALSE
+191,Sunkern,2,0.3,1.8,"Chlorophyll, Solar Power, Early Bird ",Seed Pokemon,FALSE
+192,Sunflora,2,0.8,8.5,"Chlorophyll, Solar Power, Early Bird ",Sun Pokemon,FALSE
+193,Yanma,2,1.2,38,"Speed Boost, Compoundeyes, Frisk ",Clear Wing Pokemon,FALSE
+194,Wooper,2,0.4,8.5,"Damp, Water Absorb, Unaware ",Water Fish Pokemon,FALSE
+195,Quagsire,2,1.4,75,"Damp, Water Absorb, Unaware ",Water Fish Pokemon,FALSE
+196,Espeon,2,0.9,26.5,"Synchronize, Magic Bounce ",Sun Pokemon,FALSE
+197,Umbreon,2,1,27,"Synchronize, Inner Focus ",Moonlight Pokemon,FALSE
+198,Murkrow,2,0.5,2.1,"Insomnia, Super Luck, Prankster ",Darkness Pokemon,FALSE
+199,Slowking,2,2,79.5,"Oblivious, Own Tempo, Regenerator ",Royal Pokemon,FALSE
+200,Misdreavus,2,0.7,1,Levitate ,Screech Pokemon,FALSE
+201,Unown,2,0.5,5,Levitate ,Symbol Pokemon,FALSE
+202,Wobbuffet,2,1.3,28.5,"Shadow Tag, Telepathy ",Patient Pokemon,FALSE
+203,Girafarig,2,1.5,41.5,"Inner Focus, Early Bird, Sap Sipper ",Long Neck Pokemon,FALSE
+204,Pineco,2,0.6,7.2,"Sturdy, Overcoat ",Bagworm Pokemon,FALSE
+205,Forretress,2,1.2,125.8,"Sturdy, Overcoat ",Bagworm Pokemon,FALSE
+206,Dunsparce,2,1.5,14,"Serene Grace, Run Away, Rattled ",Land Snake Pokemon,FALSE
+207,Gligar,2,1.1,64.8,"Hyper Cutter, Sand Veil, Immunity ",Flyscorpion Pokemon,FALSE
+208,Steelix,2,9.2,400,"Rock Head, Sturdy, Sheer Force ",Iron Snake Pokemon,FALSE
+209,Snubbull,2,0.6,7.8,"Intimidate, Run Away, Rattled ",Fairy Pokemon,FALSE
+210,Granbull,2,1.4,48.7,"Intimidate, Quick Feet, Rattled ",Fairy Pokemon,FALSE
+211,Qwilfish,2,0.5,3.9,"Poison Point, Swift Swim, Intimidate ",Balloon Pokemon,FALSE
+212,Scizor,2,1.8,118,"Swarm, Technician, Light Metal ",Pincer Pokemon,FALSE
+213,Shuckle,2,0.6,20.5,"Sturdy, Gluttony, Contrary ",Mold Pokemon,FALSE
+214,Heracross,2,1.5,54,"Swarm, Guts, Moxie ",Singlehorn Pokemon,FALSE
+215,Sneasel,2,0.9,28,"Inner Focus, Keen Eye, Pickpocket ",Sharp Claw Pokemon,FALSE
+216,Teddiursa,2,0.6,8.8,"Pickup, Quick Feet, Honey Gather ",Little Bear Pokemon,FALSE
+217,Ursaring,2,1.8,125.8,"Guts, Quick Feet, Unnerve ",Hibernator Pokemon,FALSE
+218,Slugma,2,0.7,35,"Magma Armor, Flame Body, Weak Armor ",Lava Pokemon,FALSE
+219,Magcargo,2,0.8,55,"Magma Armor, Flame Body, Weak Armor ",Lava Pokemon,FALSE
+220,Swinub,2,0.4,6.5,"Oblivious, Snow Cloak, Thick Fat ",Pig Pokemon,FALSE
+221,Piloswine,2,1.1,55.8,"Oblivious, Snow Cloak, Thick Fat ",Swine Pokemon,FALSE
+222,Corsola,2,0.6,5,"Hustle, Natural Cure, Regenerator ",Coral Pokemon,FALSE
+223,Remoraid,2,0.6,12,"Hustle, Sniper, Moody ",Jet Pokemon,FALSE
+224,Octillery,2,0.9,28.5,"Suction Cups, Sniper, Moody ",Jet Pokemon,FALSE
+225,Delibird,2,0.9,16,"Vital Spirit, Hustle, Insomnia ",Delivery Pokemon,FALSE
+226,Mantine,2,2.1,220,"Swift Swim, Water Absorb, Water Veil ",Kite Pokemon,FALSE
+227,Skarmory,2,1.7,50.5,"Keen Eye, Sturdy, Weak Armor ",Armor Bird Pokemon,FALSE
+228,Houndour,2,0.6,10.8,"Early Bird, Flash Fire, Unnerve ",Dark Pokemon,FALSE
+229,Houndoom,2,1.4,35,"Early Bird, Flash Fire, Unnerve ",Dark Pokemon,FALSE
+230,Kingdra,2,1.8,152,"Swift Swim, Sniper, Damp ",Dragon Pokemon,FALSE
+231,Phanpy,2,0.5,33.5,"Pickup, Sand Veil ",Long Nose Pokemon,FALSE
+232,Donphan,2,1.1,120,"Sturdy, Sand Veil ",Armor Pokemon,FALSE
+233,Porygon2,2,0.6,32.5,"Trace, Download, Analytic ",Virtual Pokemon,FALSE
+234,Stantler,2,1.4,71.2,"Intimidate, Frisk, Sap Sipper ",Big Horn Pokemon,FALSE
+235,Smeargle,2,1.2,58,"Own Tempo, Technician, Moody ",Painter Pokemon,FALSE
+236,Tyrogue,2,0.7,21,"Guts, Steadfast, Vital Spirit ",Scuffle Pokemon,FALSE
+237,Hitmontop,2,1.4,48,"Intimidate, Technician, Steadfast ",Handstand Pokemon,FALSE
+238,Smoochum,2,0.4,6,"Oblivious, Forewarn, Hydration ",Kiss Pokemon,FALSE
+239,Elekid,2,0.6,23.5,"Static, Vital Spirit ",Electric Pokemon,FALSE
+240,Magby,2,0.7,21.4,"Flame Body, Vital Spirit ",Live Coal Pokemon,FALSE
+241,Miltank,2,1.2,75.5,"Thick Fat, Scrappy, Sap Sipper ",Milk Cow Pokemon,FALSE
+242,Blissey,2,1.5,46.8,"Natural Cure, Serene Grace, Healer ",Happiness Pokemon,FALSE
+243,Raikou,2,1.9,178,"Pressure, Inner Focus ",Thunder Pokemon,FALSE
+244,Entei,2,2.1,198,"Pressure, Inner Focus ",Volcano Pokemon,FALSE
+245,Suicune,2,2,187,"Pressure, Inner Focus ",Aurora Pokemon,FALSE
+246,Larvitar,2,0.6,72,"Guts, Sand Veil ",Rock Skin Pokemon,FALSE
+247,Pupitar,2,1.2,152,Shed Skin ,Hard Shell Pokemon,FALSE
+248,Tyranitar,2,2,202,"Sand Stream, Unnerve ",Armor Pokemon,FALSE
+249,Lugia,2,5.2,216,"Pressure, Multiscale ",Diving Pokemon,FALSE
+250,Ho-Oh,2,3.8,199,"Pressure, Regenerator ",Rainbow Pokemon,FALSE
+251,Celebi,2,0.6,5,Natural Cure ,Time Travel Pokemon,FALSE
+252,Treecko,3,0.5,5,"Overgrow, Unburden ",Wood Gecko Pokemon,FALSE
+253,Grovyle,3,0.9,21.6,"Overgrow, Unburden ",Wood Gecko Pokemon,FALSE
+254,Sceptile,3,1.7,52.2,"Overgrow, Unburden ",Forest Pokemon,FALSE
+255,Torchic,3,0.4,2.5,"Blaze, Speed Boost ",Chick Pokemon,FALSE
+256,Combusken,3,0.9,19.5,"Blaze, Speed Boost ",Young Fowl Pokemon,FALSE
+257,Blaziken,3,1.9,52,"Blaze, Speed Boost ",Blaze Pokemon,FALSE
+258,Mudkip,3,0.4,7.6,"Torrent, Damp ",Mud Fish Pokemon,FALSE
+259,Marshtomp,3,0.7,28,"Torrent, Damp ",Mud Fish Pokemon,FALSE
+260,Swampert,3,1.5,81.9,"Torrent, Damp ",Mud Fish Pokemon,FALSE
+261,Poochyena,3,0.5,13.6,"Run Away, Quick Feet, Rattled ",Bite Pokemon,FALSE
+262,Mightyena,3,1,37,"Intimidate, Quick Feet, Moxie ",Bite Pokemon,FALSE
+263,Zigzagoon,3,0.4,17.5,"Pickup, Gluttony, Quick Feet ",Tiny Racoon Pokemon,FALSE
+264,Linoone,3,0.5,32.5,"Pickup, Gluttony, Quick Feet ",Rush Pokemon,FALSE
+265,Wurmple,3,0.3,3.6,"Shield Dust, Run Away ",Worm Pokemon,FALSE
+266,Silcoon,3,0.6,10,Shed Skin ,Cocoon Pokemon,FALSE
+267,Beautifly,3,1,28.4,"Swarm, Rivalry ",Butterfly Pokemon,FALSE
+268,Cascoon,3,0.7,11.5,Shed Skin ,Cocoon Pokemon,FALSE
+269,Dustox,3,1.2,31.6,"Shield Dust, Compoundeyes ",Poison Moth Pokemon,FALSE
+270,Lotad,3,0.5,2.6,"Swift Swim, Rain Dish, Own Tempo ",Water Weed Pokemon,FALSE
+271,Lombre,3,1.2,32.5,"Swift Swim, Rain Dish, Own Tempo ",Jolly Pokemon,FALSE
+272,Ludicolo,3,1.5,55,"Swift Swim, Rain Dish, Own Tempo ",Carefree Pokemon,FALSE
+273,Seedot,3,0.5,4,"Chlorophyll, Early Bird, Pickpocket ",Acorn Pokemon,FALSE
+274,Nuzleaf,3,1,28,"Chlorophyll, Early Bird, Pickpocket ",Wily Pokemon,FALSE
+275,Shiftry,3,1.3,59.6,"Chlorophyll, Early Bird, Pickpocket ",Wickid Pokemon,FALSE
+276,Taillow,3,0.3,2.3,"Guts, Scrappy ",TinySwallow Pokemon,FALSE
+277,Swellow,3,0.7,19.8,"Guts, Scrappy ",Swallow Pokemon,FALSE
+278,Wingull,3,0.6,9.5,"Keen Eye, Hydration, Rain Dish ",Seagull Pokemon,FALSE
+279,Pelipper,3,1.2,28,"Keen Eye, Drizzle, Rain Dish ",Water Bird Pokemon,FALSE
+280,Ralts,3,0.4,6.6,"Synchronize, Trace, Telepathy ",Feeling Pokemon,FALSE
+281,Kirlia,3,0.8,20.2,"Synchronize, Trace, Telepathy ",Emotion Pokemon,FALSE
+282,Gardevoir,3,1.6,48.4,"Synchronize, Trace, Telepathy ",Embrace Pokemon,FALSE
+283,Surskit,3,0.5,1.7,"Swift Swim, Rain Dish ",Pond Skater Pokemon,FALSE
+284,Masquerain,3,0.8,3.6,"Intimidate, Unnerve ",Eyeball Pokemon,FALSE
+285,Shroomish,3,0.4,4.5,"Effect Spore, Poison Heal, Quick Feet ",Mushroom Pokemon,FALSE
+286,Breloom,3,1.2,39.2,"Effect Spore, Poison Heal, Technician ",Mushroom Pokemon,FALSE
+287,Slakoth,3,0.8,24,Truant ,Slacker Pokemon,FALSE
+288,Vigoroth,3,1.4,46.5,Vital Spirit ,Wild Monkey Pokemon,FALSE
+289,Slaking,3,2,130.5,Truant ,Lazy Pokemon,FALSE
+290,Nincada,3,0.5,5.5,"Compoundeyes, Run Away ",Trainee Pokemon,FALSE
+291,Ninjask,3,0.8,12,"Speed Boost, Infiltrator ",Ninja Pokemon,FALSE
+292,Shedinja,3,0.8,1.2,Wonder Guard ,Shed Pokemon,FALSE
+293,Whismur,3,0.6,16.3,"Soundproof, Rattled ",Whisper Pokemon,FALSE
+294,Loudred,3,1,40.5,"Soundproof, Scrappy ",Big Voice Pokemon,FALSE
+295,Exploud,3,1.5,84,"Soundproof, Scrappy ",Loud Noise Pokemon,FALSE
+296,Makuhita,3,1,86.4,"Thick Fat, Guts, Sheer Force ",Guts Pokemon,FALSE
+297,Hariyama,3,2.3,253.8,"Thick Fat, Guts, Sheer Force ",Arm Thrust Pokemon,FALSE
+298,Azurill,3,0.2,2,"Thick Fat, Huge Power, Sap Sipper ",Polka Dot Pokemon,FALSE
+299,Nosepass,3,1,97,"Sturdy, Magnet Pull, Sand Force ",Compass Pokemon,FALSE
+300,Skitty,3,0.6,11,"Cute Charm, Normalize, Wonder Skin  ",Kitten Pokemon,FALSE
+301,Delcatty,3,1.1,32.6,"Cute Charm, Normalize, Wonder Skin  ",Prim Pokemon,FALSE
+302,Sableye,3,0.5,11,"Keen Eye, Stall, Prankster ",Darkness Pokemon,FALSE
+303,Mawile,3,0.6,11.5,"Hyper Cutter, Intimidate, Sheer Force ",Deceiver Pokemon,FALSE
+304,Aron,3,0.4,60,"Sturdy, Rock Head, Heavy Metal ",Iron Armor Pokemon,FALSE
+305,Lairon,3,0.9,120,"Sturdy, Rock Head, Heavy Metal ",Iron Armor Pokemon,FALSE
+306,Aggron,3,2.1,360,"Sturdy, Rock Head, Heavy Metal ",Iron Armor Pokemon,FALSE
+307,Meditite,3,0.6,11.2,"Pure Power, Telepathy ",Meditate Pokemon,FALSE
+308,Medicham,3,1.3,31.5,"Pure Power, Telepathy ",Meditate Pokemon,FALSE
+309,Electrike,3,0.6,15.2,"Static, Lightningrod, Minus ",Lightning Pokemon,FALSE
+310,Manectric,3,1.5,40.2,"Static, Lightningrod, Minus ",Discharge Pokemon,FALSE
+311,Plusle,3,0.4,4.2,"Plus, Lightningrod ",Cheering Pokemon,FALSE
+312,Minun,3,0.4,4.2,"Minus, Volt Absorb ",Cheering Pokemon,FALSE
+313,Volbeat,3,0.7,17.7,"Illuminate, Swarm, Prankster ",Firefly Pokemon,FALSE
+314,Illumise,3,0.6,17.7,"Oblivious, Tinted Lens, Prankster ",Firefly Pokemon,FALSE
+315,Roselia,3,0.3,2,"Natural Cure, Poison Point, Leaf Guard ",Thorn Pokemon,FALSE
+316,Gulpin,3,0.4,10.3,"Liquid Ooze, Sticky Hold, Gluttony ",Stomach Pokemon,FALSE
+317,Swalot,3,1.7,80,"Liquid Ooze, Sticky Hold, Gluttony ",Poison Bag Pokemon,FALSE
+318,Carvanha,3,0.8,20.8,"Rough Skin, Speed Boost ",Savage Pokemon,FALSE
+319,Sharpedo,3,1.8,88.8,"Rough Skin, Speed Boost ",Brutal Pokemon,FALSE
+320,Wailmer,3,2,130,"Water Veil, Oblivious, Pressure ",Ball Whale Pokemon,FALSE
+321,Wailord,3,14.5,398,"Water Veil, Oblivious, Pressure ",Float Whale Pokemon,FALSE
+322,Numel,3,0.7,24,"Oblivious, Simple, Own Tempo ",Numb Pokemon,FALSE
+323,Camerupt,3,1.9,220,"Magma Armor, Solid Rock, Anger Point ",Eruption Pokemon,FALSE
+324,Torkoal,3,0.5,80.4,"White Smoke, Drought, Shell Armor ",Coal Pokemon,FALSE
+325,Spoink,3,0.7,30.6,"Thick Fat, Own Tempo, Gluttony ",Bounce Pokemon,FALSE
+326,Grumpig,3,0.9,71.5,"Thick Fat, Own Tempo, Gluttony ",Manipulate Pokemon,FALSE
+327,Spinda,3,1.1,5,"Own Tempo, Tangled Feet, Contrary ",Spot Panda Pokemon,FALSE
+328,Trapinch,3,0.7,15,"Hyper Cutter, Arena Trap, Sheer Force ",Ant Pit Pokemon,FALSE
+329,Vibrava,3,1.1,15.3,Levitate ,Vibration Pokemon,FALSE
+330,Flygon,3,2,82,Levitate ,Mystic Pokemon,FALSE
+331,Cacnea,3,0.4,51.3,"Sand Veil, Water Absorb ",Cactus Pokemon,FALSE
+332,Cacturne,3,1.3,77.4,"Sand Veil, Water Absorb ",Scarecrow Pokemon,FALSE
+333,Swablu,3,0.4,1.2,"Natural Cure, Cloud Nine ",Cotton Bird Pokemon,FALSE
+334,Altaria,3,1.1,20.6,"Natural Cure, Cloud Nine ",Humming Pokemon,FALSE
+335,Zangoose,3,1.3,40.3,"Immunity, Toxic Boost ",Cat Ferret Pokemon,FALSE
+336,Seviper,3,2.7,52.5,"Shed Skin, Infiltrator ",Fang Snake Pokemon,FALSE
+337,Lunatone,3,1,168,Levitate ,Meteorite Pokemon,FALSE
+338,Solrock,3,1.2,154,Levitate ,Meteorite Pokemon,FALSE
+339,Barboach,3,0.4,1.9,"Oblivious, Anticipation, Hydration ",Whiskers Pokemon,FALSE
+340,Whiscash,3,0.9,23.6,"Oblivious, Anticipation, Hydration ",Whiskers Pokemon,FALSE
+341,Corphish,3,0.6,11.5,"Hyper Cutter, Shell Armor, Adaptability ",Ruffian Pokemon,FALSE
+342,Crawdaunt,3,1.1,32.8,"Hyper Cutter, Shell Armor, Adaptability ",Rogue Pokemon,FALSE
+343,Baltoy,3,0.5,21.5,Levitate ,Clay Doll Pokemon,FALSE
+344,Claydol,3,1.5,108,Levitate ,Clay Doll Pokemon,FALSE
+345,Lileep,3,1,23.8,"Suction Cups, Storm Drain ",Sea Lily Pokemon,FALSE
+346,Cradily,3,1.5,60.4,"Suction Cups, Storm Drain ",Barnacle Pokemon,FALSE
+347,Anorith,3,0.7,12.5,"Battle Armor, Swift Swim ",Old Shrimp Pokemon,FALSE
+348,Armaldo,3,1.5,68.2,"Battle Armor, Swift Swim ",Plate Pokemon,FALSE
+349,Feebas,3,0.6,7.4,"Swift Swim, Oblivious, Adaptability ",Fish Pokemon,FALSE
+350,Milotic,3,6.2,162,"Marvel Scale, Competitive, Cute Charm ",Tender Pokemon,FALSE
+351,Castform,3,0.3,0.8,Forecast ,Weather Pokemon,FALSE
+352,Kecleon,3,1,22,"Color Change, Protean ",Color Swap Pokemon,FALSE
+353,Shuppet,3,0.6,2.3,"Insomnia, Frisk, Cursed Body ",Puppet Pokemon,FALSE
+354,Banette,3,1.1,12.5,"Insomnia, Frisk, Cursed Body ",Marionette Pokemon,FALSE
+355,Duskull,3,0.8,15,"Levitate, Frisk ",Requiem Pokemon,FALSE
+356,Dusclops,3,1.6,30.6,"Pressure, Frisk ",Beckon Pokemon,FALSE
+357,Tropius,3,2,100,"Chlorophyll, Solar Power, Harvest ",Fruit Pokemon,FALSE
+358,Chimecho,3,0.6,1,Levitate ,Wind Chime Pokemon,FALSE
+359,Absol,3,1.2,47,"Pressure, Super Luck, Justified ",Disaster Pokemon,FALSE
+360,Wynaut,3,0.6,14,"Shadow Tag, Telepathy ",Bright Pokemon,FALSE
+361,Snorunt,3,0.7,16.8,"Inner Focus, Ice Body, Moody ",Snow Hat Pokemon,FALSE
+362,Glalie,3,1.5,256.5,"Inner Focus, Ice Body, Moody ",Face Pokemon,FALSE
+363,Spheal,3,0.8,39.5,"Thick Fat, Ice Body, Oblivious ",Clap Pokemon,FALSE
+364,Sealeo,3,1.1,87.6,"Thick Fat, Ice Body, Oblivious ",Ball Roll Pokemon,FALSE
+365,Walrein,3,1.4,150.6,"Thick Fat, Ice Body, Oblivious ",Ice Break Pokemon,FALSE
+366,Clamperl,3,0.4,52.5,"Shell Armor, Rattled ",Bivalve Pokemon,FALSE
+367,Huntail,3,1.7,27,"Swift Swim, Water Veil ",Deep Sea Pokemon,FALSE
+368,Gorebyss,3,1.8,22.6,"Swift Swim, Hydration ",South Sea Pokemon,FALSE
+369,Relicanth,3,1,23.4,"Swift Swim, Rock Head, Sturdy ",Longevity Pokemon,FALSE
+370,Luvdisc,3,0.6,8.7,"Swift Swim, Hydration ",Rendezvous Pokemon,FALSE
+371,Bagon,3,0.6,42.1,"Rock Head, Sheer Force ",Rock Head Pokemon,FALSE
+372,Shelgon,3,1.1,110.5,"Rock Head, Overcoat ",Endurance Pokemon,FALSE
+373,Salamence,3,1.5,102.6,"Intimidate, Moxie ",Dragon Pokemon,FALSE
+374,Beldum,3,0.6,95.2,"Clear Body, Light Metal ",Iron Ball Pokemon,FALSE
+375,Metang,3,1.2,202.5,"Clear Body, Light Metal ",Iron Claw Pokemon,FALSE
+376,Metagross,3,1.6,550,"Clear Body, Light Metal ",Iron Leg Pokemon,FALSE
+377,Regirock,3,1.7,230,"Clear Body, Sturdy ",Rock Peak Pokemon,FALSE
+378,Regice,3,1.8,175,"Clear Body, Ice Body ",Iceberg Pokemon,FALSE
+379,Registeel,3,1.9,205,"Clear Body, Light Metal ",Iron Pokemon,FALSE
+380,Latias,3,1.4,40,Levitate ,Eon Pokemon,FALSE
+381,Latios,3,2,60,Levitate ,Eon Pokemon,FALSE
+382,Kyogre,3,4.5,352,Drizzle ,Sea Basin Pokemon,FALSE
+383,Groudon,3,3.5,950,Drought ,Continent Pokemon,FALSE
+384,Rayquaza,3,7,206.5,Air Lock ,Sky High Pokemon,FALSE
+385,Jirachi,3,0.3,1.1,Serene Grace ,Wish Pokemon,FALSE
+386,Deoxys,3,1.7,60.8,Pressure ,DNA Pokemon,FALSE
+387,Turtwig,4,0.4,10.2,"Overgrow, Shell Armor ",Tiny Leaf Pokemon,FALSE
+388,Grotle,4,1.1,97,"Overgrow, Shell Armor ",Grove Pokemon,FALSE
+389,Torterra,4,2.2,310,"Overgrow, Shell Armor ",Continent Pokemon,FALSE
+390,Chimchar,4,0.5,6.2,"Blaze, Iron Fist ",Chimp Pokemon,FALSE
+391,Monferno,4,0.9,22,"Blaze, Iron Fist ",Playful Pokemon,FALSE
+392,Infernape,4,1.2,55,"Blaze, Iron Fist ",Flame Pokemon,FALSE
+393,Piplup,4,0.4,5.2,"Torrent, Defiant ",Penguin Pokemon,FALSE
+394,Prinplup,4,0.8,23,"Torrent, Defiant ",Penguin Pokemon,FALSE
+395,Empoleon,4,1.7,84.5,"Torrent, Defiant ",Emperor Pokemon,FALSE
+396,Starly,4,0.3,2,"Keen Eye, Reckless ",Starling Pokemon,FALSE
+397,Staravia,4,0.6,15.5,"Intimidate, Reckless ",Starling Pokemon,FALSE
+398,Staraptor,4,1.2,24.9,"Intimidate, Reckless ",Predator Pokemon,FALSE
+399,Bidoof,4,0.5,20,"Simple, Unaware, Moody ",Plump Mouse Pokemon,FALSE
+400,Bibarel,4,1,31.5,"Simple, Unaware, Moody ",Beaver Pokemon,FALSE
+401,Kricketot,4,0.3,2.2,"Shed Skin, Run Away ",Cricket Pokemon,FALSE
+402,Kricketune,4,1,25.5,"Swarm, Technician ",Cricket Pokemon,FALSE
+403,Shinx,4,0.5,9.5,"Rivalry, Intimidate, Guts ",Flash Pokemon,FALSE
+404,Luxio,4,0.9,30.5,"Rivalry, Intimidate, Guts ",Spark Pokemon,FALSE
+405,Luxray,4,1.4,42,"Rivalry, Intimidate, Guts ",Gleam Eyes Pokemon,FALSE
+406,Budew,4,0.2,1.2,"Natural Cure, Poison Point, Leaf Guard ",Bud Pokemon,FALSE
+407,Roserade,4,0.9,14.5,"Natural Cure, Poison Point, Technician ",Bouquet Pokemon,FALSE
+408,Cranidos,4,0.9,31.5,"Mold Breaker, Sheer Force ",Head Butt Pokemon,FALSE
+409,Rampardos,4,1.6,102.5,"Mold Breaker, Sheer Force ",Head Butt Pokemon,FALSE
+410,Shieldon,4,0.5,57,"Sturdy, Soundproof ",Shield Pokemon,FALSE
+411,Bastiodon,4,1.3,149.5,"Sturdy, Soundproof ",Shield Pokemon,FALSE
+412,Burmy,4,0.2,3.4,"Shed Skin, Overcoat ",Bagworm Pokemon,FALSE
+413,Wormadam,4,0.5,6.5,"Anticipation, Overcoat ",Bagworm Pokemon,FALSE
+414,Mothim,4,0.9,23.3,"Swarm, Tinted Lens ",Moth Pokemon,FALSE
+415,Combee,4,0.3,5.5,"Honey Gather, Hustle ",Tiny Bee Pokemon,FALSE
+416,Vespiquen,4,1.2,38.5,"Pressure, Unnerve ",Beehive Pokemon,FALSE
+417,Pachirisu,4,0.4,3.9,"Run Away, Pickup, Volt Absorb ",EleSquirrel Pokemon,FALSE
+418,Buizel,4,0.7,29.5,"Swift Swim, Water Veil ",Sea Weasel Pokemon,FALSE
+419,Floatzel,4,1.1,33.5,"Swift Swim, Water Veil ",Sea Weasel Pokemon,FALSE
+420,Cherubi,4,0.4,3.3,Chlorophyll ,Cherry Pokemon,FALSE
+421,Cherrim,4,0.5,9.3,Flower Gift ,Blossom Pokemon,FALSE
+422,Shellos,4,0.3,6.3,"Sticky Hold, Storm Drain, Sand Force ",Sea Slug Pokemon,FALSE
+423,Gastrodon,4,0.9,29.9,"Sticky Hold, Storm Drain, Sand Force ",Sea Slug Pokemon,FALSE
+424,Ambipom,4,1.2,20.3,"Technician, Pickup, Skill Link ",Long Tail Pokemon,FALSE
+425,Drifloon,4,0.4,1.2,"Aftermath, Unburden, Flare Boost ",Balloon Pokemon,FALSE
+426,Drifblim,4,1.2,15,"Aftermath, Unburden, Flare Boost ",Blimp Pokemon,FALSE
+427,Buneary,4,0.4,5.5,"Run Away, Klutz, Limber ",Rabbit Pokemon,FALSE
+428,Lopunny,4,1.2,33.3,"Cute Charm, Klutz, Limber ",Rabbit Pokemon,FALSE
+429,Mismagius,4,0.9,4.4,Levitate ,Magical Pokemon,FALSE
+430,Honchkrow,4,0.9,27.3,"Insomnia, Super Luck, Moxie ",Big Boss Pokemon,FALSE
+431,Glameow,4,0.5,3.9,"Limber, Own Tempo, Keen Eye ",Catty Pokemon,FALSE
+432,Purugly,4,1,43.8,"Thick Fat, Own Tempo, Defiant ",Tiger Cat Pokemon,FALSE
+433,Chingling,4,0.2,0.6,Levitate ,Bell Pokemon,FALSE
+434,Stunky,4,0.4,19.2,"Stench, Aftermath, Keen Eye ",Skunk Pokemon,FALSE
+435,Skuntank,4,1,38,"Stench, Aftermath, Keen Eye ",Skunk Pokemon,FALSE
+436,Bronzor,4,0.5,60.5,"Levitate, Heatproof, Heavy Metal ",Bronze Pokemon,FALSE
+437,Bronzong,4,1.3,187,"Levitate, Heatproof, Heavy Metal ",Bronze Bell Pokemon,FALSE
+438,Bonsly,4,0.5,15,"Sturdy, Rock Head, Rattled ",Bonsai Pokemon,FALSE
+439,Mime Jr.,4,0.6,13,"Soundproof, Filter, Technician ",Mime Pokemon,FALSE
+440,Happiny,4,0.6,24.4,"Natural Cure, Serene Grace, Friend Guard ",Playhouse Pokemon,FALSE
+441,Chatot,4,0.5,1.9,"Keen Eye, Tangled Feet, Big Pecks ",Music Note Pokemon,FALSE
+442,Spiritomb,4,1,108,"Pressure, Infiltrator ",Forbidden Pokemon,FALSE
+443,Gible,4,0.7,20.5,"Sand Veil, Rough Skin ",Land Shark Pokemon,FALSE
+444,Gabite,4,1.4,56,"Sand Veil, Rough Skin ",Cave Pokemon,FALSE
+445,Garchomp,4,1.9,95,"Sand Veil, Rough Skin ",Mach Pokemon,FALSE
+446,Munchlax,4,0.6,105,"Pickup, Thick Fat, Gluttony ",Big Eater Pokemon,FALSE
+447,Riolu,4,0.7,20.2,"Steadfast, Inner Focus, Prankster ",Emanation Pokemon,FALSE
+448,Lucario,4,1.2,54,"Steadfast, Inner Focus, Justified ",Aura Pokemon,FALSE
+449,Hippopotas,4,0.8,49.5,"Sand Stream, Sand Force ",Hippo Pokemon,FALSE
+450,Hippowdon,4,2,300,"Sand Stream, Sand Force ",Heavyweight Pokemon,FALSE
+451,Skorupi,4,0.8,12,"Battle Armor, Sniper, Keen Eye ",Scorpion Pokemon,FALSE
+452,Drapion,4,1.3,61.5,"Battle Armor, Sniper, Keen Eye ",Ogre Scorp Pokemon,FALSE
+453,Croagunk,4,0.7,23,"Anticipation, Dry Skin, Poison Touch ",Toxic Mouth Pokemon,FALSE
+454,Toxicroak,4,1.3,44.4,"Anticipation, Dry Skin, Poison Touch ",Toxic Mouth Pokemon,FALSE
+455,Carnivine,4,1.4,27,Levitate ,Bug Catcher Pokemon,FALSE
+456,Finneon,4,0.4,7,"Swift Swim, Storm Drain, Water Veil ",Wing Fish Pokemon,FALSE
+457,Lumineon,4,1.2,24,"Swift Swim, Storm Drain, Water Veil ",Neon Pokemon,FALSE
+458,Mantyke,4,1,65,"Swift Swim, Water Absorb, Water Veil ",Kite Pokemon,FALSE
+459,Snover,4,1,50.5,"Snow Warning, Soundproof ",Frosted Tree Pokemon,FALSE
+460,Abomasnow,4,2.2,135.5,"Snow Warning, Soundproof ",Frosted Tree Pokemon,FALSE
+461,Weavile,4,1.1,34,"Pressure, Pickpocket ",Sharp Claw Pokemon,FALSE
+462,Magnezone,4,1.2,180,"Magnet Pull, Sturdy, Analytic ",Magnet Area Pokemon,FALSE
+463,Lickilicky,4,1.7,140,"Own Tempo, Oblivious, Cloud Nine ",Licking Pokemon,FALSE
+464,Rhyperior,4,2.4,282.8,"Lightningrod, Solid Rock, Reckless ",Drill Pokemon,FALSE
+465,Tangrowth,4,2,128.6,"Chlorophyll, Leaf Guard, Regenerator ",Vine Pokemon,FALSE
+466,Electivire,4,1.8,138.6,"Motor Drive, Vital Spirit ",Thunderbolt Pokemon,FALSE
+467,Magmortar,4,1.6,68,"Flame Body, Vital Spirit ",Blast Pokemon,FALSE
+468,Togekiss,4,1.5,38,"Hustle, Serene Grace, Super Luck ",Jubilee Pokemon,FALSE
+469,Yanmega,4,1.9,51.5,"Speed Boost, Tinted Lens, Frisk ",Ogre Darner Pokemon,FALSE
+470,Leafeon,4,1,25.5,"Leaf Guard, Chlorophyll ",Verdant Pokemon,FALSE
+471,Glaceon,4,0.8,25.9,"Snow Cloak, Ice Body ",Fresh Snow Pokemon,FALSE
+472,Gliscor,4,2,42.5,"Hyper Cutter, Sand Veil, Poison Heal ",Fang Scorp Pokemon,FALSE
+473,Mamoswine,4,2.5,291,"Oblivious, Snow Cloak, Thick Fat ",Twin Tusk Pokemon,FALSE
+474,Porygon-Z,4,0.9,34,"Adaptability, Download, Analytic ",Virtual Pokemon,FALSE
+475,Gallade,4,1.6,52,"Steadfast, Justified ",Blade Pokemon,FALSE
+476,Probopass,4,1.4,340,"Sturdy, Magnet Pull, Sand Force ",Compass Pokemon,FALSE
+477,Dusknoir,4,2.2,106.6,"Pressure, Frisk ",Gripper Pokemon,FALSE
+478,Froslass,4,1.3,26.6,"Snow Cloak, Cursed Body ",Snow Land Pokemon,FALSE
+479,Rotom,4,0.3,0.3,Levitate ,Plasma Pokemon,FALSE
+480,Uxie,4,0.3,0.3,Levitate ,Knowledge Pokemon,FALSE
+481,Mesprit,4,0.3,0.3,Levitate ,Emotion Pokemon,FALSE
+482,Azelf,4,0.3,0.3,Levitate ,Willpower Pokemon,FALSE
+483,Dialga,4,5.4,683,"Pressure, Telepathy ",Temporal Pokemon,FALSE
+484,Palkia,4,4.2,336,"Pressure, Telepathy ",Spatial Pokemon,FALSE
+485,Heatran,4,1.7,430,"Flash Fire, Flame Body ",Lava Dome Pokemon,FALSE
+486,Regigigas,4,3.7,420,Slow Start ,Colossal Pokemon,FALSE
+487,Giratina,4,4.5,750,"Pressure, Telepathy, Levitate ",Renegade Pokemon,FALSE
+488,Cresselia,4,1.5,85.6,Levitate ,Lunar Pokemon,FALSE
+489,Phione,4,0.4,3.1,Hydration ,Sea Drifter Pokemon,FALSE
+490,Manaphy,4,0.3,1.4,Hydration ,Seafaring Pokemon,FALSE
+491,Darkrai,4,1.5,50.5,Bad Dreams ,Pitch-Black Pokemon,FALSE
+492,Shaymin,4,0.2,2.1,"Natural Cure, Serene Grace ",Gratitude Pokemon,FALSE
+493,Arceus,4,3.2,320,Multitype ,Alpha Pokemon,FALSE
+494,Victini,5,0.4,4,Victory Star ,Victory Pokemon,FALSE
+495,Snivy,5,0.6,8.1,"Overgrow, Contrary ",Grass Snake Pokemon,FALSE
+496,Servine,5,0.8,16,"Overgrow, Contrary ",Grass Snake Pokemon,FALSE
+497,Serperior,5,3.3,63,"Overgrow, Contrary ",Regal Pokemon,FALSE
+498,Tepig,5,0.5,9.9,"Blaze, Thick Fat ",Fire Pig Pokemon,FALSE
+499,Pignite,5,1,55.5,"Blaze, Thick Fat ",Fire Pig Pokemon,FALSE
+500,Emboar,5,1.6,150,"Blaze, Reckless ",Mega Fire Pig Pokemon,FALSE
+501,Oshawott,5,0.5,5.9,"Torrent, Shell Armor ",Sea Otter Pokemon,FALSE
+502,Dewott,5,0.8,24.5,"Torrent, Shell Armor ",Discipline Pokemon,FALSE
+503,Samurott,5,1.5,94.6,"Torrent, Shell Armor ",Formidable Pokemon,FALSE
+504,Patrat,5,0.5,11.6,"Run Away, Keen Eye, Analytic ",Scout Pokemon,FALSE
+505,Watchog,5,1.1,27,"Illuminate, Keen Eye, Analytic ",Lookout Pokemon,FALSE
+506,Lillipup,5,0.4,4.1,"Vital Spirit, Pickup, Run Away ",Puppy Pokemon,FALSE
+507,Herdier,5,0.9,14.7,"Intimidate, Sand Rush, Scrappy ",Loyal Dog Pokemon,FALSE
+508,Stoutland,5,1.2,61,"Intimidate, Sand Rush, Scrappy ",Big-Hearted Pokemon,FALSE
+509,Purrloin,5,0.4,10.1,"Limber, Unburden, Prankster ",Devious Pokemon,FALSE
+510,Liepard,5,1.1,37.5,"Limber, Unburden, Prankster ",Cruel Pokemon,FALSE
+511,Pansage,5,0.6,10.5,"Gluttony, Overgrow ",Grass Monkey Pokemon,FALSE
+512,Simisage,5,1.1,30.5,"Gluttony, Overgrow ",Thorn Monkey Pokemon,FALSE
+513,Pansear,5,0.6,11,"Gluttony, Blaze ",High Temp Pokemon,FALSE
+514,Simisear,5,1,28,"Gluttony, Blaze ",Ember Pokemon,FALSE
+515,Panpour,5,0.6,13.5,"Gluttony, Torrent ",Spray Pokemon,FALSE
+516,Simipour,5,1,29,"Gluttony, Torrent ",Geyser Pokemon,FALSE
+517,Munna,5,0.6,23.3,"Forewarn, Synchronize, Telepathy ",Dream Eater Pokemon,FALSE
+518,Musharna,5,1.1,60.5,"Forewarn, Synchronize, Telepathy ",Drowsing Pokemon,FALSE
+519,Pidove,5,0.3,2.1,"Big Pecks, Super Luck, Rivalry ",Tiny Pigeon Pokemon,FALSE
+520,Tranquill,5,0.6,15,"Big Pecks, Super Luck, Rivalry ",Wild Pigeon Pokemon,FALSE
+521,Unfezant,5,1.2,29,"Big Pecks, Super Luck, Rivalry ",Proud Pokemon,FALSE
+522,Blitzle,5,0.8,29.8,"Lightningrod, Motor Drive, Sap Sipper ",Electrified Pokemon,FALSE
+523,Zebstrika,5,1.6,79.5,"Lightningrod, Motor Drive, Sap Sipper ",Thunderbolt Pokemon,FALSE
+524,Roggenrola,5,0.4,18,"Sturdy, Weak Armor, Sand Force ",Mantle Pokemon,FALSE
+525,Boldore,5,0.9,102,"Sturdy, Weak Armor, Sand Force ",Ore Pokemon,FALSE
+526,Gigalith,5,1.7,260,"Sturdy, Sand Stream, Sand Force ",Compressed Pokemon,FALSE
+527,Woobat,5,0.4,2.1,"Unaware, Klutz, Simple ",Bat Pokemon,FALSE
+528,Swoobat,5,0.9,10.5,"Unaware, Klutz, Simple ",Courting Pokemon,FALSE
+529,Drilbur,5,0.3,8.5,"Sand Rush, Sand Force, Mold Breaker ",Mole Pokemon,FALSE
+530,Excadrill,5,0.7,40.4,"Sand Rush, Sand Force, Mold Breaker ",Subterrene Pokemon,FALSE
+531,Audino,5,1.1,31,"Healer, Regenerator, Klutz ",Hearing Pokemon,FALSE
+532,Timburr,5,0.6,12.5,"Guts, Sheer Force, Iron Fist ",Muscular Pokemon,FALSE
+533,Gurdurr,5,1.2,40,"Guts, Sheer Force, Iron Fist ",Muscular Pokemon,FALSE
+534,Conkeldurr,5,1.4,87,"Guts, Sheer Force, Iron Fist ",Muscular Pokemon,FALSE
+535,Tympole,5,0.5,4.5,"Swift Swim, Hydration, Water Absorb ",Tadpole Pokemon,FALSE
+536,Palpitoad,5,0.8,17,"Swift Swim, Hydration, Water Absorb ",Vibration Pokemon,FALSE
+537,Seismitoad,5,1.5,62,"Swift Swim, Poison Touch, Water Absorb ",Vibration Pokemon,FALSE
+538,Throh,5,1.3,55.5,"Guts, Inner Focus, Mold Breaker ",Judo Pokemon,FALSE
+539,Sawk,5,1.4,51,"Sturdy, Inner Focus, Mold Breaker ",Karate Pokemon,FALSE
+540,Sewaddle,5,0.3,2.5,"Swarm, Chlorophyll, Overcoat ",Sewing Pokemon,FALSE
+541,Swadloon,5,0.5,7.3,"Leaf Guard, Chlorophyll, Overcoat ",Leaf-Wrapped Pokemon,FALSE
+542,Leavanny,5,1.2,20.5,"Swarm, Chlorophyll, Overcoat ",Nurturing Pokemon,FALSE
+543,Venipede,5,0.4,5.3,"Poison Point, Swarm, Speed Boost ",Centipede Pokemon,FALSE
+544,Whirlipede,5,1.2,58.5,"Poison Point, Swarm, Speed Boost ",Curlipede Pokemon,FALSE
+545,Scolipede,5,2.5,200.5,"Poison Point, Swarm, Speed Boost ",Megapede Pokemon,FALSE
+546,Cottonee,5,0.3,0.6,"Prankster, Infiltrator, Chlorophyll ",Cotton Puff Pokemon,FALSE
+547,Whimsicott,5,0.7,6.6,"Prankster, Infiltrator, Chlorophyll ",Windveiled Pokemon,FALSE
+548,Petilil,5,0.5,6.6,"Chlorophyll, Own Tempo, Leaf Guard ",Bulb Pokemon,FALSE
+549,Lilligant,5,1.1,16.3,"Chlorophyll, Own Tempo, Leaf Guard ",Flowering Pokemon,FALSE
+550,Basculin,5,1,18,"Reckless, Rock Head, Adaptability, Mold Breaker ",Hostile Pokemon,FALSE
+551,Sandile,5,0.7,15.2,"Intimidate, Moxie, Anger Point ",Desert Croc Pokemon,FALSE
+552,Krokorok,5,1,33.4,"Intimidate, Moxie, Anger Point ",Desert Croc Pokemon,FALSE
+553,Krookodile,5,1.5,96.3,"Intimidate, Moxie, Anger Point ",Intimidation Pokemon,FALSE
+554,Darumaka,5,0.6,37.5,"Hustle, Inner Focus ",Zen Charm Pokemon,FALSE
+555,Darmanitan,5,1.3,92.9,"Sheer Force, Zen Mode ",Blazing Pokemon,FALSE
+556,Maractus,5,1,28,"Water Absorb, Chlorophyll, Storm Drain ",Cactus Pokemon,FALSE
+557,Dwebble,5,0.3,14.5,"Sturdy, Shell Armor, Weak Armor ",Rock Inn Pokemon,FALSE
+558,Crustle,5,1.4,200,"Sturdy, Shell Armor, Weak Armor ",Stone Home Pokemon,FALSE
+559,Scraggy,5,0.6,11.8,"Shed Skin, Moxie, Intimidate ",Shedding Pokemon,FALSE
+560,Scrafty,5,1.1,30,"Shed Skin, Moxie, Intimidate ",Hoodlum Pokemon,FALSE
+561,Sigilyph,5,1.4,14,"Wonder Skin , Magic Guard, Tinted Lens ",Avianoid Pokemon,FALSE
+562,Yamask,5,0.5,1.5,Mummy ,Spirit Pokemon,FALSE
+563,Cofagrigus,5,1.7,76.5,Mummy ,Coffin Pokemon,FALSE
+564,Tirtouga,5,0.7,16.5,"Solid Rock, Sturdy, Swift Swim ",Prototurtle Pokemon,FALSE
+565,Carracosta,5,1.2,81,"Solid Rock, Sturdy, Swift Swim ",Prototurtle Pokemon,FALSE
+566,Archen,5,0.5,9.5,Defeatist ,First Bird Pokemon,FALSE
+567,Archeops,5,1.4,32,Defeatist ,First Bird Pokemon,FALSE
+568,Trubbish,5,0.6,31,"Stench, Sticky Hold, Aftermath ",Trash Bag Pokemon,FALSE
+569,Garbodor,5,1.9,107.3,"Stench, Weak Armor, Aftermath ",Trash Heap Pokemon,FALSE
+570,Zorua,5,0.7,12.5,Illusion ,Tricky Fox Pokemon,FALSE
+571,Zoroark,5,1.6,81.1,Illusion ,Illusion Fox Pokemon,FALSE
+572,Minccino,5,0.4,5.8,"Cute Charm, Technician, Skill Link ",Chinchilla Pokemon,FALSE
+573,Cinccino,5,0.5,7.5,"Cute Charm, Technician, Skill Link ",Scarf Pokemon,FALSE
+574,Gothita,5,0.4,5.8,"Frisk, Competitive, Shadow Tag ",Fixation Pokemon,FALSE
+575,Gothorita,5,0.7,18,"Frisk, Competitive, Shadow Tag ",Manipulate Pokemon,FALSE
+576,Gothitelle,5,1.5,44,"Frisk, Competitive, Shadow Tag ",Astral Body Pokemon,FALSE
+577,Solosis,5,0.3,1,"Overcoat, Magic Guard, Regenerator ",Cell Pokemon,FALSE
+578,Duosion,5,0.6,8,"Overcoat, Magic Guard, Regenerator ",Mitosis Pokemon,FALSE
+579,Reuniclus,5,1,20.1,"Overcoat, Magic Guard, Regenerator ",Multiplying Pokemon,FALSE
+580,Ducklett,5,0.5,5.5,"Keen Eye, Big Pecks, Hydration ",Water Bird Pokemon,FALSE
+581,Swanna,5,1.3,24.2,"Keen Eye, Big Pecks, Hydration ",White Bird Pokemon,FALSE
+582,Vanillite,5,0.4,5.7,"Ice Body, Snow Cloak, Weak Armor ",Fresh Snow Pokemon,FALSE
+583,Vanillish,5,1.1,41,"Ice Body, Snow Cloak, Weak Armor ",Icy Snow Pokemon,FALSE
+584,Vanilluxe,5,1.3,57.5,"Ice Body, Snow Warning, Weak Armor ",Snowstorm Pokemon,FALSE
+585,Deerling,5,0.6,19.5,"Chlorophyll, Sap Sipper, Serene Grace ",Season Pokemon,FALSE
+586,Sawsbuck,5,1.9,92.5,"Chlorophyll, Sap Sipper, Serene Grace ",Season Pokemon,FALSE
+587,Emolga,5,0.4,5,"Static, Motor Drive ",Sky Squirrel Pokemon,FALSE
+588,Karrablast,5,0.5,5.9,"Swarm, Shed Skin, No Guard ",Clamping Pokemon,FALSE
+589,Escavalier,5,1,33,"Swarm, Shell Armor, Overcoat ",Cavalry Pokemon,FALSE
+590,Foongus,5,0.2,1,"Effect Spore, Regenerator ",Mushroom Pokemon,FALSE
+591,Amoonguss,5,0.6,10.5,"Effect Spore, Regenerator ",Mushroom Pokemon,FALSE
+592,Frillish,5,1.2,33,"Water Absorb, Cursed Body, Damp ",Floating Pokemon,FALSE
+593,Jellicent,5,2.2,135,"Water Absorb, Cursed Body, Damp ",Floating Pokemon,FALSE
+594,Alomomola,5,1.2,31.6,"Healer, Hydration, Regenerator ",Caring Pokemon,FALSE
+595,Joltik,5,0.1,0.6,"Compoundeyes, Unnerve, Swarm ",Attaching Pokemon,FALSE
+596,Galvantula,5,0.8,14.3,"Compoundeyes, Unnerve, Swarm ",EleSpider Pokemon,FALSE
+597,Ferroseed,5,0.6,18.8,Iron Barbs ,Thorn Seed Pokemon,FALSE
+598,Ferrothorn,5,1,110,"Iron Barbs, Anticipation ",Thorn Pod Pokemon,FALSE
+599,Klink,5,0.3,21,"Plus, Minus, Clear Body ",Gear Pokemon,FALSE
+600,Klang,5,0.6,51,"Plus, Minus, Clear Body ",Gear Pokemon,FALSE
+601,Klinklang,5,0.6,81,"Plus, Minus, Clear Body ",Gear Pokemon,FALSE
+602,Tynamo,5,0.2,0.3,Levitate ,EleFish Pokemon,FALSE
+603,Eelektrik,5,1.2,22,Levitate ,EleFish Pokemon,FALSE
+604,Eelektross,5,2.1,80.5,Levitate ,EleFish Pokemon,FALSE
+605,Elgyem,5,0.5,9,"Telepathy, Synchronize, Analytic ",Cerebral Pokemon,FALSE
+606,Beheeyem,5,1,34.5,"Telepathy, Synchronize, Analytic ",Cerebral Pokemon,FALSE
+607,Litwick,5,0.3,3.1,"Flash Fire, Flame Body, Infiltrator ",Candle Pokemon,FALSE
+608,Lampent,5,0.6,13,"Flash Fire, Flame Body, Infiltrator ",Lamp Pokemon,FALSE
+609,Chandelure,5,1,34.3,"Flash Fire, Flame Body, Infiltrator ",Luring Pokemon,FALSE
+610,Axew,5,0.6,18,"Rivalry, Mold Breaker, Unnerve ",Tusk Pokemon,FALSE
+611,Fraxure,5,1,36,"Rivalry, Mold Breaker, Unnerve ",Axe Jaw Pokemon,FALSE
+612,Haxorus,5,1.8,105.5,"Rivalry, Mold Breaker, Unnerve ",Axe Jaw Pokemon,FALSE
+613,Cubchoo,5,0.5,8.5,"Snow Cloak, Slush Rush, Rattled ",Chill Pokemon,FALSE
+614,Beartic,5,2.6,260,"Snow Cloak, Slush Rush, Swift Swim ",Freezing Pokemon,FALSE
+615,Cryogonal,5,1.1,148,Levitate ,Crystallizing Pokemon,FALSE
+616,Shelmet,5,0.4,7.7,"Hydration, Shell Armor, Overcoat ",Snail Pokemon,FALSE
+617,Accelgor,5,0.8,25.3,"Hydration, Sticky Hold, Unburden ",Shell Out Pokemon,FALSE
+618,Stunfisk,5,0.7,11,"Static, Limber, Sand Veil ",Trap Pokemon,FALSE
+619,Mienfoo,5,0.9,20,"Inner Focus, Regenerator, Reckless ",Martial Arts Pokemon,FALSE
+620,Mienshao,5,1.4,35.5,"Inner Focus, Regenerator, Reckless ",Martial Arts Pokemon,FALSE
+621,Druddigon,5,1.6,139,"Rough Skin, Sheer Force, Mold Breaker ",Cave Pokemon,FALSE
+622,Golett,5,1,92,"Iron Fist, Klutz, No Guard ",Automaton Pokemon,FALSE
+623,Golurk,5,2.8,330,"Iron Fist, Klutz, No Guard ",Automaton Pokemon,FALSE
+624,Pawniard,5,0.5,10.2,"Defiant, Inner Focus, Pressure ",Sharp Blade Pokemon,FALSE
+625,Bisharp,5,1.6,70,"Defiant, Inner Focus, Pressure ",Sword Blade Pokemon,FALSE
+626,Bouffalant,5,1.6,94.6,"Reckless, Sap Sipper, Soundproof ",Bash Buffalo Pokemon,FALSE
+627,Rufflet,5,0.5,10.5,"Keen Eye, Sheer Force, Hustle ",Eaglet Pokemon,FALSE
+628,Braviary,5,1.5,41,"Keen Eye, Sheer Force, Defiant ",Valiant Pokemon,FALSE
+629,Vullaby,5,0.5,9,"Big Pecks, Overcoat, Weak Armor ",Diapered Pokemon,FALSE
+630,Mandibuzz,5,1.2,39.5,"Big Pecks, Overcoat, Weak Armor ",Bone Vulture Pokemon,FALSE
+631,Heatmor,5,1.4,58,"Gluttony, Flash Fire, White Smoke ",Anteater Pokemon,FALSE
+632,Durant,5,0.3,33,"Swarm, Hustle, Truant ",Iron Ant Pokemon,FALSE
+633,Deino,5,0.8,17.3,Hustle ,Irate Pokemon,FALSE
+634,Zweilous,5,1.4,50,Hustle ,Hostile Pokemon,FALSE
+635,Hydreigon,5,1.8,160,Levitate ,Brutal Pokemon,FALSE
+636,Larvesta,5,1.1,28.8,"Flame Body, Swarm ",Torch Pokemon,FALSE
+637,Volcarona,5,1.6,46,"Flame Body, Swarm ",Sun Pokemon,FALSE
+638,Cobalion,5,2.1,250,Justified ,Iron Will Pokemon,FALSE
+639,Terrakion,5,1.9,260,Justified ,Cavern Pokemon,FALSE
+640,Virizion,5,2,200,Justified ,Grassland Pokemon,FALSE
+641,Tornadus,5,1.5,63,"Prankster, Defiant, Regenerator ",Cyclone Pokemon,FALSE
+642,Thundurus,5,1.5,61,"Prankster, Defiant, Volt Absorb ",Bolt Strike Pokemon,FALSE
+643,Reshiram,5,3.2,330,Turboblaze ,Vast White Pokemon,FALSE
+644,Zekrom,5,2.9,345,Teravolt ,Deep Black Pokemon,FALSE
+645,Landorus,5,1.5,68,"Sand Force, Sheer Force, Intimidate ",Abundance Pokemon,FALSE
+646,Kyurem,5,3,325,"Pressure, Teravolt, Turboblaze ",Boundary Pokemon,FALSE
+647,Keldeo,5,1.4,48.5,Justified ,Colt Pokemon,FALSE
+648,Meloetta,5,0.6,6.5,Serene Grace ,Melody Pokemon,FALSE
+649,Genesect,5,1.5,82.5,Download ,Paleozoic Pokemon,FALSE
+650,Chespin,6,0.4,9,"Overgrow, Bulletproof ",Spiky Nut Pokemon,FALSE
+651,Quilladin,6,0.7,29,"Overgrow, Bulletproof ",Spiny Armor Pokemon,FALSE
+652,Chesnaught,6,1.6,90,"Overgrow, Bulletproof ",Spiny Armor Pokemon,FALSE
+653,Fennekin,6,0.4,9.4,"Blaze, Magician ",Fox Pokemon,FALSE
+654,Braixen,6,1,14.5,"Blaze, Magician ",Fox Pokemon,FALSE
+655,Delphox,6,1.5,39,"Blaze, Magician ",Fox Pokemon,FALSE
+656,Froakie,6,0.3,7,"Torrent, Protean ",Bubble Frog Pokemon,FALSE
+657,Frogadier,6,0.6,10.9,"Torrent, Protean ",Bubble Frog Pokemon,FALSE
+658,Greninja,6,1.5,40,"Torrent, Protean, Battle Bond ",Ninja Pokemon,FALSE
+659,Bunnelby,6,0.4,5,"Pickup, Cheek Pouch, Huge Power ",Digging Pokemon,FALSE
+660,Diggersby,6,1,42.4,"Pickup, Cheek Pouch, Huge Power ",Digging Pokemon,FALSE
+661,Fletchling,6,0.3,1.7,"Big Pecks, Gale Wings ",Tiny Robin Pokemon,FALSE
+662,Fletchinder,6,0.7,16,"Flame Body, Gale Wings ",Ember Pokemon,FALSE
+663,Talonflame,6,1.2,24.5,"Flame Body, Gale Wings ",Scorching Pokemon,FALSE
+664,Scatterbug,6,0.3,2.5,"Shield Dust, Compoundeyes, Friend Guard ",Scatterdust Pokemon,FALSE
+665,Spewpa,6,0.3,8.4,"Shed Skin, Friend Guard ",Scatterdust Pokemon,FALSE
+666,Vivillon,6,1.2,17,"Shield Dust, Compoundeyes, Friend Guard ",Scale Pokemon,FALSE
+667,Litleo,6,0.6,13.5,"Rivalry, Unnerve, Moxie ",Lion Cub Pokemon,FALSE
+668,Pyroar,6,1.5,81.5,"Rivalry, Unnerve, Moxie ",Royal Pokemon,FALSE
+669,Flabébé,6,0.1,0.1,"Flower Veil, Symbiosis ",Single Bloom Pokemon,FALSE
+670,Floette,6,0.2,0.9,"Flower Veil, Symbiosis ",Fairy Pokemon,FALSE
+671,Florges,6,1.1,10,"Flower Veil, Symbiosis ",Garden Pokemon,FALSE
+672,Skiddo,6,0.9,31,"Sap Sipper, Grass Pelt ",Mount Pokemon,FALSE
+673,Gogoat,6,1.7,91,"Sap Sipper, Grass Pelt ",Mount Pokemon,FALSE
+674,Pancham,6,0.6,8,"Iron Fist, Mold Breaker, Scrappy ",Playful Pokemon,FALSE
+675,Pangoro,6,2.1,136,"Iron Fist, Mold Breaker, Scrappy ",Daunting Pokemon,FALSE
+676,Furfrou,6,1.2,28,Fur Coat ,Poodle Pokemon,FALSE
+677,Espurr,6,0.3,3.5,"Keen Eye, Infiltrator, Own Tempo ",Restraint Pokemon,FALSE
+678,Meowstic,6,0.6,8.5,"Keen Eye, Infiltrator, Prankster, Competitive ",Constraint Pokemon,FALSE
+679,Honedge,6,0.8,2,No Guard ,Sword Pokemon,FALSE
+680,Doublade,6,0.8,4.5,No Guard ,Sword Pokemon,FALSE
+681,Aegislash,6,1.7,53,Stance Change ,Royal Sword Pokemon,FALSE
+682,Spritzee,6,0.2,0.5,"Healer, Aroma Veil ",Perfume Pokemon,FALSE
+683,Aromatisse,6,0.8,15.5,"Healer, Aroma Veil ",Fragrance Pokemon,FALSE
+684,Swirlix,6,0.4,3.5,"Sweet Veil, Unburden ",Cotton Candy Pokemon,FALSE
+685,Slurpuff,6,0.8,5,"Sweet Veil, Unburden ",Meringue Pokemon,FALSE
+686,Inkay,6,0.4,3.5,"Contrary, Suction Cups, Infiltrator ",Revolving Pokemon,FALSE
+687,Malamar,6,1.5,47,"Contrary, Suction Cups, Infiltrator ",Overturning Pokemon,FALSE
+688,Binacle,6,0.5,31,"Tough Claws, Sniper, Pickpocket ",Two-Handed Pokemon,FALSE
+689,Barbaracle,6,1.3,96,"Tough Claws, Sniper, Pickpocket ",Collective Pokemon,FALSE
+690,Skrelp,6,0.5,7.3,"Poison Point, Poison Touch, Adaptability ",Mock Kelp Pokemon,FALSE
+691,Dragalge,6,1.8,81.5,"Poison Point, Poison Touch, Adaptability ",Mock Kelp Pokemon,FALSE
+692,Clauncher,6,0.5,8.3,Mega Launcher ,Water Gun Pokemon,FALSE
+693,Clawitzer,6,1.3,35.3,Mega Launcher ,Howitzer Pokemon,FALSE
+694,Helioptile,6,0.5,6,"Dry Skin, Sand Veil, Solar Power ",Generator Pokemon,FALSE
+695,Heliolisk,6,1,21,"Dry Skin, Sand Veil, Solar Power ",Generator Pokemon,FALSE
+696,Tyrunt,6,0.8,26,"Strong Jaw, Sturdy ",Royal Heir Pokemon,FALSE
+697,Tyrantrum,6,2.5,270,"Strong Jaw, Rock Head ",Despot Pokemon,FALSE
+698,Amaura,6,1.3,25.2,"Refrigerate, Snow Warning ",Tundra Pokemon,FALSE
+699,Aurorus,6,2.7,225,"Refrigerate, Snow Warning ",Tundra Pokemon,FALSE
+700,Sylveon,6,1,23.5,"Cute Charm, Pixilate ",Intertwining Pokemon,FALSE
+701,Hawlucha,6,0.8,21.5,"Limber, Unburden, Mold Breaker ",Wrestling Pokemon,FALSE
+702,Dedenne,6,0.2,2.2,"Cheek Pouch, Pickup, Plus ",Antenna Pokemon,FALSE
+703,Carbink,6,0.3,5.7,"Clear Body, Sturdy ",Jewel Pokemon,FALSE
+704,Goomy,6,0.3,2.8,"Sap Sipper, Hydration, Gooey ",Soft Tissue Pokemon,FALSE
+705,Sliggoo,6,0.8,17.5,"Sap Sipper, Hydration, Gooey ",Soft Tissue Pokemon,FALSE
+706,Goodra,6,2,150.5,"Sap Sipper, Hydration, Gooey ",Dragon Pokemon,FALSE
+707,Klefki,6,0.2,3,"Prankster, Magician ",Key Ring Pokemon,FALSE
+708,Phantump,6,0.4,7,"Natural Cure, Frisk, Harvest ",Stump Pokemon,FALSE
+709,Trevenant,6,1.5,71,"Natural Cure, Frisk, Harvest ",Elder Tree Pokemon,FALSE
+710,Pumpkaboo,6,0.8,15,"Pickup, Frisk, Insomnia ",Pumpkin Pokemon,FALSE
+711,Gourgeist,6,1.7,39,"Pickup, Frisk, Insomnia ",Pumpkin Pokemon,FALSE
+712,Bergmite,6,1,99.5,"Own Tempo, Ice Body, Sturdy ",Ice Chunk Pokemon,FALSE
+713,Avalugg,6,2,505,"Own Tempo, Ice Body, Sturdy ",Iceberg Pokemon,FALSE
+714,Noibat,6,0.5,8,"Frisk, Infiltrator, Telepathy ",Sound Wave Pokemon,FALSE
+715,Noivern,6,1.5,85,"Frisk, Infiltrator, Telepathy ",Sound Wave Pokemon,FALSE
+716,Xerneas,6,3,215,Fairy Aura ,Life Pokemon,FALSE
+717,Yveltal,6,5.8,203,Dark Aura ,Destruction Pokemon,FALSE
+718,Zygarde,6,5,284.6,"Aura Break, Power Construct ",Order Pokemon,FALSE
+719,Diancie,6,0.7,8.8,Clear Body ,Jewel Pokemon,FALSE
+720,Hoopa,6,0.5,9,Magician ,Mischief Pokemon (Confined),FALSE
+721,Volcanion,6,1.7,195,Water Absorb ,Steam Pokemon,FALSE
+722,Rowlet,7,0.3,1.5,"Overgrow, Long Reach ",Grass Quill Pokemon,FALSE
+723,Dartrix,7,0.7,16,"Overgrow, Long Reach ",Blade Quill Pokemon,FALSE
+724,Decidueye,7,1.6,36.6,"Overgrow, Long Reach ",Arrow Quill Pokemon,FALSE
+725,Litten,7,0.4,4.3,"Blaze, Intimidate ",Fire Cat Pokemon,FALSE
+726,Torracat,7,0.7,25,"Blaze, Intimidate ",Fire Cat Pokemon,FALSE
+727,Incineroar,7,1.8,83,"Blaze, Intimidate ",Heel Pokemon,FALSE
+728,Popplio,7,0.4,7.5,"Torrent, Liquid Voice ",Sea Lion Pokemon,FALSE
+729,Brionne,7,0.6,17.5,"Torrent, Liquid Voice ",Pop Star Pokemon,FALSE
+730,Primarina,7,1.8,44,"Torrent, Liquid Voice ",Soloist Pokemon,FALSE
+731,Pikipek,7,0.3,1.2,"Keen Eye, Skill Link, Pickup ",Woodpecker Pokemon,FALSE
+732,Trumbeak,7,0.6,14.8,"Keen Eye, Skill Link, Pickup ",Bugle Beak Pokemon,FALSE
+733,Toucannon,7,1.1,26,"Keen Eye, Skill Link, Sheer Force ",Cannon Pokemon,FALSE
+734,Yungoos,7,0.4,6,"Stakeout, Strong Jaw, Adaptability ",Loitering Pokemon,FALSE
+735,Gumshoos,7,0.7,14.2,"Stakeout, Strong Jaw, Adaptability ",Stakeout Pokemon,FALSE
+736,Grubbin,7,0.4,4.4,Swarm ,Larva Pokemon,FALSE
+737,Charjabug,7,0.5,10.5,Battery ,Battery Pokemon,FALSE
+738,Vikavolt,7,1.5,45,Levitate ,Stag Beetle Pokemon,FALSE
+739,Crabrawler,7,0.6,7,"Hyper Cutter, Iron Fist, Anger Point ",Boxing Pokemon,FALSE
+740,Crabominable,7,1.7,180,"Hyper Cutter, Iron Fist, Anger Point ",Woolly Crab Pokemon,FALSE
+741,Oricorio,7,0.6,3.4,Dancer ,Dancing Pokemon,FALSE
+742,Cutiefly,7,0.1,0.2,"Honey Gather, Shield Dust, Sweet Veil ",Bee Fly Pokemon,FALSE
+743,Ribombee,7,0.2,0.5,"Honey Gather, Shield Dust, Sweet Veil ",Bee Fly Pokemon,FALSE
+744,Rockruff,7,0.5,9.2,"Keen Eye, Vital Spirit, Steadfast ",Puppy Pokemon,FALSE
+745,Lycanroc,7,0.8,25,"Keen Eye, Sand Rush, Steadfast, Keen Eye, Vital Spirit, No Guard ",Wolf Pokemon,FALSE
+746,Wishiwashi,7,0.2,0.3,Schooling ,Small Fry Pokemon,FALSE
+747,Mareanie,7,0.4,8,"Merciless, Limber, Regenerator ",Brutal Star Pokemon,FALSE
+748,Toxapex,7,0.7,14.5,"Merciless, Limber, Regenerator ",Brutal Star Pokemon,FALSE
+749,Mudbray,7,1,110,"Own Tempo, Stamina, Inner Focus ",Donkey Pokemon,FALSE
+750,Mudsdale,7,2.5,920,"Own Tempo, Stamina, Inner Focus ",Draft Horse Pokemon,FALSE
+751,Dewpider,7,0.3,4,"Water Bubble, Water Absorb ",Water Bubble Pokemon,FALSE
+752,Araquanid,7,1.8,82,"Water Bubble, Water Absorb ",Water Bubble Pokemon,FALSE
+753,Fomantis,7,0.3,1.5,"Leaf Guard, Contrary ",Sickle Grass Pokemon,FALSE
+754,Lurantis,7,0.9,18.5,"Leaf Guard, Contrary ",Bloom Sickle Pokemon,FALSE
+755,Morelull,7,0.2,1.5,"Illuminate, Effect Spore, Rain Dish ",Illuminating Pokemon,FALSE
+756,Shiinotic,7,1,11.5,"Illuminate, Effect Spore, Rain Dish ",Illuminating Pokemon,FALSE
+757,Salandit,7,0.6,4.8,"Corrosion, Oblivious ",Toxic Lizard Pokemon,FALSE
+758,Salazzle,7,1.2,22.2,"Corrosion, Oblivious ",Toxic Lizard Pokemon,FALSE
+759,Stufful,7,0.5,6.8,"Fluffy, Klutz, Cute Charm ",Flailing Pokemon,FALSE
+760,Bewear,7,2.1,135,"Fluffy, Klutz, Unnerve ",Strong Arm Pokemon,FALSE
+761,Bounsweet,7,0.3,3.2,"Leaf Guard, Oblivious, Sweet Veil ",Fruit Pokemon,FALSE
+762,Steenee,7,0.7,8.2,"Leaf Guard, Oblivious, Sweet Veil ",Fruit Pokemon,FALSE
+763,Tsareena,7,1.2,21.4,"Leaf Guard, Queenly Majesty, Sweet Veil ",Fruit Pokemon,FALSE
+764,Comfey,7,0.1,0.3,"Flower Veil, Triage, Natural Cure ",Posy Picker Pokemon,FALSE
+765,Oranguru,7,1.5,76,"Inner Focus, Telepathy, Symbiosis ",Sage Pokemon,FALSE
+766,Passimian,7,2,82.8,"Receiver, Defiant ",Teamwork Pokemon,FALSE
+767,Wimpod,7,0.5,12,Wimp Out ,Turn Tail Pokemon,FALSE
+768,Golisopod,7,2,108,Emergency Exit ,Hard Scale Pokemon,FALSE
+769,Sandygast,7,0.5,70,"Water Compaction, Sand Veil ",Sand Heap Pokemon,FALSE
+770,Palossand,7,1.3,250,"Water Compaction, Sand Veil ",Sand Castle Pokemon,FALSE
+771,Pyukumuku,7,0.3,1.2,"Innards Out, Unaware ",Sea Cucumber Pokemon,FALSE
+772,Type: Null,7,1.9,120.5,Battle Armor ,Synthetic Pokemon,FALSE
+773,Silvally,7,2.3,100.5,RKS System ,Synthetic Pokemon,FALSE
+774,Minior,7,0.3,40,Shields Down ,Meteor Pokemon,FALSE
+775,Komala,7,0.4,19.9,Comatose ,Drowsing Pokemon,FALSE
+776,Turtonator,7,2,212,Shell Armor ,Blast Turtle Pokemon,FALSE
+777,Togedemaru,7,0.3,3.3,"Iron Barbs, Lightningrod, Sturdy ",Roly-Poly Pokemon,FALSE
+778,Mimikyu,7,0.2,0.7,Disguise ,Disguise Pokemon,FALSE
+779,Bruxish,7,0.9,19,"Dazzling, Strong Jaw, Wonder Skin  ",Gnash Teeth Pokemon,FALSE
+780,Drampa,7,3,185,"Berserk, Sap Sipper, Cloud Nine ",Placid Pokemon,FALSE
+781,Dhelmise,7,3.9,210,Steelworker ,Sea Creeper Pokemon,FALSE
+782,Jangmo-o,7,0.6,29.7,"Bulletproof, Soundproof, Overcoat ",Scaly Pokemon,FALSE
+783,Hakamo-o,7,1.2,47,"Bulletproof, Soundproof, Overcoat ",Scaly Pokemon,FALSE
+784,Kommo-o,7,1.6,78.2,"Bulletproof, Soundproof, Overcoat ",Scaly Pokemon,FALSE
+785,Tapu Koko,7,1.8,20.5,"Electric Surge, Telepathy ",Land Spirit Pokemon,FALSE
+786,Tapu Lele,7,1.2,18.6,"Psychic Surge, Telepathy ",Land Spirit Pokemon,FALSE
+787,Tapu Bulu,7,1.9,45.5,"Grassy Surge, Telepathy ",Land Spirit Pokemon,FALSE
+788,Tapu Fini,7,1.3,21.2,"Misty Surge, Telepathy ",Land Spirit Pokemon,FALSE
+789,Cosmog,7,0.2,0.1,Unaware ,Nebula Pokemon,FALSE
+790,Cosmoem,7,0.1,999.9,Sturdy ,Protostar Pokemon,FALSE
+791,Solgaleo,7,3.4,230,Full Metal Body ,Sunne Pokemon,FALSE
+792,Lunala,7,4,120,Shadow Shield ,Moone Pokemon,FALSE
+793,Nihilego,7,1.2,55.5,Beast Boost ,Parasite Pokemon,FALSE
+794,Buzzwole,7,2.4,333.6,Beast Boost ,Swollen Pokemon,FALSE
+795,Pheromosa,7,1.8,25,Beast Boost ,Lissome Pokemon,FALSE
+796,Xurkitree,7,3.8,100,Beast Boost ,Glowing Pokemon,FALSE
+797,Celesteela,7,9.2,999.9,Beast Boost ,Launch Pokemon,FALSE
+798,Kartana,7,0.3,0.1,Beast Boost ,Drawn Sword Pokemon,FALSE
+799,Guzzlord,7,5.5,888,Beast Boost ,Junkivore Pokemon,FALSE
+800,Necrozma,7,2.4,230,Prism Armor ,Prism Pokemon,FALSE
+801,Magearna,7,1,80.5,Soul-Heart ,Artificial Pokemon,FALSE
