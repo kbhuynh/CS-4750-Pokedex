@@ -43,22 +43,28 @@
             </div>
             <div class=col-md-4>
                 <input type="text" name="pokeName" class="form-control" id="pokeName" placeholder="Enter Pokemon name" autofocus required>
-                <select class="selectpicker" name="type1" id="type1">
-                    <option value="normal">Normal</option>
-                    <option value="grass">Grass</option>
-                    <option value="fire">Fire</option>
-                    <option value="water">Water</option>
-                    <option value="fighting">Fighting</option>
-                    <option value="flying">Flying</option>
-                </select>
-                <select class="selectpicker" name="type2" id="type2">
-                    <option value="normal">Normal</option>
-                    <option value="grass">Grass</option>
-                    <option value="fire">Fire</option>
-                    <option value="water">Water</option>
-                    <option value="fighting">Fighting</option>
-                    <option value="flying">Flying</option>
-                </select>
+                <div class="form-group">
+                    <label for="type1">Type 1</label>
+                    <select class="form-control" id="type1" name="type1">
+                        <option value="normal">Normal</option>
+                        <option value="grass">Grass</option>
+                        <option value="fire">Fire</option>
+                        <option value="water">Water</option>
+                        <option value="fighting">Fighting</option>
+                        <option value="flying">Flying</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="type2">Type 2</label>
+                    <select class="form-control" id="type2" name="type2">
+                        <option value="normal">Normal</option>
+                        <option value="grass">Grass</option>
+                        <option value="fire">Fire</option>
+                        <option value="water">Water</option>
+                        <option value="fighting">Fighting</option>
+                        <option value="flying">Flying</option>
+                    </select>
+                </div>
                 <input type="text" name="pokeRegion" class="form-control" id="pokeRegion" placeholder="Enter region" required>
                 <input type="text" name="pokeHeight" class="form-control" id="pokeHeight" placeholder="Enter height" required>
                 <input type="text" name="pokeWeight" class="form-control" id="pokeWeight" placeholder="Enter weight" required>
