@@ -21,7 +21,7 @@
 <body>  
     <header>
         <ul>
-            <li><a href="home.php">Home</a></li>
+            <li><a href="">Home</a></li>
             <li><a href="profile.php">My Profile</a></li>
             <li><a href="teams.php">Teams</a></li>
             <li><a href="customPokemon.php">Custom Pokemon</a></li>
