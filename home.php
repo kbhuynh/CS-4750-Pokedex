@@ -14,14 +14,14 @@
   <title>Pokedex</title>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles/custom.css" />
+  <link rel="stylesheet" href="styles/custom.css" type="text/css" />
        
 </head>
 
 <body>  
     <header>
         <ul>
-            <li><a href="">Home</a></li>
+            <li><a href="home.php">Home</a></li>
             <li><a href="profile.php">My Profile</a></li>
             <li><a href="teams.php">Teams</a></li>
             <li><a href="customPokemon.php">Custom Pokemon</a></li>

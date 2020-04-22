@@ -1,6 +1,11 @@
 # Use the PHP 7.3 runtime by replacing "php72" below with "php73"
 runtime: php73
 
+# handles CSS files
+handlers:
+- url: /styles
+  static_dir: styles
+
 # Defaults to "serve index.php" 
 entrypoint: serve index.php
 
