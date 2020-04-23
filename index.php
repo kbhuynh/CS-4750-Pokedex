@@ -38,6 +38,9 @@ switch (@parse_url($_SERVER['REQUEST_URI'])['path']) {
     case '/profile.php':
         require 'profile.php';
         break;
+    case '/register.php':
+        require 'register.php';
+        break;
     case '/teams.php':
         require 'teams.php';
         break;
