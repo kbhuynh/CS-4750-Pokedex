@@ -11,6 +11,9 @@ switch (@parse_url($_SERVER['REQUEST_URI'])['path']) {
     case '/':
         require 'home.php';
         break;
+    case '/connectdb.php':
+        require 'connectdb.php';
+        break;
     case '/createPokemon.php':
         require 'createPokemon.php';
         break;

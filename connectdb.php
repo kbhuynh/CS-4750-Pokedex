@@ -20,7 +20,8 @@ $host = 'cs4750-268020:us-east4:pokedex';
 
 /******************************/
 
-$dsn = "mysql:host=$host;dbname=$dbname";
+// $dsn = "mysql:host=$host;dbname=$dbname";
+$dsn = "mysql:unix_socket=/cloudsql/cs4750-268020:us-east4:pokedex;dbname=pokedex";
 $db = "";
 
 /** connect to the database **/
