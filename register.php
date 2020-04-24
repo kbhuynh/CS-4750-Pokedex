@@ -53,7 +53,7 @@ require('controller/connectdb.php');
         // Check input errors before inserting in database
         if(empty($email_err) && empty($username_err) && empty($password_err) && empty($confirm_password_err)){
             
-            addSignUp();
+            addSignUp($_POST["email"], $_POST["username"], $_POST["password"]);
             // // Prepare an insert statement
             // $sql = "INSERT INTO User (email, username, password) VALUES (?, ?, ?)";
              
