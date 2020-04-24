@@ -44,7 +44,7 @@
             <div class=col-md-4>
                 <input type="text" name="pokeName" class="form-control" id="pokeName" placeholder="Enter Pokemon name" autofocus required>
                 <div class="form-group">
-                    <!-- <label for="type1">Type 1</label> -->
+                    <label for="type1">Type 1</label>
                     <select class="form-control" id="type1" name="type1">
                         <option value="None"></option>    
                         <option value="normal">Normal</option>
@@ -56,7 +56,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <!-- <label for="type2">Type 2</label> -->
+                    <label for="type2">Type 2</label>
                     <select class="form-control" id="type2" name="type2">
                         <option value="None"></option>
                         <option value="normal">Normal</option>

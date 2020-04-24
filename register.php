@@ -14,7 +14,7 @@ require('connectdb.php');
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <meta name="author" content="Grace Wu, April Xie, Kevin Huynh, Vinh Do">
-  <meta name="description" content="Create Pokemon for Pokedex Database">  
+  <meta name="description" content="Register Page for Pokedex Database">  
     
   <link rel="shortcut icon" href="images/favicon.png" type="image/ico" />
   <title>Pokedex</title>
