@@ -24,6 +24,8 @@
             <li><a href="profile.php">My Profile</a></li>
             <li><a href="teams.php">Teams</a></li>
             <li><a href="customPokemon.php">Custom Pokemon</a></li>
+            <li style="float:right"><a href="register.php">Register</a></li>
+            <li style="float:right"><a class="navbar-right" href="login.php">Login</a></li>
         </ul>
     </header>
 
