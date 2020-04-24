@@ -30,12 +30,8 @@
         </ul>
     </header>
 
-
     <?php
-        if($_SERVER['REQUEST_METHOD']=="POST" && strlen($_POST['search']) > 0) //maybe use if (touched)
-        {
-            // do the things 
-        }
+        session_start();
     ?>
 
 </body>
