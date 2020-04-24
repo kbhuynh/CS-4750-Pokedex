@@ -7,7 +7,6 @@
       
 </head>
 <body>
-  
   <div class="container">
   <br/>
   <form action="myTeams.php" method="post">
