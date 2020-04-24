@@ -85,3 +85,8 @@ li a:hover {
     text-decoration: none;
     color: white;
 }
+
+.pokeCard {
+    text-decoration:none;
+    color: black;
+}

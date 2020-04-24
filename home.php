@@ -1,8 +1,7 @@
 <?php
 include_once('templates/header.php');
 require('controller/connectdb.php');
-// require('connectdb.php');
-require('functions.php');
+require('dbcommands/functions.php');
 ?>
 <body>
     <div class="row">
@@ -27,23 +26,25 @@ require('functions.php');
     </div>
 </br></br>    
     <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
             <div class="row">
                 <?php 
                     $pokemon = getPokemon();
                     foreach ($pokemon as $p): 
                 ?>
-                    <div class="col-md-4 card">
+                    <div class="col-md-2 card">
+                    <a href="#" style="text-decoration:none; color: black;">
                         <div class="card-body">
                             <h3><?php echo $p['Pokemon_Name'] ?></h3>
                             <img src=<?php echo $p['sprite'] ?>>
                         </div>
+                    </a>
                     </div>
                 <?php endforeach; ?>
             </div>
         </div>
-        <div class="col-md-3"></div>
+        <div class="col-md-1"></div>
     </div>
     
     <?php

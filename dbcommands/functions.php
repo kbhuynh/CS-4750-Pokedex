@@ -42,7 +42,7 @@ function drop_table()
 function getPokemon()
 {
    global $db;
-   $query = "SELECT * FROM Pokemon";
+   $query = "SELECT * FROM Pokemon ORDER BY pokedexNumber";
 
    $statement = $db->prepare($query);
    $statement->execute();
