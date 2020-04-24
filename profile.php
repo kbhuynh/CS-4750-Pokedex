@@ -18,6 +18,11 @@
 </head>
 
 <body>  
+    <?php
+        // session_start();
+        // if(isset($_SESSION['userEmail']))
+        // {
+    ?>
     <header>
         <ul>
             <li><a href="home.php">Home</a></li>
@@ -30,6 +35,10 @@
     </header>
 
 
-
+    <?php 
+        // }
+        // else
+            // header('Location: login.php');
+    ?>
 </body>
 </html>

@@ -18,6 +18,11 @@
 </head>
 
 <body>  
+    <?php
+        // session_start();
+        // if(isset($_SESSION['userEmail']))
+        // {
+    ?>
     <header>
         <ul>
             <li><a href="home.php">Home</a></li>
@@ -112,7 +117,11 @@
         </div>
         <div class="col-md-3"></div>
     </div>
-
+    <?php 
+        // }
+        // else
+            // header('Location: login.php');
+    ?>
     <?php
         if($_SERVER['REQUEST_METHOD']=="POST" && strlen($_POST['search']) > 0) //maybe use if (touched)
         {

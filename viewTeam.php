@@ -19,7 +19,7 @@
         <th>Pokemon 4</th>
         <th>Pokemon 5</th>
         <th>Pokemon 6</th>
-        <th>(Edit?)</th>
+        <th>(Add?)</th>
         <th>(Delete?)</th>
       </tr>      
       <?php foreach ($teams as $team): ?>
@@ -47,7 +47,7 @@
         </td>        
         <td>
           <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
-            <input type="submit" value="Edit" name="action" class="btn btn-primary" />             
+            <input type="submit" value="Add" name="action" class="btn btn-primary" />             
             <input type="hidden" name="teamID" value="<?php echo $task['teamID'] ?>" />
           </form> 
         </td>                        

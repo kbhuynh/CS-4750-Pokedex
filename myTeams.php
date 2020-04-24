@@ -25,6 +25,11 @@ $action = "list_teams";        // default action
 </head>
 
 <body>  
+    <?php
+        // session_start();
+        // if(isset($_SESSION['userEmail']))
+        // {
+    ?>
     <header>
         <ul>
             <li><a href="home.php">Home</a></li>
@@ -75,15 +80,11 @@ $action = "list_teams";        // default action
         }
     }
     ?>
-
-
-
-
-
-
-
     </div>
-
-
+    <?php 
+        // }
+        // else
+            // header('Location: login.php');
+    ?>
 </body>
 </html>
