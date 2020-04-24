@@ -88,7 +88,7 @@ require('dbcommands/teamActions.php');
 <body>
     <div class="wrapper">
         <h2>Sign Up</h2>
-        <form action="login.php" method="post">
+        <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
             <div class="form-group <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
                 <label>Email</label>
                 <input type="text" name="email" class="form-control" value="<?php echo $email; ?>">

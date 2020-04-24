@@ -38,11 +38,11 @@ function drop_table()
 }
 
 ///*****SEARCHING POKEDEX********///
-////////////////////////////////////////////////////////////////////////
+
 function getPokemon()
 {
    global $db;
-   $query = "SELECT * FROM Pokemon";
+   $query = "SELECT * FROM pokemon";
 
    $statement = $db->prepare($query);
    $statement->execute();
@@ -163,6 +163,7 @@ function getPokemonByCustom()
 function checkSignUp($email){
    global $db;
    $query = "SELECT * FROM User WHERE Email = :email";
+
 
    $statement = $db->prepare($query);
    $statement->bindValue(':email', $email);

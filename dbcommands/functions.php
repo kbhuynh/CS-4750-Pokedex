@@ -1,5 +1,5 @@
 <?php 
-
+require('controller/connectdb.php');
 // Prepared statement (or parameterized statement) happens in 2 phases:
 //   1. prepare() sends a template to the server, the server analyzes the syntax
 //                and initialize the internal structure.
@@ -176,8 +176,7 @@ function checkSignUp($email){
 function addSignUp($email, $username, $password)
 {
    global $db;
-   $query = "INSERT INTO User VALUES (:email, :username, :password)";
-
+   $query = "INSERT INTO User (email, username, password) VALUES (:email, :username, :password)";
    $statement = $db->prepare($query);
    $statement->bindValue(':email', $email);
    $statement->bindValue(':username', $username);
@@ -191,6 +190,7 @@ function addSignUp($email, $username, $password)
    }
    $statement->closeCursor();
 }
+   //  $query = "INSERT INTO register (username, password) VALUES (:username, :password)";
 
 function checkLogIn($email, $password){
    global $db;
