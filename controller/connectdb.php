@@ -32,11 +32,29 @@ try
 }
 catch (PDOException $e)     // handle a PDO exception (errors thrown by the PDO library)
 {
-   // Call a method from any object, 
-   // use the object's name followed by -> and then method's name
-   // All exception objects provide a getMessage() method that returns the error message 
-   $error_message = $e->getMessage();        
-   echo "<p>An error occurred while connecting to the database: $error_message </p>";
+   // VINH CONNECTING TO LOCAL XAMPP IF THE GOOGLE CLOUD ONE FAILS SO THAT I CAN TEST LOCALLY
+   try
+   {
+      $host = 'localhost:3306';
+      $dbname = 'pokedex';
+
+      $username = 'test';
+      $password = 'pass123';
+
+      $dsn = "mysql:host=$host;dbname=$dbname";
+      $db = "";
+
+      $db = new PDO($dsn, $username, $password);   
+      // echo "<p>You are connected to your local database</p>";
+   }
+   catch (PDOException $e)
+   {
+      // Call a method from any object, 
+      // use the object's name followed by -> and then method's name
+      // All exception objects provide a getMessage() method that returns the error message 
+      $error_message = $e->getMessage();        
+      echo "<p>An error occurred while connecting to the database: $error_message </p>";
+   }
 }
 catch (Exception $e)       // handle any type of exception
 {

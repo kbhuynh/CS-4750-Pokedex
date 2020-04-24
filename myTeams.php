@@ -1,7 +1,7 @@
 <?php
 include_once('templates/header.php');
 require('controller/connectdb.php');
-require('teamActions.php');
+require('dbcommands/teamActions.php');
 $action = "list_teams";        // default action
 ?>
 <body>
