@@ -5,9 +5,9 @@ require('controller/connectdb.php');
 
 <body>  
     <?php
-        // session_start();
-        // if(isset($_SESSION['userEmail']))
-        // {
+        session_start();
+        if(isset($_SESSION['email']))
+        {
     ?>
     <div class="row">
         <div class="col-md-3"></div>
@@ -34,9 +34,9 @@ require('controller/connectdb.php');
 
 
     <?php 
-        // }
-        // else
-            // header('Location: login.php');
+        }
+        else
+            header('Location: login.php');
     ?>
 </body>
 </html>
