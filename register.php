@@ -20,7 +20,7 @@ require('connectdb.php');
   <title>Pokedex</title>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <!--<link rel="stylesheet" href="styles/custom.css" />-->
+  <!-- <link rel="stylesheet" href="styles/custom.css" /> -->
        
 </head>
 
@@ -121,6 +121,14 @@ require('connectdb.php');
 ?>
 
 <body>
+    <ul>
+        <li><a href="home.php">Home</a></li>
+        <li><a href="profile.php">My Profile</a></li>
+        <li><a href="teams.php">Teams</a></li>
+        <li><a href="customPokemon.php">Custom Pokemon</a></li>
+        <li style="float:right"><a href="register.php">Register</a></li>
+        <li style="float:right"><a class="navbar-right" href="login.php">Login</a></li>
+    </ul>
     <div class="wrapper">
         <h2>Sign Up</h2>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
