@@ -7,6 +7,6 @@ handlers:
   static_dir: styles
 
 # Defaults to "serve index.php" 
- entrypoint: serve index.php
+entrypoint: serve controller/index.php
 
 # If your main page is index.php, comment the above entrypoint setting 
