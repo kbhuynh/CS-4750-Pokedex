@@ -38,6 +38,7 @@ function drop_table()
 }
 
 ///*****SEARCHING POKEDEX********///
+
 function getPokemon()
 {
    global $db;
@@ -60,7 +61,7 @@ function getPokemonByNumber($pokedexNumber)
    $statement = $db->prepare($query);
    $statement->bindValue(':pokedexNumber', $pokedexNumber);
    $statement->execute();
-   $results = $statement->fetch(); // fetch() return a row
+   $results = $statement->fetch(); // fetch() returns a row
    $statement->closeCursor();
 	
    return $results;
@@ -141,28 +142,28 @@ function getPokemonByCustom()
    return $results;
 }
 
-function getPokemonByLikes()
-{
-   global $db;
-   $query = "SELECT * FROM Pokemon AS P 
-            WHERE P.pokedexNumber = 
-               (SELECT E.pokedexNumber FROM Egg_group AS E 
-               WHERE E.eggGroup = :eggGroup)";
+// function getPokemonByLikes()
+// {
+//    global $db;
+//    $query = "SELECT * FROM Pokemon AS P 
+//             WHERE P.pokedexNumber = 
+//                (SELECT L.pokedexNumber FROM Likes AS L 
+//                WHERE E.userEmail = $_SESSION['userEmail'])";
 
-   $statement = $db->prepare($query);
-   $statement->bindValue(':Generation', $Generation);
-   $statement->execute();
-   $results = $statement->fetchAll();
-   $statement->closeCursor();
+//    $statement = $db->prepare($query);
+//    $statement->execute();
+//    $results = $statement->fetchAll();
+//    $statement->closeCursor();
    
-   return $results;
-}
-//getPokemonByLikes
+//    return $results;
+// }
 
 ///******SIGN-UP & LOGIN******//
+////////////////////////////////////////////////////////////////////////
 function checkSignUp($email){
    global $db;
-   $query = "SELECT Email FROM User WHERE Email = :email";
+   $query = "SELECT * FROM User WHERE Email = :email";
+
 
    $statement = $db->prepare($query);
    $statement->bindValue(':email', $email);
@@ -170,7 +171,7 @@ function checkSignUp($email){
    $results = $statement->fetchAll();
    $statement->closeCursor();
 
-   return len($results);
+   return sizeof($results);
 }
 
 function addSignUp($email, $username, $password)
@@ -181,7 +182,8 @@ function addSignUp($email, $username, $password)
    $statement = $db->prepare($query);
    $statement->bindValue(':email', $email);
    $statement->bindValue(':username', $username);
-   $statement->bindValue(':password', $password);
+   $hash_password = password_hash($password, PASSWORD_DEFAULT);
+   $statement->bindValue(':password', $hash_password);
    if($statement->execute()){
       header("location: login.php");
    }
@@ -191,17 +193,65 @@ function addSignUp($email, $username, $password)
    $statement->closeCursor();
 }
 
-//checkLogIn
+function checkLogIn($email, $password){
+   global $db;
+   $query = "SELECT * FROM User WHERE Email = :email AND Password = :password";
+
+   $statement = $db->prepare($query);
+   $statement->bindValue(':email', $email);
+   $hash_password = password_hash($password, PASSWORD_DEFAULT);
+   $statement->bindValue(':password', $hash_password);
+   $statement->execute();
+   $results = $statement->fetchAll();
+   $statement->closeCursor();
+
+   return sizeof($results);
+}
 
 
 ///*****TEAMS*****///
-//addTeam
-//insertTeam
-//deleteTeam
-//alterTeam
+////////////////////////////////////////////////////////////////////////
+function addTeam($teamID, $userEmail, $teamName, $pokemon1)
+{
+   global $db;
+   $query = "INSERT INTO Team VALUES (:teamID, :userEmail, :teamName, :pokemon1, NULL, NULL, NULL, NUll, NULL)";
+
+   $statement = $db->prepare($query);
+   $statement->bindValue(':teamID', $teamID);
+   $statement->bindValue(':userEmail', $userEmail);
+   $statement->bindValue(':teamName', $teamName);
+   $statement->bindValue(':pokemon1', $pokemon1);
+   if($statement->execute()){
+      header("location: myTeams.php");
+   }
+   else {
+      echo "Something went wrong. Please try again later.";
+   }
+   $statement->closeCursor();
+}
+
+function deleteTeam($teamID, $userEmail)
+{
+   global $db;
+   $query = "DELETE FROM Team WHERE teamID = :teamID AND userEmail = :userEmail";
+
+   $statement = $db->prepare($query);
+   $statement->bindValue(':teamID', $teamID);
+   $statement->bindValue(':userEmail', $userEmail);
+   if($statement->execute()){
+      header("location: myTeams.php");
+   }
+   else {
+      echo "Something went wrong. Please try again later.";
+   }
+   $statement->closeCursor();
+}
+
+//alterTeam???
 
 
 ///******MISC******///
+////////////////////////////////////////////////////////////////////////
 function addLike($pokedexNumber, $userEmail)
 {
    global $db;
@@ -230,7 +280,7 @@ function addComment($commentID, $userEmail, $teamID, $text)
 
 
 
-/////////////////////SAMPLES CODE///////////////////////////
+////////////////////////SAMPLES CODE///////////////////////////
 
 function addFriend($name, $major, $year)
 {

@@ -7,33 +7,28 @@
 /******************************/
 // connecting to GCP cloud SQL instance
 
-// $username = 'root';
-// $password = 'pass123';
-$username = 'web4640';
-$password = 'password';
+$username = 'root';
+$password = 'pass123';
 
-
-// $dbname = 'pokedex';
-$dbname = 'Pokedex';
+$dbname = 'pokedex';
 
 // if PHP is on GCP standard App Engine, use instance name to connect
-// $host = 'cs4750-268020:us-east4:pokedex';
-$host = 'localhost:3306';
+$host = 'cs4750-268020:us-east4:pokedex';
 
 // if PHP is hosted somewhere else (non-GCP), use public IP address to connect
 // $host = "public-IP-address-to-cloud-instance";
 
 /******************************/
 
-$dsn = "mysql:host=$host;dbname=$dbname";
-// $dsn = "mysql:unix_socket=/cloudsql/cs4750-268020:us-east4:pokedex;dbname=pokedex";
+// $dsn = "mysql:host=$host;dbname=$dbname";
+$dsn = "mysql:unix_socket=/cloudsql/cs4750-268020:us-east4:pokedex;dbname=pokedex";
 $db = "";
 
 /** connect to the database **/
 try 
 {
    $db = new PDO($dsn, $username, $password);   
-   // echo "<p>You are connected to the database</p>";
+   echo "<p>You are connected to the database</p>";
 }
 catch (PDOException $e)     // handle a PDO exception (errors thrown by the PDO library)
 {
