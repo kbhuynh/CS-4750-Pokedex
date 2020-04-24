@@ -7,6 +7,11 @@
   <link rel="stylesheet" href="styles/custom.css" />
   
 </head>
+<?php
+include_once('templates/header.php');
+require('controller/connectdb.php');
+?>
+
 <body>
   
   <div class="container">

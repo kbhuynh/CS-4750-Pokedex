@@ -1,29 +1,7 @@
 <?php
-// include('connectdb.php');
-require('connectdb.php');
-//require('friend-db.php');
-require('functions.php')
-
+include_once('templates/header.php');
+require('controller/connectdb.php');
 ?>
-
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">  
-  
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <meta name="author" content="Grace Wu, April Xie, Kevin Huynh, Vinh Do">
-  <meta name="description" content="Register Page for Pokedex Database">  
-    
-  <link rel="shortcut icon" href="images/favicon.png" type="image/ico" />
-  <title>Pokedex</title>
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <!-- <link rel="stylesheet" href="styles/custom.css" /> -->
-       
-</head>
 
 <?php
     // Define variables and initialize with empty values
@@ -38,7 +16,7 @@ require('functions.php')
         }
         else{
             if(checkSignUp($_POST["email"]) > 1){
-                $email_err = "This username is already taken.";
+                $email_err = "This email is already taken.";
             }
             else {
                 echo "Oops! Something went wrong. Please try again later.";
@@ -75,45 +53,37 @@ require('functions.php')
         // Check input errors before inserting in database
         if(empty($email_err) && empty($username_err) && empty($password_err) && empty($confirm_password_err)){
             
-            // Prepare an insert statement
-            $sql = "INSERT INTO User (email, username, password) VALUES (?, ?, ?)";
+            addSignUp();
+            // // Prepare an insert statement
+            // $sql = "INSERT INTO User (email, username, password) VALUES (?, ?, ?)";
              
-            if($stmt = mysqli_prepare($link, $sql)){
-                // Bind variables to the prepared statement as parameters
-                mysqli_stmt_bind_param($stmt, "ss", $param_email, $param_username, $param_password);
+            // if($stmt = mysqli_prepare($link, $sql)){
+            //     // Bind variables to the prepared statement as parameters
+            //     mysqli_stmt_bind_param($stmt, "ss", $param_email, $param_username, $param_password);
                 
-                // Set parameters
-                $param_email = $email;
-                $param_username = $username;
-                $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
+            //     // Set parameters
+            //     $param_email = $email;
+            //     $param_username = $username;
+            //     $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
                 
-                // Attempt to execute the prepared statement
-                if(mysqli_stmt_execute($stmt)){
-                    // Redirect to login page
-                    header("location: login.php");
-                } else{
-                    echo "Something went wrong. Please try again later.";
-                }
+            //     // Attempt to execute the prepared statement
+            //     if(mysqli_stmt_execute($stmt)){
+            //         // Redirect to login page
+            //         header("location: login.php");
+            //     } else{
+            //         echo "Something went wrong. Please try again later.";
+            //     }
     
-                // Close statement
-                mysqli_stmt_close($stmt);
-            }
+            //     // Close statement
+            //     mysqli_stmt_close($stmt);
         }
+    }
         
         // Close connection
-        mysqli_close($link);
-    }
+        //mysqli_close($link);
 ?>
 
 <body>
-    <ul>
-        <li><a href="home.php">Home</a></li>
-        <li><a href="profile.php">My Profile</a></li>
-        <li><a href="teams.php">Teams</a></li>
-        <li><a href="customPokemon.php">Custom Pokemon</a></li>
-        <li style="float:right"><a href="register.php">Register</a></li>
-        <li style="float:right"><a class="navbar-right" href="login.php">Login</a></li>
-    </ul>
     <div class="wrapper">
         <h2>Sign Up</h2>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">

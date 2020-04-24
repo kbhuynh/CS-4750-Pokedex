@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+<?php
+include_once('templates/header.php');
+require('controller/connectdb.php');
+?>
+=======
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,7 +39,9 @@
             <li style="float:right"><a class="navbar-right" href="login.php">Login</a></li>
         </ul>
     </header>
+>>>>>>> b3ef539f85b001a5df279b31526af47bbd8da6ac
 
+<body>
     <div class="row">
         <div class="col-md-12">
             <h2>My Custom Pokemon</h2>
