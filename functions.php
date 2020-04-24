@@ -33,67 +33,209 @@ function drop_table()
 	
    $statement = $db->prepare($query);
    $statement->execute();
-   $statement->closeCursor();
+   // closes the cursor and frees the connection to the server so other SQL statements may be issued
+   $statement->closeCursor(); 
 }
 
-///*****SEARCHING DB********///
-function getAllFriends()
+///*****SEARCHING POKEDEX********///
+function getPokemon()
 {
    global $db;
-   $query = "select * from friends";
+   $query = "SELECT * FROM Pokemon";
+
    $statement = $db->prepare($query);
    $statement->execute();
-	
    // fetchAll() returns an array for all of the rows in the result set
    $results = $statement->fetchAll();
-	
-   // closes the cursor and frees the connection to the server so other SQL statements may be issued
-   $statement->closecursor();
+   $statement->closeCursor();
 	
    return $results;
 }
 
-
-function getFriendInfo_by_name($name)
+function getPokemonByNumber($pokedexNumber)
 {
    global $db;
-	
-   $query = "select * from friends where name = :name";
+   $query = "SELECT * FROM Pokemon WHERE pokedexNumber = :pokedexNumber";
+
    $statement = $db->prepare($query);
-   $statement->bindValue(':name', $name);
+   $statement->bindValue(':pokedexNumber', $pokedexNumber);
    $statement->execute();
-	
-   // fetchAll() returns an array for all of the rows in the result set
-   // fetch() return a row
-   $results = $statement->fetch();
-	
-   // closes the cursor and frees the connection to the server so other SQL statements may be issued
-   $statement->closecursor();
+   $results = $statement->fetch(); // fetch() return a row
+   $statement->closeCursor();
 	
    return $results;
 }
 
-///******SIGN-UP******//
+function getPokemonByName($Pokemon_Name)
+{
+   global $db;
+   $query = "SELECT * FROM Pokemon WHERE Pokemon_Name = :Pokemon_Name";
+
+   $statement = $db->prepare($query);
+   $statement->bindValue(':Pokemon_Name', $Pokemon_Name);
+   $statement->execute();
+   $results = $statement->fetch();
+   $statement->closeCursor();
+   
+   return $results;
+}
+
+function getPokemonByGen($Generation)
+{
+   global $db;
+   $query = "SELECT * FROM Pokemon WHERE Generation = :Generation";
+
+   $statement = $db->prepare($query);
+   $statement->bindValue(':Generation', $Generation);
+   $statement->execute();
+   $results = $statement->fetchAll();
+   $statement->closeCursor();
+   
+   return $results;
+}
+
+function getPokemonByType($type)
+{
+   global $db;
+   $query = "SELECT * FROM Pokemon AS P 
+            WHERE P.pokedexNumber = 
+               (SELECT T.pokedexNumber FROM Pokemon_Types AS T 
+               WHERE T.type1 = :type OR T.type2 = :type)";
+
+   $statement = $db->prepare($query);
+   $statement->bindValue(':type', $type);
+   $statement->execute();
+   $results = $statement->fetchAll();
+   $statement->closeCursor();
+   
+   return $results;
+}
+
+function getPokemonByEgg($eggGroup)
+{
+   global $db;
+   $query = "SELECT * FROM Pokemon AS P 
+            WHERE P.pokedexNumber = 
+               (SELECT E.pokedexNumber FROM Egg_group AS E 
+               WHERE E.eggGroup = :eggGroup)";
+
+   $statement = $db->prepare($query);
+   $statement->bindValue(':eggGroup', $eggGroup);
+   $statement->execute();
+   $results = $statement->fetchAll();
+   $statement->closeCursor();
+   
+   return $results;
+}
+
+function getPokemonByCustom()
+{
+   global $db;
+   $query = "SELECT * FROM Pokemon WHERE isCustom = 1";
+
+   $statement = $db->prepare($query);
+   $statement->execute();
+   $results = $statement->fetchAll();
+   $statement->closeCursor();
+   
+   return $results;
+}
+
+function getPokemonByLikes()
+{
+   global $db;
+   $query = "SELECT * FROM Pokemon AS P 
+            WHERE P.pokedexNumber = 
+               (SELECT E.pokedexNumber FROM Egg_group AS E 
+               WHERE E.eggGroup = :eggGroup)";
+
+   $statement = $db->prepare($query);
+   $statement->bindValue(':Generation', $Generation);
+   $statement->execute();
+   $results = $statement->fetchAll();
+   $statement->closeCursor();
+   
+   return $results;
+}
+//getPokemonByLikes
+
+///******SIGN-UP & LOGIN******//
+function checkSignUp($email){
+   global $db;
+   $query = "SELECT Email FROM User WHERE Email = :email";
+
+   $statement = $db->prepare($query);
+   $statement->bindValue(':email', $email);
+   $statement->execute();
+   $results = $statement->fetchAll();
+   $statement->closeCursor();
+
+   return len($results);
+}
+
 function addSignUp($email, $username, $password)
 {
    global $db;
    $query = "INSERT INTO User VALUES (:email, :username, :password)";
+
    $statement = $db->prepare($query);
    $statement->bindValue(':email', $email);
    $statement->bindValue(':username', $username);
    $statement->bindValue(':password', $password);
+   if($statement->execute()){
+      header("location: login.php");
+   }
+   else {
+      echo "Something went wrong. Please try again later."
+   }
+   $statement->closeCursor();
+}
+
+//checkLogIn
+
+
+///*****TEAMS*****///
+//addTeam
+//insertTeam
+//deleteTeam
+//alterTeam
+
+
+///******MISC******///
+function addLike($pokedexNumber, $userEmail)
+{
+   global $db;
+   $query = "INSERT INTO Likes VALUES (:pokedexNumber, :userEmail)";
+   
+   $statement = $db->prepare($query);
+   $statement->bindValue(':pokedexNumber', $pokedexNumber);
+   $statement->bindValue(':userEmail', $userEmail);
+   $statement->execute();
+   $statement->closeCursor();
+}
+
+function addComment($commentID, $userEmail, $teamID, $text)
+{
+   global $db;
+   $query = "INSERT INTO Comment_on VALUES (:commentID, :userEmail, :teamID, :text)";
+   
+   $statement = $db->prepare($query);
+   $statement->bindValue(':commentID', $commentID);
+   $statement->bindValue(':userEmail', $userEmail);
+   $statement->bindValue(':teamID', $teamID);
+   $statement->bindValue(':text', $text);
    $statement->execute();
    $statement->closeCursor();
 }
 
 
 
-
+/////////////////////SAMPLES CODE///////////////////////////
 
 function addFriend($name, $major, $year)
 {
    global $db;
-	
+   
    // insert into friends (name, major, year) values ('someone', 'CS', 4);
    $query = "INSERT INTO friends VALUES (:name, :major, :year)";
    
@@ -104,7 +246,7 @@ function addFriend($name, $major, $year)
    $statement->bindValue(':year', $year);
    $statement->execute();     // if the statement is successfully executed, execute() returns true
    // false otherwise
-		
+      
    $statement->closeCursor();
 }
 
@@ -112,7 +254,7 @@ function addFriend($name, $major, $year)
 function updateFriendInfo($name, $major, $year)
 {
    global $db;
-	
+   
    // update friends set major="EE", year=2 where name="someoneelse"
    $query = "UPDATE friends SET major=:major, year=:year WHERE name=:name";
    $statement = $db->prepare($query);
@@ -127,12 +269,14 @@ function updateFriendInfo($name, $major, $year)
 function deleteFriend($name)
 {
    global $db;
-	
+   
    $query = "DELETE FROM friends WHERE name=:name";
    $statement = $db->prepare($query);
    $statement->bindValue(':name', $name);
    $statement->execute();
    $statement->closeCursor();
 }
+
+
 ?>
 
