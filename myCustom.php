@@ -88,7 +88,11 @@ require('controller/connectdb.php');
         </div>
         <div class="col-md-3"></div>
     </div>
-
+    <?php 
+        // }
+        // else
+            // header('Location: login.php');
+    ?>
     <?php
         if($_SERVER['REQUEST_METHOD']=="POST" && strlen($_POST['search']) > 0) //maybe use if (touched)
         {

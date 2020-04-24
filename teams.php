@@ -32,6 +32,10 @@ require('controller/connectdb.php');
             // do the things 
         }
     ?>
-
+    <?php 
+        // }
+        // else
+            // header('Location: login.php');
+    ?>
 </body>
 </html>
