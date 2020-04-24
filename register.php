@@ -2,6 +2,7 @@
 include_once('templates/header.php');
 require('controller/connectdb.php');
 require('dbcommands/functions.php');
+require('dbcommands/teamActions.php');
 ?>
 
 <?php
@@ -54,7 +55,7 @@ require('dbcommands/functions.php');
         // Check input errors before inserting in database
         if(empty($email_err) && empty($username_err) && empty($password_err) && empty($confirm_password_err)){
             
-            addSignUp();
+            addSignUp($_POST["email"], $_POST["username"], $_POST['password']);
             // // Prepare an insert statement
             // $sql = "INSERT INTO User (email, username, password) VALUES (?, ?, ?)";
              
@@ -87,7 +88,7 @@ require('dbcommands/functions.php');
 <body>
     <div class="wrapper">
         <h2>Sign Up</h2>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+        <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
             <div class="form-group <?php echo (!empty($email_err)) ? 'has-error' : ''; ?>">
                 <label>Email</label>
                 <input type="text" name="email" class="form-control" value="<?php echo $email; ?>">
