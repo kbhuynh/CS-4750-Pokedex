@@ -38,7 +38,7 @@ require('functions.php')
         }
         else{
             if(checkSignUp($_POST["email"]) > 1){
-                $email_err = "This username is already taken.";
+                $email_err = "This email is already taken.";
             }
             else {
                 echo "Oops! Something went wrong. Please try again later.";
@@ -75,34 +75,34 @@ require('functions.php')
         // Check input errors before inserting in database
         if(empty($email_err) && empty($username_err) && empty($password_err) && empty($confirm_password_err)){
             
-            // Prepare an insert statement
-            $sql = "INSERT INTO User (email, username, password) VALUES (?, ?, ?)";
+            addSignUp();
+            // // Prepare an insert statement
+            // $sql = "INSERT INTO User (email, username, password) VALUES (?, ?, ?)";
              
-            if($stmt = mysqli_prepare($link, $sql)){
-                // Bind variables to the prepared statement as parameters
-                mysqli_stmt_bind_param($stmt, "ss", $param_email, $param_username, $param_password);
+            // if($stmt = mysqli_prepare($link, $sql)){
+            //     // Bind variables to the prepared statement as parameters
+            //     mysqli_stmt_bind_param($stmt, "ss", $param_email, $param_username, $param_password);
                 
-                // Set parameters
-                $param_email = $email;
-                $param_username = $username;
-                $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
+            //     // Set parameters
+            //     $param_email = $email;
+            //     $param_username = $username;
+            //     $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
                 
-                // Attempt to execute the prepared statement
-                if(mysqli_stmt_execute($stmt)){
-                    // Redirect to login page
-                    header("location: login.php");
-                } else{
-                    echo "Something went wrong. Please try again later.";
-                }
+            //     // Attempt to execute the prepared statement
+            //     if(mysqli_stmt_execute($stmt)){
+            //         // Redirect to login page
+            //         header("location: login.php");
+            //     } else{
+            //         echo "Something went wrong. Please try again later.";
+            //     }
     
-                // Close statement
-                mysqli_stmt_close($stmt);
-            }
+            //     // Close statement
+            //     mysqli_stmt_close($stmt);
         }
+    }
         
         // Close connection
-        mysqli_close($link);
-    }
+        //mysqli_close($link);
 ?>
 
 <body>
