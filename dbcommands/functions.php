@@ -42,7 +42,7 @@ function drop_table()
 function getPokemon()
 {
    global $db;
-   $query = "SELECT * FROM Pokemon ORDER BY pokedexNumber";
+   $query = "SELECT * FROM pokemon ORDER BY pokedexNumber";
 
    $statement = $db->prepare($query);
    $statement->execute();
@@ -53,10 +53,10 @@ function getPokemon()
    return $results;
 }
 
-function getPokemonByNumber($pokedexNumber)
+function getpokemonByNumber($pokedexNumber)
 {
    global $db;
-   $query = "SELECT * FROM Pokemon WHERE pokedexNumber = :pokedexNumber";
+   $query = "SELECT * FROM pokemon WHERE pokedexNumber = :pokedexNumber";
 
    $statement = $db->prepare($query);
    $statement->bindValue(':pokedexNumber', $pokedexNumber);
@@ -70,7 +70,7 @@ function getPokemonByNumber($pokedexNumber)
 function getPokemonByName($Pokemon_Name)
 {
    global $db;
-   $query = "SELECT * FROM Pokemon WHERE Pokemon_Name = :Pokemon_Name";
+   $query = "SELECT * FROM pokemon WHERE Pokemon_Name = :Pokemon_Name";
 
    $statement = $db->prepare($query);
    $statement->bindValue(':Pokemon_Name', $Pokemon_Name);
@@ -84,7 +84,7 @@ function getPokemonByName($Pokemon_Name)
 function getPokemonByGen($Generation)
 {
    global $db;
-   $query = "SELECT * FROM Pokemon WHERE Generation = :Generation";
+   $query = "SELECT * FROM pokemon WHERE Generation = :Generation";
 
    $statement = $db->prepare($query);
    $statement->bindValue(':Generation', $Generation);
@@ -98,9 +98,9 @@ function getPokemonByGen($Generation)
 function getPokemonByType($type)
 {
    global $db;
-   $query = "SELECT * FROM Pokemon AS P 
+   $query = "SELECT * FROM pokemon AS P 
             WHERE P.pokedexNumber = 
-               (SELECT T.pokedexNumber FROM Pokemon_Types AS T 
+               (SELECT T.pokedexNumber FROM pokemon_Types AS T 
                WHERE T.type1 = :type OR T.type2 = :type)";
 
    $statement = $db->prepare($query);
@@ -115,7 +115,7 @@ function getPokemonByType($type)
 function getPokemonByEgg($eggGroup)
 {
    global $db;
-   $query = "SELECT * FROM Pokemon AS P 
+   $query = "SELECT * FROM pokemon AS P 
             WHERE P.pokedexNumber = 
                (SELECT E.pokedexNumber FROM Egg_group AS E 
                WHERE E.eggGroup = :eggGroup)";
@@ -132,7 +132,7 @@ function getPokemonByEgg($eggGroup)
 function getPokemonByCustom()
 {
    global $db;
-   $query = "SELECT * FROM Pokemon WHERE isCustom = 1";
+   $query = "SELECT * FROM pokemon WHERE isCustom = 1";
 
    $statement = $db->prepare($query);
    $statement->execute();
@@ -145,7 +145,7 @@ function getPokemonByCustom()
 // function getPokemonByLikes()
 // {
 //    global $db;
-//    $query = "SELECT * FROM Pokemon AS P 
+//    $query = "SELECT * FROM pokemon AS P 
 //             WHERE P.pokedexNumber = 
 //                (SELECT L.pokedexNumber FROM Likes AS L 
 //                WHERE E.userEmail = $_SESSION['userEmail'])";
