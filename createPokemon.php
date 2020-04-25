@@ -15,11 +15,8 @@ if(isset($_SESSION['email']))
         <div class="col-md-2"></div>
             <div class=col-md-4>
             <form action="<?php $_SERVER['PHP_SELF'] ?>" id="create" method="post"> 
-                <h3 style="font-size:2vw;">Upload Pokemon Sprite</h3>
                 </br>
-                <p>
-                    <input type="url" name="pokeSprite" id="pokeSprite">
-                </p>
+                    <input type="text" name="pokeSprite" class="form-control" id="pokeSprite" placeholder="Enter URL to Pokemon sprite" required>
                 </br></br>
                 <div class="form-group">
                     <!-- <label for="type1">Type 1</label> -->
