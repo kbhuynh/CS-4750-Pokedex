@@ -14,7 +14,7 @@ require('dbcommands/functions.php');
                     </div>   
                     <div id="sortCol">
                         <label for="sort">Sort By: </label>
-                        <select id="sort" name="sort">
+                        <select class="form-control" id="sort" name="sort">
                             <option selected value="alphaN">Pokedex Number</option>   
                             <option value="alphaA">Alphabetical (Ascending)</option>
                             <option value="alphaD">Alphabetical (Descending)</option>
@@ -47,12 +47,7 @@ require('dbcommands/functions.php');
     <a href="#" id="load">Load More</a>
     <a href="#" id="scroll" style="display: none;"><span></span></a>
 
-    <?php
-        if($_SERVER['REQUEST_METHOD']=="POST" && strlen($_POST['search']) > 0) //maybe use if (touched)
-        {
-            // do the things 
-        }
-    ?>
+
     <script src="styles/search.js"></script>
 
 </body>

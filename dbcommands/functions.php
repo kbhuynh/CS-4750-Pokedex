@@ -1,5 +1,6 @@
 <?php 
-require('../controller/connectdb.php');
+// include('../controller/connectdb.php');
+include('controller/connectdb.php');
 // Prepared statement (or parameterized statement) happens in 2 phases:
 //   1. prepare() sends a template to the server, the server analyzes the syntax
 //                and initialize the internal structure.
@@ -250,19 +251,20 @@ function deleteTeam($teamID, $userEmail)
 
 ///******CUSTOM POKES******///
 ////////////////////////////////////////////////////////////////////////
-function addCustom($Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities, $Classification, $Type1, $Type2, $Egg_Group)
+function addCustom($Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities, $Classification, $Type1, $Type2, $Egg_Group, $Sprite)
 {
    global $db;
-   $query = "INSERT INTO pokemon VALUES ('', :Pokemon_Name, :Generation, :Height_m, :Weight_kg, :Abilities, :Classification, :isCustom)";
+   $query = "INSERT INTO pokemon VALUES ('', :Pokemon_Name, :Generation, :Height_m, :Weight_kg, :Abilities, :Classification, :isCustom, :Sprite)";
    
    $statement = $db->prepare($query);
    $statement->bindValue(':Pokemon_Name', $Pokemon_Name);
    $statement->bindValue(':Generation', $Generation);
-   $statement->bindValue(':Heigh_m', $Heigh_m);
+   $statement->bindValue(':Height_m', $Height_m);
    $statement->bindValue(':Weight_kg', $Weight_kg);
    $statement->bindValue(':Abilities', $Abilities);
    $statement->bindValue(':Classification', $Classification);
    $statement->bindValue(':isCustom', 1);
+   $statement->bindValue(':Sprite', $Sprite);
    $statement->execute();
    $statement->closeCursor();
 

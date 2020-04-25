@@ -5,11 +5,11 @@ require('controller/connectdb.php');
 
 <body>
     <?php
-        session_start();
-        if(isset($_SESSION['email']))
-        {
-            if(isset($_SESSION[]))
-            {
+        // session_start();
+        // if(isset($_SESSION['email']))
+        // {
+            // if(isset($_SESSION[]))
+            // {
     ?>
     <div class="row">
         <div class="col-md-12">

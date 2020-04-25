@@ -1,15 +1,16 @@
 <?php
+        session_start();
+        if(isset($_SESSION['email']))
+        {
+?>
+<?php
 include_once('templates/header.php');
 require('controller/connectdb.php');
 ?>
 <body>
-    <?php
-        session_start();
-        if(isset($_SESSION['email']))
-        {
-    ?>
 
-<h1><?php echo $_SESSION['email']?></h1>
+
+<h1>Hello <?php echo $_SESSION['email']?></h1>
 
 
 

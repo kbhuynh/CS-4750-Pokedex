@@ -2,7 +2,9 @@
 include_once('templates/header.php');
 require('controller/connectdb.php');
 ?>
-
+<?php
+    session_start();
+?>
 <body>  
 <div class="row">
     <div class='col-md-3'></div>
@@ -29,9 +31,6 @@ require('controller/connectdb.php');
         </div>
     </div>
     <div class="col-md-3"></div>
-<?php
-    session_start();
-?>
 <?php
     if($_SERVER['REQUEST_METHOD']=="POST" && strlen($_POST['email']) > 0)
     {
