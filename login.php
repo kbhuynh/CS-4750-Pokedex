@@ -1,4 +1,4 @@
-<?php
+php -S localhost:8000<?php
 include_once('templates/header.php');
 require('controller/connectdb.php');
 ?>
