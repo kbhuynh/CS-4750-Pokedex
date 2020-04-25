@@ -296,6 +296,15 @@ function addCustom($Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities
    $statement->bindValue(':type2', $Type2);
    $statement->execute();
    $statement->closeCursor();
+
+   global $db;
+   $query = "INSERT INTO Design VALUES (:creatorEmail, :pokedexNumber)";
+
+   $statement = $db->prepare($query);
+   $statement->bindValue(':creatorEmail', $_SESSION[email]);
+   $statement->bindValue(':pokedexNumber', $num);
+   $statement->execute();
+   $statement->closeCursor();
 }
 
 function editCustom($pokedexNumber, $Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities, $Classification, $Type1, $Type2, $Egg_Group)
@@ -335,6 +344,22 @@ function editCustom($pokedexNumber, $Pokemon_Name, $Generation, $Height_m, $Weig
    $statement->closeCursor();
 }
 
+function getCustom()
+{
+   global $db;
+   $query = "SELECT * FROM pokemon AS P 
+            WHERE P.pokedexNumber = 
+               (SELECT D.pokedexNumber FROM Design AS D 
+               WHERE E.creatorEmail = $_SESSION[email])";
+
+   $statement = $db->prepare($query);
+   $statement->execute();
+   // fetchAll() returns an array for all of the rows in the result set
+   $results = $statement->fetchAll();
+   $statement->closeCursor();
+   
+   return $results;
+}
 
 ///******MISC******///
 ////////////////////////////////////////////////////////////////////////
