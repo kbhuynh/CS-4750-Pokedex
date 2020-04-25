@@ -14,7 +14,7 @@ require('dbcommands/functions.php');
         <div class="col-md-1">
             <label for="sort">Sorting</label>
             <select class="" id="sort" name="sort">
-                <option disabled selected>Choose a sort method</option>    
+                <option selected value="alphaN">Pokedex Number</option>   
                 <option value="alphaA">Alphabetical (Ascending)</option>
                 <option value="alphaD">Alphabetical (Descending)</option>
             </select>
@@ -32,7 +32,7 @@ require('dbcommands/functions.php');
                     foreach ($pokemon as $p): 
                 ?>
                     <div class="col-md-2 card" data-name=<?php echo strtolower($p['Pokemon_Name'])?>>
-                        <a onclick="goToPokemon(<?php echo $p['pokedexNumber']?>)" style="text-decoration:none; color: black;">
+                        <a href="pokeInfo.php?pokedexNumber=<?php echo $p['pokedexNumber']?>" style="text-decoration:none; color: black;">
                             <div class="card-body">
                                 <h3><?php echo $p['Pokemon_Name'] ?></h3>
                                 <img src=<?php echo $p['sprite'] ?>>
@@ -51,12 +51,6 @@ require('dbcommands/functions.php');
             // do the things 
         }
     ?>
-    <script>
-        function goToPokemon(pokeNum) {
-            console.log(pokeNum);
-            
-        }
-    </script>
     <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
     <script src="search.js"></script>
 

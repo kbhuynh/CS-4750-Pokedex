@@ -9,6 +9,8 @@ $(document).ready(function() {
             return String.prototype.localeCompare.call($(a).data('name').toLowerCase(), $(b).data('name').toLowerCase());
         } else if($('#sort').val() == "alphaD") {
             return String.prototype.localeCompare.call($(b).data('name').toLowerCase(), $(a).data('name').toLowerCase());
+        } else {
+            return $(a).data('number') - $(b).data('number');
         }
     });
 
