@@ -7,7 +7,7 @@ require('dbcommands/functions.php');
     <div class="row">
         <div class="col-md-3"></div>
         <div class="col-md-5">
-            <!-- <form id="search">  -->
+            <!-- <form action="<?php $_SERVER['PHP_SELF'] ?>" id="search" method="post">  -->
                 <div class="form-group mx-sm-5 mb-2">
                     <input type="text" name="search" class="form-control" id="search" placeholder="Enter a Pokemon name here" autofocus>
                 </div>    
@@ -27,7 +27,7 @@ require('dbcommands/functions.php');
 </br></br>    
     <div class="row">
         <div class="col-md-1"></div>
-        <div class="col-md-10">
+        <div id="wrapperParent" class="col-md-10">
             <div id="wrapper" class="row">
                 <?php 
                     $pokemon = getPokemon();
