@@ -4,13 +4,10 @@ require('controller/connectdb.php');
 require('dbcommands/teamActions.php');
 require('dbcommands/functions.php');
 $action = "list_teams";        // default action
+if(isset($_SESSION['email']))
+{
 ?>
 <body>
-    <?php
-        session_start();
-        if(isset($_SESSION['email']))
-        {
-    ?>
     <div class="container">
 
     <?php
@@ -52,10 +49,8 @@ $action = "list_teams";        // default action
     }
     ?>
     </div>
-    <?php 
-        }
-        else
-            header('Location: login.php');
-    ?>
 </body>
 </html>
+<?php } else {
+    header('Location: login.php');
+}?>

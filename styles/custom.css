@@ -95,7 +95,6 @@ li a:hover {
 }
 
 .card {
-    display: none;
     margin:2px;
     box-sizing: content-box;
 }

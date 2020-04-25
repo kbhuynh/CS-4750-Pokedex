@@ -44,7 +44,7 @@ require('dbcommands/functions.php');
         </div>
     </div>
     
-    <a href="#" id="load">Load More</a>
+    <!-- <a href="#" id="load">Load More</a> -->
     <a href="#" id="scroll" style="display: none;"><span></span></a>
 
     <?php
