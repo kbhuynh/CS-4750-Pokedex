@@ -5,6 +5,8 @@ runtime: php73
 handlers:
 - url: /styles
   static_dir: styles
+- url: /img
+  static_dir: img
 
 # Defaults to "serve index.php" 
 entrypoint: serve controller/index.php
