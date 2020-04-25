@@ -34,7 +34,7 @@ require('dbcommands/functions.php');
                     foreach ($pokemon as $p): 
                 ?>
                     <div class="col-md-2 card">
-                    <a href="#" style="text-decoration:none; color: black;">
+                    <a onclick="selectPokemon()" style="text-decoration:none; color: black;">
                         <div class="card-body">
                             <h3><?php echo $p['Pokemon_Name'] ?></h3>
                             <img src=<?php echo $p['sprite'] ?>>

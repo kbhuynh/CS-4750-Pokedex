@@ -8,10 +8,12 @@ require('controller/connectdb.php');
         session_start();
         if(isset($_SESSION['email']))
         {
+            if(isset($_SESSION[]))
+            {
     ?>
     <div class="row">
         <div class="col-md-12">
-            <h2>My Custom Pokemon</h2>
+            <h2>Edit Custom Pokemon</h2>
         </div>
     </div>
     <br/>
@@ -93,13 +95,14 @@ require('controller/connectdb.php');
     </div>
     <?php 
         }
-        else
-            header('Location: login.php');
+    }
+    else
+        header('Location: login.php');
     ?>
     <?php
         if($_SERVER['REQUEST_METHOD']=="POST")
         {
-            createPokemon($pokeName, $height, $weight, $ability, $classification);
+            createPokemon($pokeName, $height, $weight, $ability, $classification, $type1, $type2);
         }
     ?>
 
