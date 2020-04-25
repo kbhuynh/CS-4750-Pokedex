@@ -1,5 +1,5 @@
 <?php
-require('controller/connectdb.php');
+require('../controller/connectdb.php');
 session_start();
 
 if($_SERVER['REQUEST_METHOD']=="POST" && strlen($_POST['email']) > 0)
