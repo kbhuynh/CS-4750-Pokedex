@@ -4,6 +4,11 @@ require('controller/connectdb.php');
 ?>
 
 <body>
+    <?php
+        session_start();
+        if(isset($_SESSION['email']))
+        {
+    ?>
     <div class="row">
         <div class="col-md-12">
             <h2>My Custom Pokemon</h2>
@@ -89,9 +94,9 @@ require('controller/connectdb.php');
         <div class="col-md-3"></div>
     </div>
     <?php 
-        // }
-        // else
-            // header('Location: login.php');
+        }
+        else
+            header('Location: login.php');
     ?>
     <?php
         if($_SERVER['REQUEST_METHOD']=="POST" && strlen($_POST['search']) > 0) //maybe use if (touched)
