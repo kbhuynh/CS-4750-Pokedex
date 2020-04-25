@@ -53,7 +53,7 @@ require('dbcommands/functions.php');
             // do the things 
         }
     ?>
-    <script src="search.js"></script>
+    <script src="styles/search.js"></script>
 
 </body>
 </html>
