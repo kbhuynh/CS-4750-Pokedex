@@ -250,6 +250,43 @@ function deleteTeam($teamID, $userEmail)
 //alterTeam???
 
 
+///******CUSTOM POKES******///
+////////////////////////////////////////////////////////////////////////
+function addCustom($Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities, $Classification)
+{
+   global $db;
+   $query = "INSERT INTO pokemon VALUES ('', :Pokemon_Name, :Generation, :Heigh_m, :Weight_kg, :Abilities, :Classification, :isCustom)";
+   
+   $statement = $db->prepare($query);
+   $statement->bindValue(':Pokemon_Name', $Pokemon_Name);
+   $statement->bindValue(':Generation', $Generation);
+   $statement->bindValue(':Heigh_m', $Heigh_m);
+   $statement->bindValue(':Weight_kg', $Weight_kg);
+   $statement->bindValue(':Abilities', $Abilities);
+   $statement->bindValue(':Classification', $Classification);
+   $statement->bindValue(':isCustom', 1);
+   $statement->execute();
+   $statement->closeCursor();
+}
+
+function editCustom($pokedexNumber, $Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities, $Classification)
+{
+   global $db;
+   $query = "INSERT INTO pokemon VALUES ('', :Pokemon_Name, :Generation, :Heigh_m, :Weight_kg, :Abilities, :Classification, :isCustom)";
+   
+   $statement = $db->prepare($query);
+   $statement->bindValue(':Pokemon_Name', $Pokemon_Name);
+   $statement->bindValue(':Generation', $Generation);
+   $statement->bindValue(':Heigh_m', $Heigh_m);
+   $statement->bindValue(':Weight_kg', $Weight_kg);
+   $statement->bindValue(':Abilities', $Abilities);
+   $statement->bindValue(':Classification', $Classification);
+   $statement->bindValue(':isCustom', 1);
+   $statement->execute();
+   $statement->closeCursor();
+}
+
+
 ///******MISC******///
 ////////////////////////////////////////////////////////////////////////
 function addLike($pokedexNumber, $userEmail)
@@ -263,6 +300,19 @@ function addLike($pokedexNumber, $userEmail)
    $statement->execute();
    $statement->closeCursor();
 }
+
+function removeLike($pokedexNumber, $userEmail)
+{
+   global $db;
+   $query = "DELETE FROM Likes VALUES (:pokedexNumber, :userEmail)";
+   
+   $statement = $db->prepare($query);
+   $statement->bindValue(':pokedexNumber', $pokedexNumber);
+   $statement->bindValue(':userEmail', $userEmail);
+   $statement->execute();
+   $statement->closeCursor();
+}
+
 
 function addComment($commentID, $userEmail, $teamID, $text)
 {

@@ -142,21 +142,21 @@ function getPokemonByCustom()
    return $results;
 }
 
-// function getPokemonByLikes()
-// {
-//    global $db;
-//    $query = "SELECT * FROM pokemon AS P 
-//             WHERE P.pokedexNumber = 
-//                (SELECT L.pokedexNumber FROM Likes AS L 
-//                WHERE E.userEmail = $_SESSION['userEmail'])";
+function getPokemonByLikes()
+{
+   global $db;
+   $query = "SELECT * FROM pokemon AS P 
+            WHERE P.pokedexNumber = 
+               (SELECT L.pokedexNumber FROM Likes AS L 
+               WHERE E.userEmail = $_SESSION['email'])";
 
-//    $statement = $db->prepare($query);
-//    $statement->execute();
-//    $results = $statement->fetchAll();
-//    $statement->closeCursor();
+   $statement = $db->prepare($query);
+   $statement->execute();
+   $results = $statement->fetchAll();
+   $statement->closeCursor();
    
-//    return $results;
-// }
+   return $results;
+}
 
 ///******SIGN-UP & LOGIN******//
 ////////////////////////////////////////////////////////////////////////
@@ -248,6 +248,43 @@ function deleteTeam($teamID, $userEmail)
 
 //alterTeam???
 
+///******CUSTOM POKES******///
+////////////////////////////////////////////////////////////////////////
+function addCustom($Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities, $Classification)
+{
+   global $db;
+   $query = "INSERT INTO pokemon VALUES ('', :Pokemon_Name, :Generation, :Height_m, :Weight_kg, :Abilities, :Classification, :isCustom)";
+   
+   $statement = $db->prepare($query);
+   $statement->bindValue(':Pokemon_Name', $Pokemon_Name);
+   $statement->bindValue(':Generation', $Generation);
+   $statement->bindValue(':Heigh_m', $Heigh_m);
+   $statement->bindValue(':Weight_kg', $Weight_kg);
+   $statement->bindValue(':Abilities', $Abilities);
+   $statement->bindValue(':Classification', $Classification);
+   $statement->bindValue(':isCustom', 1);
+   $statement->execute();
+   $statement->closeCursor();
+}
+
+function editCustom($pokedexNumber, $Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities, $Classification)
+{
+   global $db;
+   $query = "UPDATE pokemon SET Pokemon_Name = :Pokemon_Name, Generation = :Generation, Height_m = :Height_m, Weight_kg = :Weight_kg, Abilities = :Abilities, Classification = :Classification WHERE pokedexNumber = :pokedexNumber";
+   
+   $statement = $db->prepare($query);
+   $statement->bindValue(':pokedexNumber', $pokedexNumber);
+   $statement->bindValue(':Pokemon_Name', $Pokemon_Name);
+   $statement->bindValue(':Generation', $Generation);
+   $statement->bindValue(':Heigh_m', $Heigh_m);
+   $statement->bindValue(':Weight_kg', $Weight_kg);
+   $statement->bindValue(':Abilities', $Abilities);
+   $statement->bindValue(':Classification', $Classification);
+   $statement->bindValue(':isCustom', 1);
+   $statement->execute();
+   $statement->closeCursor();
+}
+
 
 ///******MISC******///
 ////////////////////////////////////////////////////////////////////////
@@ -262,6 +299,19 @@ function addLike($pokedexNumber, $userEmail)
    $statement->execute();
    $statement->closeCursor();
 }
+
+function removeLike($pokedexNumber, $userEmail)
+{
+   global $db;
+   $query = "DELETE FROM Likes VALUES (:pokedexNumber, :userEmail)";
+   
+   $statement = $db->prepare($query);
+   $statement->bindValue(':pokedexNumber', $pokedexNumber);
+   $statement->bindValue(':userEmail', $userEmail);
+   $statement->execute();
+   $statement->closeCursor();
+}
+
 
 function addComment($commentID, $userEmail, $teamID, $text)
 {
