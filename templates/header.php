@@ -1,8 +1,7 @@
 <?php
+    session_start();
     require('../controller/connectdb.php');
     require('../dbcommands/functions.php');
-
-    session_start();
     if(!isset($_SESSION['email']))
     {
 ?>
