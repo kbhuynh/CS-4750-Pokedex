@@ -190,22 +190,6 @@ function addSignUp($email, $username, $password)
    }
    $statement->closeCursor();
 }
-   //  $query = "INSERT INTO register (username, password) VALUES (:username, :password)";
-
-function checkLogIn($email, $password){
-   global $db;
-   $query = "SELECT * FROM User WHERE Email = :email AND Password = :password";
-
-   $statement = $db->prepare($query);
-   $statement->bindValue(':email', $email);
-   $hash_password = password_hash($password, PASSWORD_DEFAULT);
-   $statement->bindValue(':password', $hash_password);
-   $statement->execute();
-   $results = $statement->fetchAll();
-   $statement->closeCursor();
-
-   return sizeof($results);
-}
 
 
 ///*****TEAMS*****///
