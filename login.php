@@ -1,6 +1,9 @@
-php -S localhost:8000<?php
+<?php
 include_once('templates/header.php');
 require('controller/connectdb.php');
+
+if(!isset($_SESSION['email']))
+    {
 ?>
 
 <body>  
@@ -10,7 +13,7 @@ require('controller/connectdb.php');
         <div class="wrapper">
             <h2>Login</h2>
             </br>
-            <form class="needs-validation" action="<?php $_SERVER['PHP_SELF'] ?>" id="login" method="post"> 
+            <form class="needs-validation" action="signin.php" id="login" method="post"> 
             <div class="form-group mx-sm-5 mb-2">
                 <label>Email</label>
                 <input type="text" name="email" class="form-control" id="username" autofocus required>
@@ -29,25 +32,10 @@ require('controller/connectdb.php');
         </div>
     </div>
     <div class="col-md-3"></div>
-<?php
-    session_start();
-?>
-<?php
-    if($_SERVER['REQUEST_METHOD']=="POST" && strlen($_POST['email']) > 0)
-    {
-        $user = trim($_POST['email']);
-        if(isset($_POST['password']))
-        {
-            $pwd = trim($_POST['pwd']);
-            $_SESSION['email'] = $user;
-            $hash_pwd = password_hash($pwd, PASSWORD_DEFAULT);
-            $_SESSION['pwd'] = $hash_pwd;
-            header('Location: home.php');
-        }
-    }
-
-
-?>
 
 </body>
 </html>
+
+<?php } else { 
+    header('Location: home.php');
+}?>

@@ -1,13 +1,11 @@
 <?php
 include_once('templates/header.php');
 require('controller/connectdb.php');
+
+if(isset($_SESSION['email']))
+{
 ?>
 <body>
-    <?php
-        session_start();
-        if(isset($_SESSION['email']))
-        {
-    ?>
     <div class="row">
         <div class="col-md-3"></div>
         <div class=col-md-6>
@@ -37,10 +35,8 @@ require('controller/connectdb.php');
             // do the things 
         }
     ?>
-    <?php 
-        }
-        else
-            header('Location: login.php');
-    ?>
 </body>
 </html>
+<?php } else { 
+    header('Location: login.php');
+}?>
