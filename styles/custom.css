@@ -86,6 +86,16 @@ li a:hover {
     color: white;
 }
 
+.landing-wrapper {
+    max-width: 60%;
+    margin:0 auto;   
+    font:0.9em 'Space Mono', monospace; 
+}
+
+.img-fluid {
+    padding: 16px 18px;
+}
+
 .wrapper {
     max-width: 90%;
     margin:0 auto;
