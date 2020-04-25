@@ -26,9 +26,10 @@ require('controller/connectdb.php');
                 </p>
                 </br></br>
                 <div class="form-group">
-                    <label for="type1">Type 1</label>
+                    <!-- <label for="type1">Type 1</label> -->
                     <select class="form-control" id="type1" name="type1">
-                        <option value="None"></option>    
+                        <option disabled selected>Type 1</option>    
+                        <!-- <option value=""></option>     -->
                         <option value="normal">Normal</option>
                         <option value="grass">Grass</option>
                         <option value="fire">Fire</option>
@@ -49,9 +50,10 @@ require('controller/connectdb.php');
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="type2">Type 2</label>
+                    <!-- <label for="type2">Type 2</label> -->
                     <select class="form-control" id="type2" name="type2">
-                        <option value="None"></option>
+                        <option disabled selected>Type 2</option>    
+                        <option value="">None</option>
                         <option value="normal">Normal</option>
                         <option value="grass">Grass</option>
                         <option value="fire">Fire</option>
@@ -99,7 +101,7 @@ require('controller/connectdb.php');
     <?php
         if($_SERVER['REQUEST_METHOD']=="POST")
         {
-            createPokemon($pokeName, $height, $weight, $ability, $classification);
+            createPokemon($pokeName, $height, $weight, $ability, $classification, $type1, $type2);
         }
     ?>
 

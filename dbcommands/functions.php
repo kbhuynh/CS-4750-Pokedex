@@ -81,13 +81,13 @@ function getPokemonByName($Pokemon_Name)
    return $results;
 }
 
-function getPokemonByGen($Generation)
+function getPokemonByGen($generation)
 {
    global $db;
-   $query = "SELECT * FROM pokemon WHERE Generation = :Generation";
+   $query = "SELECT * FROM pokemon WHERE generation = :generation";
 
    $statement = $db->prepare($query);
-   $statement->bindValue(':Generation', $Generation);
+   $statement->bindValue(':generation', $generation);
    $statement->execute();
    $results = $statement->fetchAll();
    $statement->closeCursor();

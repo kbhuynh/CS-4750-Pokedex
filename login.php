@@ -26,9 +26,9 @@ require('controller/connectdb.php');
                 <a href="register.php" class="register">Don't have an account? Register now</a>
             </div> 
         </form>
+        </div>
     </div>
-        <div class="col-md-4"></div>
-    </div>
+    <div class="col-md-3"></div>
 <?php
     session_start();
 ?>
