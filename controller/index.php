@@ -11,6 +11,9 @@ switch (@parse_url($_SERVER['REQUEST_URI'])['path']) {
     case '/':
         require '../home.php';
         break;
+    case '/pokeInfo.php':
+        require '/pokeInfo.php';
+        break;
     case '/connectdb.php':
         require '/connectdb.php';
         break;
@@ -54,6 +57,12 @@ switch (@parse_url($_SERVER['REQUEST_URI'])['path']) {
         require '../dbcommands/teamActions.php';
     case '/teams.php':
         require '../teams.php';
+        break;
+    case '/signin.php':
+        require '../signin.php';
+        break;
+    case '/logout.php':
+        require '../logout.php';
         break;
     default:
         http_response_code(404);
