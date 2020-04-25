@@ -13,7 +13,7 @@ if(!isset($_SESSION['email']) && $_SERVER['REQUEST_METHOD'] == 'GET')
         <div class="wrapper">
             <h2>Login</h2>
             </br>
-            <form class="needs-validation" action="<?php echo $_SERVER['PHP_SELF']; ?>" id="login" method="post"> 
+            <form class="needs-validation" action="login.php" id="login" method="post"> 
             <div class="form-group mx-sm-5 mb-2">
                 <label>Email</label>
                 <input type="text" name="email" class="form-control" id="username" autofocus required>
