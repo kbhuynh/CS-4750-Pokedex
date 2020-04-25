@@ -160,6 +160,19 @@ function getPokemonByLikes()
    return $results;
 }
 
+function getPokemonCreatorEmail()
+{
+   global $db;
+   $query = "SELECT * FROM pokemon";
+
+   $statement = $db->prepare($query);
+   $statement->execute();
+   $results = $statement->fetchAll();
+   $statement->closeCursor();
+   
+   return $results;
+}
+
 ///******SIGN-UP & LOGIN******//
 ////////////////////////////////////////////////////////////////////////
 function checkSignUp($email){
