@@ -1,11 +1,8 @@
 <?php
 include_once('templates/header.php');
-require('controller/connectdb.php');
-require('dbcommands/functions.php');
 if(isset($_SESSION['email']))
 {
 ?>
-<body>
     <h1>My Custom Pokédex</h1>
     <div class="row">
         <div class="col-md-12 wrapper">

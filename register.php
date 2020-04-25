@@ -1,8 +1,5 @@
 <?php
 include_once('templates/header.php');
-require('controller/connectdb.php');
-require('dbcommands/functions.php');
-require('dbcommands/teamActions.php');
 ?>
 
 <?php
@@ -85,7 +82,6 @@ require('dbcommands/teamActions.php');
         //mysqli_close($link);
 ?>
 
-<body>
     <div class="row">
     <div class='col-md-3'></div>
     <div class='col-md-6'>
