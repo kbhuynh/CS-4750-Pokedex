@@ -31,7 +31,7 @@ require('dbcommands/functions.php');
                     $pokemon = getPokemon();
                     foreach ($pokemon as $p): 
                 ?>
-                    <div class="col-md-2 card" data-name=<?php echo strtolower($p['Pokemon_Name'])?>>
+                    <div class="col-md-2 card" data-name=<?php echo strtolower($p['Pokemon_Name'])?>  data-number=<?php echo $p['pokedexNumber']?>>
                         <a href="pokeInfo.php?pokedexNumber=<?php echo $p['pokedexNumber']?>" style="text-decoration:none; color: black;">
                             <div class="card-body">
                                 <h3><?php echo $p['Pokemon_Name'] ?></h3>
