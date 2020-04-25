@@ -369,7 +369,7 @@ function getCustom()
    $query = "SELECT * FROM pokemon AS P 
             WHERE P.pokedexNumber = 
                (SELECT D.pokedexNumber FROM Design AS D 
-               WHERE E.creatorEmail = $_SESSION[email])";
+               WHERE D.creatorEmail = $_SESSION[email])";
 
    $statement = $db->prepare($query);
    $statement->execute();
