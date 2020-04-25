@@ -101,6 +101,7 @@ require('controller/connectdb.php');
     <?php
         if($_SERVER['REQUEST_METHOD']=="POST")
         {
+            /// NOTE FROM APRIL: Should this function be the addCustom function in functions.php? **** Need generation and egg group info****
             createPokemon($pokeName, $height, $weight, $ability, $classification, $type1, $type2);
         }
     ?>

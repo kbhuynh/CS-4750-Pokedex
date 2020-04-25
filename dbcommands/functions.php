@@ -266,11 +266,37 @@ function addCustom($Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities
    $statement->execute();
    $statement->closeCursor();
 
-   // global $db;
-   // $query = "INSERT INTO Egg_group VALUES ('', ";
+   global $db;
+   $query = "SELECT pokedexNumber FROM pokemon WHERE Pokemon_Name = :Pokemon_Name";
+
+   $statement = $db->prepare($query);
+   $statement->bindValue(':Pokemon_Name', $Pokemon_Name);
+   $statement->execute();
+   $results = $statement->fetch();
+   $statement->closeCursor();
+   $num = $results[0];
+
+   global $db;
+   $query = "INSERT INTO Egg_group VALUES (:pokedexNumber, :Egg_Group)";
+
+   $statement = $db->prepare($query);
+   $statement->bindValue(':pokedexNumber', $num);
+   $statement->bindValue(':Egg_Group', $Egg_Group);
+   $statement->execute();
+   $statement->closeCursor();
+
+   global $db;
+   $query = "INSERT INTO Pokemon_Types VALUES (:pokedexNumber, :type1, :type2)";
+
+   $statement = $db->prepare($query);
+   $statement->bindValue(':pokedexNumber', $num);
+   $statement->bindValue(':type1', $Type1);
+   $statement->bindValue(':type2', $Type2);
+   $statement->execute();
+   $statement->closeCursor();
 }
 
-function editCustom($pokedexNumber, $Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities, $Classification)
+function editCustom($pokedexNumber, $Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities, $Classification, $Type1, $Type2, $Egg_Group)
 {
    global $db;
    $query = "UPDATE pokemon SET Pokemon_Name = :Pokemon_Name, Generation = :Generation, Height_m = :Height_m, Weight_kg = :Weight_kg, Abilities = :Abilities, Classification = :Classification WHERE pokedexNumber = :pokedexNumber";
@@ -284,6 +310,25 @@ function editCustom($pokedexNumber, $Pokemon_Name, $Generation, $Height_m, $Weig
    $statement->bindValue(':Abilities', $Abilities);
    $statement->bindValue(':Classification', $Classification);
    $statement->bindValue(':isCustom', 1);
+   $statement->execute();
+   $statement->closeCursor();
+
+   global $db;
+   $query = "UPDATE Egg_group SET Egg_Group = :Egg_Group WHERE pokedexNumber = :pokedexNumber";
+
+   $statement = $db->prepare($query);
+   $statement->bindValue(':pokedexNumber', $pokedexNumber);
+   $statement->bindValue(':Egg_Group', $Egg_Group);
+   $statement->execute();
+   $statement->closeCursor();
+
+   global $db;
+   $query = "UPDATE Pokemon_Types SET type1 = :type1, type2 = :type2 WHERE pokedexNumber = :pokedexNumber)";
+
+   $statement = $db->prepare($query);
+   $statement->bindValue(':pokedexNumber', $pokedexNumber);
+   $statement->bindValue(':type1', $Type1);
+   $statement->bindValue(':type2', $Type2);
    $statement->execute();
    $statement->closeCursor();
 }
