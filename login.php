@@ -1,6 +1,9 @@
 <?php
 include_once('templates/header.php');
-require('controller/connectdb.php');
+require('../controller/connectdb.php');
+
+if(!isset($_SESSION['email']) && $_SERVER['REQUEST_METHOD'] == 'GET')
+    {
 ?>
 <?php
     session_start();
@@ -12,7 +15,7 @@ require('controller/connectdb.php');
         <div class="wrapper">
             <h2>Login</h2>
             </br>
-            <form class="needs-validation" action="<?php $_SERVER['PHP_SELF'] ?>" id="login" method="post"> 
+            <form class="needs-validation" action="login.php" id="login" method="post"> 
             <div class="form-group mx-sm-5 mb-2">
                 <label>Email</label>
                 <input type="text" name="email" class="form-control" id="username" autofocus required>
@@ -31,8 +34,15 @@ require('controller/connectdb.php');
         </div>
     </div>
     <div class="col-md-3"></div>
-<?php
-    if($_SERVER['REQUEST_METHOD']=="POST" && strlen($_POST['email']) > 0)
+
+</body>
+</html>
+
+<?php } 
+else if (!isset($_SESSION['email']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
+    session_start();
+
+    if(strlen($_POST['email']) > 0)
     {
         $user = trim($_POST['email']);
         if(isset($_POST['password']))
@@ -44,9 +54,7 @@ require('controller/connectdb.php');
             header('Location: home.php');
         }
     }
-
-
-?>
-
-</body>
-</html>
+} 
+else if(isset($_SESSION['email'])) { 
+    header('Location: home.php');
+}?>

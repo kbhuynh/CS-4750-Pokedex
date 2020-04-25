@@ -2,13 +2,9 @@
 include_once('templates/header.php');
 require('controller/connectdb.php');
 require('dbcommands/functions.php');
+if(isset($_SESSION['email']))
+{
 ?>
-<?php
-    session_start();
-    if(isset($_SESSION['email']))
-    {
-?>
-    
 <body>
     <h1>My Custom Pokédex</h1>
     <div class="row">
@@ -56,11 +52,10 @@ require('dbcommands/functions.php');
 
     <script src="styles/search.js"></script>
     <?php 
-        }
-        else
-        {
-            header('Location: login.php');
-        }
     ?>    
 </body>
 </html>
+<?php } else {
+    header('Location: login.php');
+}
+?>

@@ -112,14 +112,6 @@ require('dbcommands/functions.php');
         </div>
         <div class="col-md-4"></div>
     </div>
-    </form>
-    <?php 
-        }
-        else
-        {
-            header('Location: login.php');
-        }
-    ?>    
     <?php
         if($_SERVER['REQUEST_METHOD']=="POST")
         {
@@ -135,3 +127,6 @@ require('dbcommands/functions.php');
 
 </body>
 </html>
+<?php } else {
+    header('Location: login.php');
+} ?> 

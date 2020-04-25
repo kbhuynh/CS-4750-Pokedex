@@ -1,6 +1,6 @@
 <?php
 include_once('templates/header.php');
-require('controller/connectdb.php');
+require('../controller/connectdb.php');
 require('dbcommands/functions.php');
 ?>
 <body>
@@ -44,7 +44,7 @@ require('dbcommands/functions.php');
         </div>
     </div>
     
-    <a href="#" id="load">Load More</a>
+    <!-- <a href="#" id="load">Load More</a> -->
     <a href="#" id="scroll" style="display: none;"><span></span></a>
 
 
