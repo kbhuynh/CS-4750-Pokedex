@@ -4,7 +4,6 @@ $action = "list_teams";        // default action
 if(isset($_SESSION['email']))
 {
 ?>
-<body>
     <div class="container">
 
     <?php

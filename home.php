@@ -1,7 +1,6 @@
 <?php
 include_once('templates/header.php');
 ?>
-<body>
     <h1>Pokédex</h1>
     <div class="row">
         <div class="col-md-12 wrapper">
