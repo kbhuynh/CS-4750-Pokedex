@@ -1,6 +1,6 @@
 <?php
 include_once('templates/header.php');
-include('../controller/connectdb.php');
+// include('../controller/connectdb.php');
 require('dbcommands/functions.php');
 ?>
 <body>

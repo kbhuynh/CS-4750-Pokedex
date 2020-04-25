@@ -6,9 +6,6 @@ require('controller/connectdb.php');
 if(!isset($_SESSION['email']))
     {
 ?>
-<?php
-    session_start();
-?>
 <body>  
 <div class="row">
     <div class='col-md-3'></div>
