@@ -1,6 +1,6 @@
 <?php 
 // include('../controller/connectdb.php');
-include('controller/connectdb.php');
+include('../controller/connectdb.php');
 // require('../controller/connectdb.php');
 
 // Prepared statement (or parameterized statement) happens in 2 phases:
