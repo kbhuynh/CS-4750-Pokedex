@@ -30,7 +30,7 @@ if(isset($_SESSION['email']))
         <div id="wrapperParent" class="col-md-12">
             <div id="wrapper" class="wrapper row d-flex justify-content-center">
                 <?php 
-                    $pokemon = getPokemon();
+                    $pokemon = getCustom();
                     foreach ($pokemon as $p): 
                 ?>
                     <div class="col-md-2 card" data-name=<?php echo strtolower($p['Pokemon_Name'])?>  data-number=<?php echo $p['pokedexNumber']?>>

@@ -49,6 +49,8 @@ switch (@parse_url($_SERVER['REQUEST_URI'])['path']) {
         break;
     case '/pokeInfo.php':
         require 'pokeInfo.php';
+    case '/signin.php':
+        require 'signin.php';
         break;
     default:
         http_response_code(404);

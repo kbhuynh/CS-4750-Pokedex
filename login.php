@@ -1,8 +1,9 @@
 <?php
 include_once('templates/header.php');
-require('../controller/connectdb.php');
+// require('../controller/connectdb.php');
+require('controller/connectdb.php');
 
-if(!isset($_SESSION['email']) && $_SERVER['REQUEST_METHOD'] == 'GET')
+if(!isset($_SESSION['email']))
     {
 ?>
 <?php
@@ -15,7 +16,7 @@ if(!isset($_SESSION['email']) && $_SERVER['REQUEST_METHOD'] == 'GET')
         <div class="wrapper">
             <h2>Login</h2>
             </br>
-            <form class="needs-validation" action="login.php" id="login" method="post"> 
+            <form class="needs-validation" action="signin.php" id="login" method="post"> 
             <div class="form-group mx-sm-5 mb-2">
                 <label>Email</label>
                 <input type="text" name="email" class="form-control" id="username" autofocus required>
@@ -39,22 +40,6 @@ if(!isset($_SESSION['email']) && $_SERVER['REQUEST_METHOD'] == 'GET')
 </html>
 
 <?php } 
-else if (!isset($_SESSION['email']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
-    session_start();
-
-    if(strlen($_POST['email']) > 0)
-    {
-        $user = trim($_POST['email']);
-        if(isset($_POST['password']))
-        {
-            $pwd = trim($_POST['pwd']);
-            $_SESSION['email'] = $user;
-            $hash_pwd = password_hash($pwd, PASSWORD_DEFAULT);
-            $_SESSION['pwd'] = $hash_pwd;
-            header('Location: home.php');
-        }
-    }
-} 
-else if(isset($_SESSION['email'])) { 
+else { 
     header('Location: home.php');
 }?>
