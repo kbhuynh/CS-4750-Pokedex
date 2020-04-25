@@ -9,7 +9,7 @@
 # [START gae_simple_front_controller]
 switch (@parse_url($_SERVER['REQUEST_URI'])['path']) {
     case '/':
-        require '../home.php';
+        require '../landing.php';
         break;
     case '/connectdb.php':
         require '/connectdb.php';
