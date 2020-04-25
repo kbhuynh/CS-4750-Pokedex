@@ -9,12 +9,17 @@ require('controller/connectdb.php');
         {
     ?>
 
-<h1><?php echo $_SESSION['email']?></h1>
-
 <input type ="hidden" name ="pokeNum"
 value="<?php echo $_GET['pokedexNumber']?>" method="get">
+<div class="row">
+        <div class="col-md-2"></div>
+            <div class=col-md-4></div>
+</div>
 
+<?php
+echo $_GET['pokedexNumber']
 
+?>
 
 
 
