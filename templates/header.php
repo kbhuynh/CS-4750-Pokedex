@@ -18,14 +18,42 @@
 </head>
 
 <body>  
-    <header>
+    <!-- <header>
         <ul>
             <li><a href="home.php">Home</a></li>
             <li><a href="profile.php">My Profile</a></li>
             <li><a href="teams.php">Teams</a></li>
             <li><a href="customPokemon.php">Custom Pokemon</a></li>
-            <li style="float:right"><a href="register.php">Register</a></li>
-            <li style="float:right"><a class="navbar-right" href="login.php">Login</a></li>
+            <div id="rLinks">
+                <li><a class="navbar-right" href="login.php">Login</a></li>
+                <li><a href="register.php">Register</a></li>
+            </div>
         </ul>
-    </header>
+    </header> -->
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item"><a href="home.php">Home</a></li>
+                <li class="nav-item"><a href="profile.php">My Profile</a></li>
+                <li class="nav-item"><a href="teams.php">Teams</a></li>
+                <li class="nav-item"><a href="customPokemon.php">Custom Pokemon</a></li>
+            </ul>
+            <span id="rLinks">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li><a href="login.php">Login</a></li>
+                    <li><a href="register.php">Register</a></li>
+                </ul>
+            </span>
+        </div>
+    </nav>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
 </body>

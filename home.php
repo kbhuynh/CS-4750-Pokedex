@@ -4,29 +4,29 @@ require('controller/connectdb.php');
 require('dbcommands/functions.php');
 ?>
 <body>
+    <h1>Pokédex</h1>
     <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-5">
-                <div class="form-group mx-sm-5 mb-2">
-                    <input type="text" name="search" class="form-control" id="search" placeholder="Enter a Pokemon name here" autofocus>
-                </div>    
-        </div>    
-        <div class="col-md-1">
-            <label for="sort">Sorting</label>
-            <select class="" id="sort" name="sort">
-                <option selected value="alphaN">Pokedex Number</option>   
-                <option value="alphaA">Alphabetical (Ascending)</option>
-                <option value="alphaD">Alphabetical (Descending)</option>
-            </select>
-        </div>    
+        <div class="col-md-12 wrapper">
+            <div class="row">
+                <div id="stuff" class="col-md-12">
+                    <div id="searchParent" class="form-group">
+                        <input type="text" name="search" class="form-control mb-0" id="search" placeholder="Enter a Pokemon name here" autofocus>
+                    </div>   
+                    <div id="sortCol">
+                        <label for="sort">Sort By: </label>
+                        <select id="sort" name="sort">
+                            <option selected value="alphaN">Pokedex Number</option>   
+                            <option value="alphaA">Alphabetical (Ascending)</option>
+                            <option value="alphaD">Alphabetical (Descending)</option>
+                        </select>
+                    </div>   
+                </div>      
+            </div>
         </div>
-        <div class="col-md-3"></div>
-    </div>
-</br></br>    
+    </div> 
     <div class="row">
-        <div class="col-md-1"></div>
-        <div id="wrapperParent" class="col-md-10">
-            <div id="wrapper" class="row">
+        <div id="wrapperParent" class="col-md-12">
+            <div id="wrapper" class="wrapper row d-flex justify-content-center">
                 <?php 
                     $pokemon = getPokemon();
                     foreach ($pokemon as $p): 
@@ -35,23 +35,24 @@ require('dbcommands/functions.php');
                         <a href="pokeInfo.php?pokedexNumber=<?php echo $p['pokedexNumber']?>" style="text-decoration:none; color: black;">
                             <div class="card-body">
                                 <h3><?php echo $p['Pokemon_Name'] ?></h3>
-                                <img src=<?php echo $p['sprite'] ?>>
+                                <img class="sprite" src=<?php echo $p['sprite'] ?>>
                             </div>
                         </a>
                     </div>
                 <?php endforeach; ?>
             </div>
         </div>
-        <div class="col-md-1"></div>
     </div>
     
+    <a href="#" id="load">Load More</a>
+    <a href="#" id="scroll" style="display: none;"><span></span></a>
+
     <?php
         if($_SERVER['REQUEST_METHOD']=="POST" && strlen($_POST['search']) > 0) //maybe use if (touched)
         {
             // do the things 
         }
     ?>
-    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
     <script src="search.js"></script>
 
 </body>

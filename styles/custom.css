@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Yantramanav:wght@400;700&display=swap');
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -15,31 +16,36 @@ time, mark, audio, video {
  margin: 0;
  padding: 0;
  border: 0;
- font-size: 100%;
  font: inherit;
  vertical-align: baseline;
 }
 
 body {
-    background-color: rgb(196, 204, 207);
+    background: #f9f9f9;
+    font: 16px 'Yantramanav', sans-serif;
     text-align: center;
 }
 
-header {
+nav {
+    background-image: linear-gradient(to right, #4481eb 0%, #29b5ec 100%);
+    font:0.9em 'Space Mono', monospace;
     margin-bottom: 4%;
 }
 
+.navbar {
+    padding: 0;
+}
+
 h1 {
-    font-size: 5vw;
-    text-align: center;
-    margin-top: 1%; 
+    font-size: 3em;
+    font-weight: 700;
+    font-family: 'Space Mono', monospace;
     margin-bottom: 3%;
-    color: rgb(0, 0, 0);
-    max-width: 20%;
 }
 
 h2 {
-    font-size: 3vw;
+    font-size: 2em;
+    font-weight: 700;
 }
 
 .form-control {
@@ -62,26 +68,120 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: rgb(0, 0, 0);
+}
 
-}
-  
-li {
-    float: left;
-    border-right: 1px solid #bbb;
-    border-left: 1px solid #bbb;
-}
   
 li a {
     display: block;
-    color: white;
+    color: #fff;
     text-align: center;
-    padding: 14px 16px;
+    padding: 16px 18px;
     text-decoration: none;
-    font-size: 1.5vw;
+    /* font-size: 1.5vw; */
 }
 li a:hover {
-    background-color: rgb(240, 82, 82);
+    background-color: #000;
     text-decoration: none;
     color: white;
+}
+
+.wrapper {
+    max-width: 90%;
+    margin:0 auto;
+}
+
+#wrapperParent {
+    margin: 20px 0;
+}
+
+.card {
+    display: none;
+    margin:2px;
+    box-sizing: content-box;
+}
+
+#stuff {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#searchParent {
+    flex-basis: 70%;
+    margin: 0 10px 0 0;
+}
+
+#sortCol {
+    text-align: left;
+}
+
+.sprite {
+    max-height: 100px;
+}
+
+.row {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#load {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    padding: 10px;
+    margin: 0 0 20px 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: .25rem;
+}
+
+#scroll {
+    display:none;
+    position:fixed;
+    background-color:#4481eb;
+    width:50px;
+    height:50px;
+    right:10px;
+    bottom:10px;
+    cursor:pointer;
+    text-indent:-9999px;
+    -webkit-border-radius:60px;
+    -moz-border-radius:60px;
+    border-radius:60px
+}
+#scroll span {
+    position:absolute;
+    height:0;
+    width:0;
+    top:50%;
+    left:50%;
+    margin-left:-8px;
+    margin-top:-12px;
+    border:8px solid transparent;
+    border-bottom-color:#ffffff;
+}
+#scroll:hover {
+    background-color:#000;
+    opacity:1;
+}
+
+@media(max-width:768px) {
+    #rLinks {
+        float: none;
+    }
+
+    .navbar {
+        padding: 5px;
+    }
+
+}
+
+@media(max-width:500px) {
+    #stuff {
+        display: block;
+    }
+
+    #searchParent {
+        margin: 0 0 10px 0;
+    }
 }

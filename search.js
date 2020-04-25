@@ -1,4 +1,26 @@
 $(document).ready(function() {
+    $(".card").slice(0, 50).show();
+    $("#load").click(function(e){ 
+        e.preventDefault();
+        $(".card:hidden").slice(0, 50).show(); 
+        if($(".card:hidden").length == 0){ 
+            $("#load").css('display', 'none');
+        }
+    });
+
+    $(window).scroll(function(){ 
+        if ($(this).scrollTop() > 100) { 
+            $('#scroll').fadeIn(); 
+        } else { 
+            $('#scroll').fadeOut(); 
+        } 
+    }); 
+    $('#scroll').click(function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 600); 
+        return false; 
+    });
+
+
     $('#search').on('input', function() {
         filterSelection(($('#search').val()).toLowerCase());
     });

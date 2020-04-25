@@ -21,7 +21,7 @@ $host = 'cs4750-268020:us-east4:pokedex';
 /******************************/
 
 // $dsn = "mysql:host=$host;dbname=$dbname";
-$dsn = "mysql:unix_socket=/cloudsql/cs4750-268020:us-east4:pokedex;dbname=pokedex";
+$dsn = "mysql:unix_socket=/cloudsql/cs4750-268020:us-east4:pokedex;dbname=pokedex;charset=utf8";
 $db = "";
 
 /** connect to the database **/
@@ -41,7 +41,7 @@ catch (PDOException $e)     // handle a PDO exception (errors thrown by the PDO 
       $username = 'test';
       $password = 'pass123';
 
-      $dsn = "mysql:host=$host;dbname=$dbname";
+      $dsn = "mysql:host=$host;dbname=$dbname;charset=utf8";
       $db = "";
 
       $db = new PDO($dsn, $username, $password);   
