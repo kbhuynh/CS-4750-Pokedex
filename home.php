@@ -14,7 +14,7 @@ require('dbcommands/functions.php');
         <div class="col-md-1">
             <label for="sort">Sorting</label>
             <select class="" id="sort" name="sort">
-                <option disabled selected>Choose a sort method</option>    
+                <option selected value="alphaN">Pokedex Number</option>   
                 <option value="alphaA">Alphabetical (Ascending)</option>
                 <option value="alphaD">Alphabetical (Descending)</option>
             </select>
@@ -31,7 +31,7 @@ require('dbcommands/functions.php');
                     $pokemon = getPokemon();
                     foreach ($pokemon as $p): 
                 ?>
-                    <div class="col-md-2 card" data-name=<?php echo strtolower($p['Pokemon_Name'])?>>
+                    <div class="col-md-2 card" data-name=<?php echo strtolower($p['Pokemon_Name'])?> data-number=<?php echo $p['pokedexNumber'] ?>>
                         <a onclick="goToPokemon(<?php echo $p['pokedexNumber']?>)" style="text-decoration:none; color: black;">
                             <div class="card-body">
                                 <h3><?php echo $p['Pokemon_Name'] ?></h3>
