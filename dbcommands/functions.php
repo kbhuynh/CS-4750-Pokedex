@@ -1,5 +1,6 @@
 <?php 
-require('controller/connectdb.php');
+require('../controller/connectdb.php');
+
 // Prepared statement (or parameterized statement) happens in 2 phases:
 //   1. prepare() sends a template to the server, the server analyzes the syntax
 //                and initialize the internal structure.
@@ -190,22 +191,6 @@ function addSignUp($email, $username, $password)
    }
    $statement->closeCursor();
 }
-   //  $query = "INSERT INTO register (username, password) VALUES (:username, :password)";
-
-function checkLogIn($email, $password){
-   global $db;
-   $query = "SELECT * FROM User WHERE Email = :email AND Password = :password";
-
-   $statement = $db->prepare($query);
-   $statement->bindValue(':email', $email);
-   $hash_password = password_hash($password, PASSWORD_DEFAULT);
-   $statement->bindValue(':password', $hash_password);
-   $statement->execute();
-   $results = $statement->fetchAll();
-   $statement->closeCursor();
-
-   return sizeof($results);
-}
 
 
 ///*****TEAMS*****///
@@ -246,7 +231,24 @@ function deleteTeam($teamID, $userEmail)
    $statement->closeCursor();
 }
 
-//alterTeam???
+function editTeam($teamID, $userEmail, $teamName, $pokemon1, $pokemon2, $pokemon3, $pokemon4, $pokemon5, $pokemon6)
+{
+   global $db;
+   $query = "UPDATE Team teamName = :teamName, pokemon1 = :pokemon1, pokemon2 = pokemon2, pokemon3 = :pokemon3, pokemon4 = :pokemon4, pokemon5 = :pokemon5, pokemon6 = :pokemon6 WHERE teamID = :teamID AND userEmail = :userEmail";
+
+   $statement = $db->prepare($query);
+   $statement->bindValue(':teamID', $teamID);
+   $statement->bindValue(':userEmail', $userEmail);
+   $statement->bindValue(':teamNAme', $teamName);
+   $statement->bindValue(':pokemon1', $pokemon1);
+   $statement->bindValue(':pokemon2', $pokemon2);
+   $statement->bindValue(':pokemon3', $pokdmon3);
+   $statement->bindValue(':pokemon4', $pokemon4);
+   $statement->bindValue(':pokemon5', $pokdmon5);
+   $statement->bindValue(':pokemon6', $pokemon6);
+   $statement->execute();
+   $statement->closeCursor();
+}
 
 ///******CUSTOM POKES******///
 ////////////////////////////////////////////////////////////////////////
@@ -294,6 +296,15 @@ function addCustom($Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities
    $statement->bindValue(':type2', $Type2);
    $statement->execute();
    $statement->closeCursor();
+
+   global $db;
+   $query = "INSERT INTO Design VALUES (:creatorEmail, :pokedexNumber)";
+
+   $statement = $db->prepare($query);
+   $statement->bindValue(':creatorEmail', $_SESSION[email]);
+   $statement->bindValue(':pokedexNumber', $num);
+   $statement->execute();
+   $statement->closeCursor();
 }
 
 function editCustom($pokedexNumber, $Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities, $Classification, $Type1, $Type2, $Egg_Group)
@@ -333,6 +344,22 @@ function editCustom($pokedexNumber, $Pokemon_Name, $Generation, $Height_m, $Weig
    $statement->closeCursor();
 }
 
+function getCustom()
+{
+   global $db;
+   $query = "SELECT * FROM pokemon AS P 
+            WHERE P.pokedexNumber = 
+               (SELECT D.pokedexNumber FROM Design AS D 
+               WHERE E.creatorEmail = $_SESSION[email])";
+
+   $statement = $db->prepare($query);
+   $statement->execute();
+   // fetchAll() returns an array for all of the rows in the result set
+   $results = $statement->fetchAll();
+   $statement->closeCursor();
+   
+   return $results;
+}
 
 ///******MISC******///
 ////////////////////////////////////////////////////////////////////////
@@ -364,13 +391,13 @@ function removeLike($pokedexNumber, $userEmail)
 function addComment($commentID, $userEmail, $teamID, $text)
 {
    global $db;
-   $query = "INSERT INTO Comment_on VALUES (:commentID, :userEmail, :teamID, :text)";
+   $query = "INSERT INTO Comment_on VALUES (:commentID, :userEmail, :teamID, :comment)";
    
    $statement = $db->prepare($query);
    $statement->bindValue(':commentID', $commentID);
    $statement->bindValue(':userEmail', $userEmail);
    $statement->bindValue(':teamID', $teamID);
-   $statement->bindValue(':text', $text);
+   $statement->bindValue(':comment', $text);
    $statement->execute();
    $statement->closeCursor();
 }

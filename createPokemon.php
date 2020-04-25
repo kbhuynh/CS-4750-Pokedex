@@ -1,14 +1,11 @@
 <?php
 include_once('templates/header.php');
-require('../controller/connectdb.php');
+require('controller/connectdb.php');
+if(isset($_SESSION['email']))
+{
 ?>
 
 <body>
-    <?php
-        session_start();
-        if(isset($_SESSION['email']))
-        {
-    ?>
     <div class="row">
         <div class="col-md-12">
             <h2>My Custom Pokemon</h2>
@@ -93,11 +90,6 @@ require('../controller/connectdb.php');
         </div>
         <div class="col-md-4"></div>
     </div>
-    <?php 
-        }
-        else
-            header('Location: login.php');
-    ?>
     <?php
         if($_SERVER['REQUEST_METHOD']=="POST")
         {
@@ -108,3 +100,6 @@ require('../controller/connectdb.php');
 
 </body>
 </html>
+<?php } else {
+    header('Location: login.php');
+} ?> 
