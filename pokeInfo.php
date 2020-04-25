@@ -2,11 +2,7 @@
 include_once('templates/header.php');
 ?>
 <body>
-    <?php
-        session_start();
-        if(isset($_SESSION['email']))
-        {
-    ?>
+
 
 <input type ="hidden" name ="pokeNum"
 value="<?php echo $_GET['pokedexNumber']?>" method="get">
@@ -21,14 +17,5 @@ echo $_GET['pokedexNumber']
 ?>
 
 
-
-
-    <?php
-        }
-        else
-        {
-            header('Location: login.php');
-        }
-    ?>
 </body>
 </html>

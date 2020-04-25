@@ -195,6 +195,22 @@ function addSignUp($email, $username, $password)
 
 ///*****TEAMS*****///
 ////////////////////////////////////////////////////////////////////////
+function getAllTeams()
+{
+	global $db;
+	$query = "SELECT * FROM team";
+	$statement = $db->prepare($query);
+	$statement->execute();
+	
+	// fetchAll() returns an array for all of the rows in the result set
+	$results = $statement->fetchAll();
+	
+	// closes the cursor and frees the connection to the server so other SQL statements may be issued
+	$statement->closecursor();
+	
+	return $results;
+}
+
 function addTeam($teamID, $userEmail, $teamName, $pokemon1)
 {
    global $db;
@@ -252,19 +268,20 @@ function editTeam($teamID, $userEmail, $teamName, $pokemon1, $pokemon2, $pokemon
 
 ///******CUSTOM POKES******///
 ////////////////////////////////////////////////////////////////////////
-function addCustom($Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities, $Classification, $Type1, $Type2, $Egg_Group)
+function addCustom($Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities, $Classification, $Type1, $Type2, $Egg_Group, $Sprite)
 {
    global $db;
-   $query = "INSERT INTO pokemon VALUES ('', :Pokemon_Name, :Generation, :Height_m, :Weight_kg, :Abilities, :Classification, :isCustom)";
+   $query = "INSERT INTO pokemon VALUES ('', :Pokemon_Name, :Generation, :Height_m, :Weight_kg, :Abilities, :Classification, :isCustom, :Sprite)";
    
    $statement = $db->prepare($query);
    $statement->bindValue(':Pokemon_Name', $Pokemon_Name);
    $statement->bindValue(':Generation', $Generation);
-   $statement->bindValue(':Heigh_m', $Heigh_m);
+   $statement->bindValue(':Height_m', $Height_m);
    $statement->bindValue(':Weight_kg', $Weight_kg);
    $statement->bindValue(':Abilities', $Abilities);
    $statement->bindValue(':Classification', $Classification);
    $statement->bindValue(':isCustom', 1);
+   $statement->bindValue(':Sprite', $Sprite);
    $statement->execute();
    $statement->closeCursor();
 

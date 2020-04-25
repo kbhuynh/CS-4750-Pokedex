@@ -46,6 +46,7 @@ h1 {
 h2 {
     font-size: 2em;
     font-weight: 700;
+    font-family: 'Space Mono', monospace;
 }
 
 .form-control {
@@ -83,6 +84,16 @@ li a:hover {
     background-color: #000;
     text-decoration: none;
     color: white;
+}
+
+.landing-wrapper {
+    max-width: 60%;
+    margin:0 auto;   
+    font:0.9em 'Space Mono', monospace; 
+}
+
+.img-fluid {
+    padding: 16px 18px;
 }
 
 .wrapper {

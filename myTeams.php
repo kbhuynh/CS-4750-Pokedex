@@ -1,6 +1,5 @@
 <?php
 include_once('templates/header.php');
-require('dbcommands/teamActions.php');
 $action = "list_teams";        // default action
 if(isset($_SESSION['email']))
 {

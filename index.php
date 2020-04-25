@@ -9,60 +9,48 @@
 # [START gae_simple_front_controller]
 switch (@parse_url($_SERVER['REQUEST_URI'])['path']) {
     case '/':
-        require '../home.php';
-        break;
-    case '/pokeInfo.php':
-        require '/pokeInfo.php';
+        require 'home.php';
         break;
     case '/connectdb.php':
-        require '/connectdb.php';
+        require 'connectdb.php';
         break;
     case '/createPokemon.php':
-        require '../createPokemon.php';
+        require 'createPokemon.php';
         break;
     case '/createTeam.php':
-        require '../createTeam.php';
+        require 'createTeam.php';
         break;   
     case '/customPokemon.php':
-        require '../customPokemon.php';
+        require 'customPokemon.php';
         break; 
-    case '/functions.php':
-        require '../dbcommands/functions.php';
-        break;
-    case '/header.php':
-        require '../templates/header.php';
-        break;
     case '/home.php':
-        require '../home.php';
+        require 'home.php';
         break;
     case '/index.php':
-        require '../index.php';
-        break;
-    case '/login.php':
-        require '../login.php';
+        require 'index.php';
         break;
     case '/myCustom.php':
-        require '../myCustom.php';
+        require 'myCustom.php';
         break;
     case '/myTeams.php':
-        require '../myTeams.php';
+        require 'myTeams.php';
         break;
     case '/profile.php':
-        require '../profile.php';
+        require 'profile.php';
         break;
     case '/register.php':
-        require '../register.php';
+        require 'register.php';
         break;
-    case '/teamActions.php':
-        require '../dbcommands/teamActions.php';
     case '/teams.php':
-        require '../teams.php';
-        break;
-    case '/signin.php':
-        require '../signin.php';
+        require 'teams.php';
         break;
     case '/logout.php':
-        require '../logout.php';
+        require 'logout.php';
+        break;
+    case '/pokeInfo.php':
+        require 'pokeInfo.php';
+    case '/signin.php':
+        require 'signin.php';
         break;
     default:
         http_response_code(404);
