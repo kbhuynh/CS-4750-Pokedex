@@ -101,7 +101,8 @@ require('controller/connectdb.php');
     <?php
         if($_SERVER['REQUEST_METHOD']=="POST")
         {
-            createPokemon($pokeName, $height, $weight, $ability, $classification, $type1, $type2);
+
+            createPokemon($pokeName, $generation, $height, $weight, $ability, $classification, $type1, $type2, $eggGroup);
         }
     ?>
 
