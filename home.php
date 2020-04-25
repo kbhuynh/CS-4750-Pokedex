@@ -25,7 +25,7 @@ require('dbcommands/functions.php');
 </br></br>    
     <div class="row">
         <div class="col-md-1"></div>
-        <div class="col-md-10">
+        <div id="wrapperParent" class="col-md-10">
             <div id="wrapper" class="row">
                 <?php 
                     $pokemon = getPokemon();
