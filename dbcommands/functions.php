@@ -112,16 +112,16 @@ function getPokemonByType($type)
    return $results;
 }
 
-function getPokemonByEgg($eggGroup)
+function getPokemonByEgg($Egg_Group)
 {
    global $db;
    $query = "SELECT * FROM pokemon AS P 
             WHERE P.pokedexNumber = 
                (SELECT E.pokedexNumber FROM Egg_group AS E 
-               WHERE E.eggGroup = :eggGroup)";
+               WHERE E.Egg_Group = :Egg_Group)";
 
    $statement = $db->prepare($query);
-   $statement->bindValue(':eggGroup', $eggGroup);
+   $statement->bindValue(':Egg_Group', $Egg_Group);
    $statement->execute();
    $results = $statement->fetchAll();
    $statement->closeCursor();
@@ -250,7 +250,7 @@ function deleteTeam($teamID, $userEmail)
 
 ///******CUSTOM POKES******///
 ////////////////////////////////////////////////////////////////////////
-function addCustom($Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities, $Classification)
+function addCustom($Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities, $Classification, $Type1, $Type2, $Egg_Group)
 {
    global $db;
    $query = "INSERT INTO pokemon VALUES ('', :Pokemon_Name, :Generation, :Height_m, :Weight_kg, :Abilities, :Classification, :isCustom)";
@@ -265,6 +265,9 @@ function addCustom($Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities
    $statement->bindValue(':isCustom', 1);
    $statement->execute();
    $statement->closeCursor();
+
+   // global $db;
+   // $query = "INSERT INTO Egg_group VALUES ('', ";
 }
 
 function editCustom($pokedexNumber, $Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities, $Classification)
