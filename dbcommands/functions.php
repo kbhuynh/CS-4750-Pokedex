@@ -247,7 +247,24 @@ function deleteTeam($teamID, $userEmail)
    $statement->closeCursor();
 }
 
-//alterTeam???
+function editTeam($teamID, $userEmail, $teamName, $pokemon1, $pokemon2, $pokemon3, $pokemon4, $pokemon5, $pokemon6)
+{
+   global $db;
+   $query = "UPDATE Team teamName = :teamName, pokemon1 = :pokemon1, pokemon2 = pokemon2, pokemon3 = :pokemon3, pokemon4 = :pokemon4, pokemon5 = :pokemon5, pokemon6 = :pokemon6 WHERE teamID = :teamID AND userEmail = :userEmail";
+
+   $statement = $db->prepare($query);
+   $statement->bindValue(':teamID', $teamID);
+   $statement->bindValue(':userEmail', $userEmail);
+   $statement->bindValue(':teamNAme', $teamName);
+   $statement->bindValue(':pokemon1', $pokemon1);
+   $statement->bindValue(':pokemon2', $pokemon2);
+   $statement->bindValue(':pokemon3', $pokdmon3);
+   $statement->bindValue(':pokemon4', $pokemon4);
+   $statement->bindValue(':pokemon5', $pokdmon5);
+   $statement->bindValue(':pokemon6', $pokemon6);
+   $statement->execute();
+   $statement->closeCursor();
+}
 
 ///******CUSTOM POKES******///
 ////////////////////////////////////////////////////////////////////////
@@ -365,13 +382,13 @@ function removeLike($pokedexNumber, $userEmail)
 function addComment($commentID, $userEmail, $teamID, $text)
 {
    global $db;
-   $query = "INSERT INTO Comment_on VALUES (:commentID, :userEmail, :teamID, :text)";
+   $query = "INSERT INTO Comment_on VALUES (:commentID, :userEmail, :teamID, :comment)";
    
    $statement = $db->prepare($query);
    $statement->bindValue(':commentID', $commentID);
    $statement->bindValue(':userEmail', $userEmail);
    $statement->bindValue(':teamID', $teamID);
-   $statement->bindValue(':text', $text);
+   $statement->bindValue(':comment', $text);
    $statement->execute();
    $statement->closeCursor();
 }
