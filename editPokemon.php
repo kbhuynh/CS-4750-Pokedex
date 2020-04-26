@@ -3,8 +3,20 @@ include_once('templates/header.php');
 if(isset($_SESSION['email']))
 {
 ?>
+
 <?php 
     $pokemon = getPokemonByNumber($_COOKIE['pokedexNumber']);
+
+    if($_SERVER['REQUEST_METHOD']=="POST")
+    {
+        if(substr($_POST['pokeSprite'], -4) == ".jpg" || substr($_POST['pokeSprite'], -4) == ".png" || substr($_POST['pokeSprite'], -4) == ".gif" ) 
+        {
+            editCustom($pokemon['0'], $_POST['pokeName'], $_POST['pokeGeneration'], $_POST['pokeHeight'],
+            $_POST['pokeWeight'], $_POST['ability'], $_POST['classification'], $_POST['type1'],
+            $_POST['type2'], $_POST['eggGroup'], $_POST['pokeSprite']);
+            echo "success";
+        }
+    }
 ?>
 
     <div class="row">
@@ -16,7 +28,7 @@ if(isset($_SESSION['email']))
     <div class="row">
         <div class="col-md-2"></div>
             <div class=col-md-4>
-            <form action="<?php $_SERVER['PHP_SELF'] ?>" id="create" method="post"> 
+            <form action="<?php $_SERVER['PHP_SELF'] ?>" id="edit" method="post"> 
                 </br>
                     <input type="text" value="<?php echo $pokemon['8']; ?>" name="pokeSprite" class="form-control" id="pokeSprite" placeholder="Enter URL to Pokemon sprite" required>
                 </br></br>
@@ -103,18 +115,7 @@ if(isset($_SESSION['email']))
         </div>
         <div class="col-md-4"></div>
     </div>
-    <?php
-        if($_SERVER['REQUEST_METHOD']=="POST")
-        {
-            if(substr($_POST['pokeSprite'], -4) == ".jpg" || substr($_POST['pokeSprite'], -4) == ".png" || substr($_POST['pokeSprite'], -4) == ".gif" ) 
-            {
-                editCustom($_POST['pokeName'], $_POST['pokeGeneration'], $_POST['pokeHeight'], $_POST['pokeWeight'],
-                $_POST['ability'], $_POST['classification'], $_POST['type1'], 
-                $_POST['type2'], $_POST['eggGroup'], $_POST['pokeSprite']);    
-                header('Location: pokeInfo.php');
-            }
-        }
-    ?>
+    </form>
 
 </body>
 </html>

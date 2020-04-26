@@ -29,6 +29,7 @@ include_once('templates/header.php');
     if(!empty(getPokemonCreatorEmail($pokemon['0'])) && $_SESSION['email'] === getPokemonCreatorEmail($pokemon['0'])[0])
     {    
 ?>
+</br>
     <a href="editPokemon.php">
         <button class="btn btn-primary small-box-button" type="" >Edit Pokemon</button>
     </a>
