@@ -17,8 +17,8 @@ if(isset($_SESSION['email']))
         <th>Pokemon 4</th>
         <th>Pokemon 5</th>
         <th>Pokemon 6</th>
-        <th>(Add?)</th>
-        <th>(Delete?)</th>
+        <th></th>
+        <th></th>
       </tr>      
       <?php foreach ($teams as $team): ?>
       <tr>
@@ -59,9 +59,16 @@ if(isset($_SESSION['email']))
           ?> 
         </td>        
         <td>
-          <form action="teams.php" method="post">
-            <input type="submit" value="Add" name="action" class="btn btn-primary" />             
+          <form action="createTeam.php" method="post">
+            <input type="submit" value="Edit" name="action" class="btn btn-primary" />             
             <input type="hidden" name="teamID" value="<?php echo $team['teamID'] ?>" />
+            <input type="hidden" name="teamname" value="<?php echo $team['teamName'] ?>" />
+            <input type="hidden" name="p1" value="<?php echo $team['pokemon1'] ?>" />
+            <input type="hidden" name="p2" value="<?php echo $team['pokemon2'] ?>" />
+            <input type="hidden" name="p3" value="<?php echo $team['pokemon3'] ?>" />
+            <input type="hidden" name="p4" value="<?php echo $team['pokemon4'] ?>" />
+            <input type="hidden" name="p5" value="<?php echo $team['pokemon5'] ?>" />
+            <input type="hidden" name="p6" value="<?php echo $team['pokemon6'] ?>" />
           </form> 
         </td>                        
         <td>

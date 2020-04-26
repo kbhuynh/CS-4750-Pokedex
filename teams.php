@@ -17,13 +17,13 @@ if(isset($_SESSION['email']))
     else if ($_SERVER['REQUEST_METHOD'] == 'POST')
     {
         if (!empty($_POST['action']) && ($_POST['action'] == 'Edit'))
-        {
-            $tteam_to_update = getTeamInfo_by_id($_POST['teamID']);		
-            include('editTeam.php');
-            if (!empty($_POST['teamID']) && !empty($_POST['pokemon1']) && !empty($_POST['pokemon2']))
+        {	
+            if (!empty($_POST['teamID']) && !empty($_POST['p1']))
             {
-                editTeam($_POST['teamID'], $_POST['pokemon1'], $_POST['pokemon2'], $_POST['pokemon3'], $_POST['pokemon4'], $_POST['pokemon5'], $_POST['pokemon6']);
+                editTeam($_POST['teamID'], $_SESSION['email'], $_POST['teamname'], $_POST['p1'], $_POST['p2'], $_POST['p3'], $_POST['p4'], $_POST['p5'], $_POST['p6']);
                 header("Location: teams.php");
+            } else {
+                echo "Something went wrong. Please try again";
             }
         }
         else if (!empty($_POST['action']) && ($_POST['action'] == 'Add'))

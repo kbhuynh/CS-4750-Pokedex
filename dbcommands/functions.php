@@ -319,20 +319,64 @@ function deleteTeam($teamID, $userEmail)
 function editTeam($teamID, $userEmail, $teamName, $pokemon1, $pokemon2, $pokemon3, $pokemon4, $pokemon5, $pokemon6)
 {
    global $db;
-   $query = "UPDATE Team teamName = :teamName, pokemon1 = :pokemon1, pokemon2 = pokemon2, pokemon3 = :pokemon3, pokemon4 = :pokemon4, pokemon5 = :pokemon5, pokemon6 = :pokemon6 WHERE teamID = :teamID AND userEmail = :userEmail";
+   $query = "UPDATE Team SET teamName = :teamName, pokemon1 = :pokemon1, pokemon2 = :pokemon2, pokemon3 = :pokemon3, pokemon4 = :pokemon4, pokemon5 = :pokemon5, pokemon6 = :pokemon6 WHERE teamID = :teamID AND userEmail = :userEmail";
 
    $statement = $db->prepare($query);
+   $statement->bindValue(':teamName', $teamName);
    $statement->bindValue(':teamID', $teamID);
    $statement->bindValue(':userEmail', $userEmail);
-   $statement->bindValue(':teamNAme', $teamName);
-   $statement->bindValue(':pokemon1', $pokemon1);
-   $statement->bindValue(':pokemon2', $pokemon2);
-   $statement->bindValue(':pokemon3', $pokdmon3);
-   $statement->bindValue(':pokemon4', $pokemon4);
-   $statement->bindValue(':pokemon5', $pokdmon5);
-   $statement->bindValue(':pokemon6', $pokemon6);
+   
+   if($pokemon1 != "") {
+      $p1 = explode('(' , rtrim($pokemon1, ')'));
+      $p1 = $p1[1];
+      $statement->bindValue(':pokemon1', $p1);
+   }
+   
+   if($pokemon2 != "") {
+      $p2 = explode('(' , rtrim($pokemon2, ')'));
+      $p2 = $p2[1];
+      $statement->bindValue(':pokemon2', $p2);
+   } else {
+      $statement->bindValue(':pokemon2', null);
+   }
+
+   if($pokemon3 != "") {
+      $p3 = explode('(' , rtrim($pokemon3, ')'));
+      $p3 = $p3[1];
+      $statement->bindValue(':pokemon3', $p3);
+   } else {
+      $statement->bindValue(':pokemon3', null);
+   }
+
+   if($pokemon4 != "") {
+      $p4 = explode('(' , rtrim($pokemon4, ')'));
+      $p4 = $p4[1];
+      $statement->bindValue(':pokemon4', $p4);
+   } else {
+      $statement->bindValue(':pokemon4', null);
+   }
+
+   if($pokemon5 != "") {
+      $p5 = explode('(' , rtrim($pokemon5, ')'));
+      $p5 = $p5[1];
+      $statement->bindValue(':pokemon5', $p5);
+   } else {
+      $statement->bindValue(':pokemon5', null);
+   } 
+
+   if($pokemon6 != "") { 
+      $p6 = explode('(' , rtrim($pokemon6, ')'));
+      $p6 = $p6[1];
+      $statement->bindValue(':pokemon6', $p6);
+   } else {
+      $statement->bindValue(':pokemon6', null);
+   }
+
    $statement->execute();
+   
    $statement->closeCursor();
+
+   // return $statement->debugDumpParams();
 }
 
 ///******CUSTOM POKES******///
