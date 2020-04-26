@@ -53,9 +53,12 @@ h2 {
     border-radius: 10rem;
 }
 
+.btn {
+    border-radius: 10rem;
+}
+
 .btn-primary {
     color: white;
-    border-radius: 10rem;
 }
 
 .box-button {

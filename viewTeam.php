@@ -80,7 +80,7 @@ if(isset($_SESSION['email']))
       </tr>
       <?php endforeach; ?>
       <tr>
-        <td colspan="9"><a href="createTeam.php" class="btn btn-primary">Create Team</a></td>
+        <td align="center" colspan="9"><a href="createTeam.php" class="btn btn-primary">Create Team</a></td>
       </tr>
     </table>
     
