@@ -1,6 +1,6 @@
 <?php 
-// require('../controller/connectdb.php');
-require('controller/connectdb.php');
+v                                                          require('../controller/connectdb.php');
+//require('controller/connectdb.php');
 
 // Prepared statement (or parameterized statement) happens in 2 phases:
 //   1. prepare() sends a template to the server, the server analyzes the syntax
@@ -388,6 +388,18 @@ function getCustom()
    $statement->closeCursor();
    
    return $results;
+}
+
+function removeLike($pokedexNumber, $userEmail)
+{
+   global $db;
+   $query = "DELETE FROM Likes VALUES (:pokedexNumber, :userEmail)";
+   
+   $statement = $db->prepare($query);
+   $statement->bindValue(':pokedexNumber', $pokedexNumber);
+   $statement->bindValue(':userEmail', $userEmail);
+   $statement->execute();
+   $statement->closeCursor();
 }
 
 ///******MISC******///
