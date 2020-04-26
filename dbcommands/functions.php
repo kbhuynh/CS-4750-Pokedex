@@ -326,7 +326,9 @@ function addTeam($userEmail, $teamName, $pokemon1, $pokemon2, $pokemon3, $pokemo
     }
 
    if($statement->execute()){
-      header("location: teams.php");
+
+      //header("location: teams.php");
+      echo '<script type="text/javascript"> window.location = "https://cs4750-268020.uk.r.appspot.com/teams.php" </script>';
    }
    else {
       echo "Something went wrong. Please try again later.";

@@ -31,7 +31,7 @@ if(isset($_SESSION['email']))
             if (!empty($_POST['p1']))
             {
                 addTeam($_SESSION['email'], $_POST['teamname'], $_POST['p1'], $_POST['p2'], $_POST['p3'], $_POST['p4'], $_POST['p5'], $_POST['p6']);
-                header("Location: teams.php");
+                //header("Location: teams.php");
             }
         }
         else if (!empty($_POST['action']) && ($_POST['action'] == 'Delete'))
