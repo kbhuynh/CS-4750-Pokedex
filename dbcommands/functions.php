@@ -161,6 +161,48 @@ function getPokemonCreatorEmail()
    return $results;
 }
 
+function getTypeByNum($pokedexNumber)
+{
+   global $db;
+   $query = "SELECT type1, type2 FROM Pokemon_Types WHERE pokedexNumber = :pokedexNumber";
+
+   $statement = $db->prepare($query);
+   $statement->bindValue(':pokedexNumber', $pokedexNumber);
+   $statement->execute();
+   $results = $statement->fetch();
+   $statement->closeCursor();
+   
+   return $results;
+}
+
+function getEggByNum($pokedexNumber)
+{
+   global $db;
+   $query = "SELECT Egg Group FROM Egg_Group WHERE pokedexNumber = :pokedexNumber";
+
+   $statement = $db->prepare($query);
+   $statement->bindValue(':pokedexNumber', $pokedexNumber);
+   $statement->execute();
+   $results = $statement->fetch();
+   $statement->closeCursor();
+   
+   return $results;
+}
+
+function getEvoByNum($pokedexNumber)
+{
+   global $db;
+   $query = "SELECT E1.*, E2.postPokemonNum FROM Evolve_Into AS E1 LEFT OUTER JOIN Evolve_Into AS E2 ON E1.postPokemonNum = E2.prePokemonNum WHERE E1.prePokemonNum = :pokedexNumber OR E1.postPokemonNum = pokedexNumber OR E2.postPokemonNum = pokedexNumber";
+
+   $statement = $db->prepare($query);
+   $statement->bindValue(':pokedexNumber', $pokedexNumber);
+   $statement->execute();
+   $results = $statement->fetch();
+   $statement->closeCursor();
+   
+   return $results;
+}
+
 ///******SIGN-UP & LOGIN******//
 ////////////////////////////////////////////////////////////////////////
 function checkSignUp($email){
