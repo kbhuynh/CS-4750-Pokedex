@@ -1,6 +1,6 @@
 <?php 
-// require('../controller/connectdb.php');
-require('controller/connectdb.php');
+require('../controller/connectdb.php');
+// require('controller/connectdb.php');
 
 // Prepared statement (or parameterized statement) happens in 2 phases:
 //   1. prepare() sends a template to the server, the server analyzes the syntax
@@ -494,4 +494,3 @@ function deleteFriend($name)
 
 
 ?>
-
