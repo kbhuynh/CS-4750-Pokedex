@@ -30,25 +30,24 @@ include_once('templates/header.php');
     {    
 ?>
     <a href="editPokemon.php">
-        <button class="btn btn-primary small-box-button" type="submit" >Edit Pokemon</button>
+        <button class="btn btn-primary small-box-button" type="" >Edit Pokemon</button>
     </a>
-    <a href="home.php" onclick="return deletePokemon()">
-        <button class="btn btn-danger small-box-button" type="submit" >Delete Pokemon</button>
-    </a>
+    <form action="<?php $_SERVER['PHP_SELF'] ?>" id="delete" method="post"> 
+        <a href="home.php">
+            <button class="btn btn-danger small-box-button" type="" >Delete Pokemon</button>
+        </a>
+    </form>
 <?php
     }  
 ?>
-<script>
-    function deletePokemon()
+<?php
+    if($_SERVER['REQUEST_METHOD']=="POST")
     {
-        <?php
-            return deleteCustom($pokemon['0']);
-        ?>
-        return false;
+        deleteCustom($pokemon['0']);
+        setcookie("pokedexNumber", "", time() - 3600); 
+        header('Location: home.php');
     }
-
-</script>
-
+?>
 
 </body>
 </html>
