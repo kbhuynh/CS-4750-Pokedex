@@ -1,6 +1,6 @@
 <?php
-    // require('dbcommands/functions.php');
-    require('../dbcommands/functions.php');
+    require('dbcommands/functions.php');
+    // require('../dbcommands/functions.php');
 
     // Processing form data when form is submitted
     if($_SERVER["REQUEST_METHOD"] == "POST"){

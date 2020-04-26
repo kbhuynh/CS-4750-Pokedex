@@ -1,6 +1,6 @@
 <?php 
-v                                                          require('../controller/connectdb.php');
-//require('controller/connectdb.php');
+// require('../controller/connectdb.php');
+require('controller/connectdb.php');
 
 // Prepared statement (or parameterized statement) happens in 2 phases:
 //   1. prepare() sends a template to the server, the server analyzes the syntax
@@ -188,6 +188,19 @@ function checkSignUp($email){
    return sizeof($results);
 }
 
+function checkPassword($email, $password){
+    global $db;
+    $query = "SELECT * FROM User WHERE Email = :email";
+
+    $statement = $db->prepare($query);
+    $statement->bindValue(':email', $email);
+    $statement->execute();
+    $results = $statement->fetchAll();
+    $statement->closeCursor();
+
+    return password_verify($password, $results[0]["Password"]);
+ }
+
 function addSignUp($email, $username, $password)
 {
    global $db;
@@ -212,7 +225,7 @@ function addSignUp($email, $username, $password)
 function getAllTeams()
 {
 	global $db;
-	$query = "SELECT * FROM team";
+	$query = "SELECT * FROM Team";
 	$statement = $db->prepare($query);
 	$statement->execute();
 	
@@ -225,16 +238,60 @@ function getAllTeams()
 	return $results;
 }
 
-function addTeam($teamID, $userEmail, $teamName, $pokemon1)
+function addTeam($userEmail, $teamName, $pokemon1, $pokemon2, $pokemon3, $pokemon4, $pokemon5, $pokemon6)
 {
    global $db;
-   $query = "INSERT INTO Team VALUES (:teamID, :userEmail, :teamName, :pokemon1, NULL, NULL, NULL, NUll, NULL)";
+   $query = "INSERT INTO Team 
+             VALUES (null, :userEmail, :teamName, :pokemon1, :pokemon2, :pokemon3, :pokemon4, :pokemon5, :pokemon6)";
 
    $statement = $db->prepare($query);
-   $statement->bindValue(':teamID', $teamID);
    $statement->bindValue(':userEmail', $userEmail);
    $statement->bindValue(':teamName', $teamName);
-   $statement->bindValue(':pokemon1', $pokemon1);
+   if($pokemon1 != "") {
+       $p1 = explode('(' , rtrim($pokemon1, ')'));
+       $p1 = $p1[1];
+       $statement->bindValue(':pokemon1', $p1);
+    }
+
+    if($pokemon2 != "") {
+       $p2 = explode('(' , rtrim($pokemon2, ')'));
+       $p2 = $p2[1];
+       $statement->bindValue(':pokemon2', $p2);
+    } else {
+       $statement->bindValue(':pokemon2', null);
+    }
+
+    if($pokemon3 != "") {
+       $p3 = explode('(' , rtrim($pokemon3, ')'));
+       $p3 = $p3[1];
+       $statement->bindValue(':pokemon3', $p3);
+    } else {
+       $statement->bindValue(':pokemon3', null);
+    }
+
+    if($pokemon4 != "") {
+       $p4 = explode('(' , rtrim($pokemon4, ')'));
+       $p4 = $p4[1];
+       $statement->bindValue(':pokemon4', $p4);
+    } else {
+       $statement->bindValue(':pokemon4', null);
+    }
+
+    if($pokemon5 != "") {
+       $p5 = explode('(' , rtrim($pokemon5, ')'));
+       $p5 = $p5[1];
+       $statement->bindValue(':pokemon5', $p5);
+    } else {
+       $statement->bindValue(':pokemon5', null);
+    } 
+
+    if($pokemon6 != "") { 
+       $p6 = explode('(' , rtrim($pokemon6, ')'));
+       $p6 = $p6[1];
+       $statement->bindValue(':pokemon6', $p6);
+    } else {
+       $statement->bindValue(':pokemon6', null);
+
    if($statement->execute()){
       header("location: myTeams.php");
    }
@@ -264,18 +321,57 @@ function deleteTeam($teamID, $userEmail)
 function editTeam($teamID, $userEmail, $teamName, $pokemon1, $pokemon2, $pokemon3, $pokemon4, $pokemon5, $pokemon6)
 {
    global $db;
-   $query = "UPDATE Team teamName = :teamName, pokemon1 = :pokemon1, pokemon2 = pokemon2, pokemon3 = :pokemon3, pokemon4 = :pokemon4, pokemon5 = :pokemon5, pokemon6 = :pokemon6 WHERE teamID = :teamID AND userEmail = :userEmail";
+   $query = "UPDATE Team SET teamName = :teamName, pokemon1 = :pokemon1, pokemon2 = :pokemon2, pokemon3 = :pokemon3, pokemon4 = :pokemon4, pokemon5 = :pokemon5, pokemon6 = :pokemon6 WHERE teamID = :teamID AND userEmail = :userEmail";
 
    $statement = $db->prepare($query);
    $statement->bindValue(':teamID', $teamID);
    $statement->bindValue(':userEmail', $userEmail);
-   $statement->bindValue(':teamNAme', $teamName);
-   $statement->bindValue(':pokemon1', $pokemon1);
-   $statement->bindValue(':pokemon2', $pokemon2);
-   $statement->bindValue(':pokemon3', $pokdmon3);
-   $statement->bindValue(':pokemon4', $pokemon4);
-   $statement->bindValue(':pokemon5', $pokdmon5);
-   $statement->bindValue(':pokemon6', $pokemon6);
+   $statement->bindValue(':teamName', $teamName);
+   if($pokemon1 != "") {
+       $p1 = explode('(' , rtrim($pokemon1, ')'));
+       $p1 = $p1[1];
+       $statement->bindValue(':pokemon1', $p1);
+    }
+
+    if($pokemon2 != "") {
+       $p2 = explode('(' , rtrim($pokemon2, ')'));
+       $p2 = $p2[1];
+       $statement->bindValue(':pokemon2', $p2);
+    } else {
+       $statement->bindValue(':pokemon2', null);
+    }
+
+    if($pokemon3 != "") {
+       $p3 = explode('(' , rtrim($pokemon3, ')'));
+       $p3 = $p3[1];
+       $statement->bindValue(':pokemon3', $p3);
+    } else {
+       $statement->bindValue(':pokemon3', null);
+    }
+
+    if($pokemon4 != "") {
+       $p4 = explode('(' , rtrim($pokemon4, ')'));
+       $p4 = $p4[1];
+       $statement->bindValue(':pokemon4', $p4);
+    } else {
+       $statement->bindValue(':pokemon4', null);
+    }
+
+    if($pokemon5 != "") {
+       $p5 = explode('(' , rtrim($pokemon5, ')'));
+       $p5 = $p5[1];
+       $statement->bindValue(':pokemon5', $p5);
+    } else {
+       $statement->bindValue(':pokemon5', null);
+    } 
+
+    if($pokemon6 != "") { 
+       $p6 = explode('(' , rtrim($pokemon6, ')'));
+       $p6 = $p6[1];
+       $statement->bindValue(':pokemon6', $p6);
+    } else {
+       $statement->bindValue(':pokemon6', null);
+    }
    $statement->execute();
    $statement->closeCursor();
 }
