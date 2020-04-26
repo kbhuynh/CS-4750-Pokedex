@@ -255,7 +255,9 @@ function addSignUp($email, $username, $password)
 function getAllTeams()
 {
 	global $db;
-	$query = "SELECT * FROM Team";
+	$query = "SELECT * FROM Team WHERE userEmail = :userEmail";
+
+   $statement->bindValue(':userEmail', $_SESSION['email']);
 	$statement = $db->prepare($query);
 	$statement->execute();
 	
