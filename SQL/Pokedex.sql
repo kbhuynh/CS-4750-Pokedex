@@ -65,14 +65,14 @@ CREATE TABLE `Design` (
 
 CREATE TABLE `Egg_Group` (
   `pokedexNumber` int(11) NOT NULL,
-  `Egg Group` varchar(20) NOT NULL
+  `eggGroup` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `Egg_Group`
 --
 
-INSERT INTO `Egg_Group` (`pokedexNumber`, `Egg Group`) VALUES
+INSERT INTO `Egg_Group` (`pokedexNumber`, `eggGroup`) VALUES
 (1, 'monster'),
 (1, 'plant'),
 (2, 'monster'),
