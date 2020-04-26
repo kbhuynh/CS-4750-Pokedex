@@ -21,7 +21,7 @@ include_once('templates/header.php');
             <h3>Weight: <?php echo $pokemon['4']; ?> kg</h3>
             <h3>Evolutionary Chain: [PLACEHOLDER]]</h3>
             <h3>Abilities: <?php echo $pokemon['5']; ?></h3>
-            <h3>Type Weaknesses: [PLACEHOLDER]</h3>
+            <h3>Egg Groups: [PLACEHOLDER]</h3>
         </div>
         <div class="col-md-3"></div>
 </div>

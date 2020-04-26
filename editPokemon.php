@@ -3,7 +3,9 @@ include_once('templates/header.php');
 if(isset($_SESSION['email']))
 {
 ?>
-
+<?php 
+    $pokemon = getPokemonByNumber($_COOKIE['pokedexNumber']);
+?>
 
     <div class="row">
         <div class="col-md-12">
@@ -16,7 +18,7 @@ if(isset($_SESSION['email']))
             <div class=col-md-4>
             <form action="<?php $_SERVER['PHP_SELF'] ?>" id="create" method="post"> 
                 </br>
-                    <input type="text" name="pokeSprite" class="form-control" id="pokeSprite" placeholder="Enter URL to Pokemon sprite" required>
+                    <input type="text" value="<?php echo $pokemon['8']; ?>" name="pokeSprite" class="form-control" id="pokeSprite" placeholder="Enter URL to Pokemon sprite" required>
                 </br></br>
                 <div class="form-group">
                     <select class="form-control" id="type1" name="type1">
@@ -86,12 +88,12 @@ if(isset($_SESSION['email']))
                 </div>
             </div>
             <div class=col-md-4>
-                <input type="text" name="pokeName" class="form-control" id="pokeName" placeholder="Enter Pokemon name" autofocus required>
-                <input type="text" name="classification" class="form-control" id="classification" placeholder="Enter Pokemon classification" required>
-                <input type="text" name="ability" class="form-control" id="ability" placeholder="Enter Pokemon ability" required>
-                <input type="text" name="pokeGeneration" class="form-control" id="pokeGeneration" placeholder="Enter generation" required>
-                <input type="text" name="pokeHeight" class="form-control" id="pokeHeight" placeholder="Enter height" required>
-                <input type="text" name="pokeWeight" class="form-control" id="pokeWeight" placeholder="Enter weight" required>
+                <input type="text" value="" name="pokeName" class="form-control" id="pokeName" placeholder="Enter Pokemon name" autofocus required>
+                <input type="text" value="" name="classification" class="form-control" id="classification" placeholder="Enter Pokemon classification" required>
+                <input type="text" value="" name="ability" class="form-control" id="ability" placeholder="Enter Pokemon ability" required>
+                <input type="text" value="" name="pokeGeneration" class="form-control" id="pokeGeneration" placeholder="Enter generation" required>
+                <input type="text" value="" name="pokeHeight" class="form-control" id="pokeHeight" placeholder="Enter height" required>
+                <input type="text" value="" name="pokeWeight" class="form-control" id="pokeWeight" placeholder="Enter weight" required>
             </div>
     </div>
     <div class="row">
