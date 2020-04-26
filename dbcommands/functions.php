@@ -252,12 +252,12 @@ function addSignUp($email, $username, $password)
 
 ///*****TEAMS*****///
 ////////////////////////////////////////////////////////////////////////
-function getAllTeams()
+function getAllTeams($userEmail)
 {
 	global $db;
 	$query = "SELECT * FROM Team WHERE userEmail = :userEmail";
 
-   $statement->bindValue(':userEmail', $_SESSION['email']);
+   $statement->bindValue(':userEmail', $userEmail);
 	$statement = $db->prepare($query);
 	$statement->execute();
 	
