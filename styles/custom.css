@@ -50,13 +50,15 @@ h2 {
 }
 
 .form-control {
-    margin-bottom: 2.5%;
+    border-radius: 10rem;
+}
+
+.btn {
     border-radius: 10rem;
 }
 
 .btn-primary {
     color: white;
-    border-radius: 10rem;
 }
 
 .box-button {
@@ -99,6 +101,11 @@ li a:hover {
 .wrapper {
     max-width: 90%;
     margin:0 auto;
+}
+
+.wrapper-sm {
+    max-width:600px;
+    margin: 0 auto 50px auto;
 }
 
 #wrapperParent {
