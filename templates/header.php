@@ -34,7 +34,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <!-- <li class="nav-item"><a href="home.php">Home</a></li> -->
+                <li class="nav-item"><a href="home.php">Pokedex</a></li>
             </ul>
             <span id="rLinks">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
@@ -77,7 +77,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item"><a href="home.php">Home</a></li>
+                <li class="nav-item"><a href="home.php">Pokedex</a></li>
                 
                 <li class="nav-item"><a href="teams.php">Teams</a></li>
                 <li class="nav-item"><a href="customPokemon.php">Custom Pokemon</a></li>

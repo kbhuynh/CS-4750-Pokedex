@@ -53,6 +53,9 @@ switch (@parse_url($_SERVER['REQUEST_URI'])['path']) {
     case '/register.php':
         require '../register.php';
         break;
+    case '/check_register.php':
+        require '../check_register.php';
+        break;
     case '/teamActions.php':
         require '../dbcommands/teamActions.php';
     case '/teams.php':
@@ -60,6 +63,9 @@ switch (@parse_url($_SERVER['REQUEST_URI'])['path']) {
         break;
     case '/signin.php':
         require '../signin.php';
+        break;
+    case '/check_register.php':
+        require '../check_register.php';
         break;
     case '/logout.php':
         require '../logout.php';
