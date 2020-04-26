@@ -468,17 +468,18 @@ function addCustom($Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities
 function editCustom($pokedexNumber, $Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities, $Classification, $Type1, $Type2, $Egg_Group)
 {
    global $db;
-   $query = "UPDATE pokemon SET Pokemon_Name = :Pokemon_Name, Generation = :Generation, Height_m = :Height_m, Weight_kg = :Weight_kg, Abilities = :Abilities, Classification = :Classification WHERE pokedexNumber = :pokedexNumber";
+   $query = "UPDATE pokemon SET Pokemon_Name = :Pokemon_Name, Generation = :Generation, Height_m = :Height_m, Weight_kg = :Weight_kg, Abilities = :Abilities, Classification = :Classification, Sprite = :Sprite WHERE pokedexNumber = :pokedexNumber";
    
    $statement = $db->prepare($query);
    $statement->bindValue(':pokedexNumber', $pokedexNumber);
    $statement->bindValue(':Pokemon_Name', $Pokemon_Name);
    $statement->bindValue(':Generation', $Generation);
-   $statement->bindValue(':Heigh_m', $Heigh_m);
+   $statement->bindValue(':Height_m', $Height_m);
    $statement->bindValue(':Weight_kg', $Weight_kg);
    $statement->bindValue(':Abilities', $Abilities);
    $statement->bindValue(':Classification', $Classification);
    $statement->bindValue(':isCustom', 1);
+   $statement->bindValue(':Sprite', $Sprite);
    $statement->execute();
    $statement->closeCursor();
 

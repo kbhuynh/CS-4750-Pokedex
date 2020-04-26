@@ -11,11 +11,12 @@ if(isset($_SESSION['email']))
                 addCustom($_POST['pokeName'], $_POST['pokeGeneration'], $_POST['pokeHeight'], $_POST['pokeWeight'],
                 $_POST['ability'], $_POST['classification'], $_POST['type1'], 
                 $_POST['type2'], $_POST['eggGroup'], $_POST['pokeSprite']);    
-                header('Location: pokeInfo');
+                $results = getPokemonByName($_POST['pokeName']);
+                setcookie('pokedexNumber', $results[0]);
+                header('Location: pokeInfo.php');
             }
         }
     ?>
-
     <div class="row">
         <div class="col-md-12">
             <h2>My Custom Pokemon</h2>
@@ -114,8 +115,6 @@ if(isset($_SESSION['email']))
         </div>
         <div class="col-md-4"></div>
     </div>
-    
-
 </body>
 </html>
 <?php } else {
