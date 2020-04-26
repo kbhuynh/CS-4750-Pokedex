@@ -1088,15 +1088,15 @@ INSERT INTO `Egg_Group` (`pokedexNumber`, `Egg Group`) VALUES
 --
 
 CREATE TABLE `Evolve_Into` (
-  `prePokemon#` int(11) NOT NULL,
-  `postPokemon#` int(11) NOT NULL
+  `prePokemonNum` int(11) NOT NULL,
+  `postPokemonNum` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `Evolve_Into`
 --
 
-INSERT INTO `Evolve_Into` (`prePokemon#`, `postPokemon#`) VALUES
+INSERT INTO `Evolve_Into` (`prePokemonNum`, `postPokemonNum`) VALUES
 (1, 2),
 (2, 3),
 (4, 5),
@@ -15958,7 +15958,7 @@ ALTER TABLE `Egg_Group`
 -- Indexes for table `Evolve_Into`
 --
 ALTER TABLE `Evolve_Into`
-  ADD PRIMARY KEY (`prePokemon#`,`postPokemon#`);
+  ADD PRIMARY KEY (`prePokemonNum`,`postPokemonNum`);
 
 --
 -- Indexes for table `Is_On`
