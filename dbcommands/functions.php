@@ -148,17 +148,17 @@ function getPokemonByLikes()
    return $results;
 }
 
-function getPokemonCreatorEmail()
+function getPokemonCreatorEmail($pokedexNumber)
 {
    global $db;
-   $query = "SELECT * FROM pokemon";
+   $query = "SELECT creatorEmail FROM design WHERE pokedexNumber = :pokedexNumber";
 
    $statement = $db->prepare($query);
+   $statement->bindValue(':pokedexNumber', $pokedexNumber);
    $statement->execute();
-   $results = $statement->fetchAll();
+   $result = $statement->fetch();
    $statement->closeCursor();
-   
-   return $results;
+   return $result;
 }
 
 ///******SIGN-UP & LOGIN******//
@@ -476,16 +476,41 @@ function getCustom()
    return $results;
 }
 
-function deleteCustom($pokedexNumber, $userEmail)
+function deleteCustom($pokedexNumber)
 {
    global $db;
    $query = "DELETE FROM pokemon WHERE pokedexNumber = :pokedexNumber";
    
    $statement = $db->prepare($query);
    $statement->bindValue(':pokedexNumber', $pokedexNumber);
-   $statement->bindValue(':userEmail', $userEmail);
    $statement->execute();
    $statement->closeCursor();
+   
+   global $db;
+   $query = "DELETE FROM Egg_group WHERE pokedexNumber = :pokedexNumber";
+   
+   $statement = $db->prepare($query);
+   $statement->bindValue(':pokedexNumber', $pokedexNumber);
+   $statement->execute();
+   $statement->closeCursor();
+   
+   global $db;
+   $query = "DELETE FROM Pokemon_Types WHERE pokedexNumber = :pokedexNumber";
+   
+   $statement = $db->prepare($query);
+   $statement->bindValue(':pokedexNumber', $pokedexNumber);
+   $statement->execute();
+   $statement->closeCursor();
+   
+   global $db;
+   $query = "DELETE FROM Design WHERE pokedexNumber = :pokedexNumber";
+   
+   $statement = $db->prepare($query);
+   $statement->bindValue(':pokedexNumber', $pokedexNumber);
+   $statement->execute();
+   $statement->closeCursor();
+   
+   return true;
 }
 
 ///******MISC******///

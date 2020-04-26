@@ -26,12 +26,28 @@ include_once('templates/header.php');
         <div class="col-md-3"></div>
 </div>
 <?php
-    // if($_SESSION['email'] === )
+    if(!empty(getPokemonCreatorEmail($pokemon['0'])) && $_SESSION['email'] === getPokemonCreatorEmail($pokemon['0'])[0])
+    {    
 ?>
     <a href="editPokemon.php">
-        <button class="btn btn-dark" type="submit" >Edit Pokemon</button>
+        <button class="btn btn-primary small-box-button" type="submit" >Edit Pokemon</button>
     </a>
+    <a href="home.php" onclick="return deletePokemon()">
+        <button class="btn btn-danger small-box-button" type="submit" >Delete Pokemon</button>
+    </a>
+<?php
+    }  
+?>
+<script>
+    function deletePokemon()
+    {
+        <?php
+            return deleteCustom($pokemon['0']);
+        ?>
+        return false;
+    }
 
+</script>
 
 
 </body>

@@ -61,6 +61,10 @@ h2 {
     color: white;
 }
 
+.small-box-button {
+    border-radius: 0.5rem;
+}
+
 .box-button {
     border-radius: 0.5rem;
     font-size: 3rem;

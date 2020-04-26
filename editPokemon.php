@@ -88,18 +88,18 @@ if(isset($_SESSION['email']))
                 </div>
             </div>
             <div class=col-md-4>
-                <input type="text" value="" name="pokeName" class="form-control" id="pokeName" placeholder="Enter Pokemon name" autofocus required>
-                <input type="text" value="" name="classification" class="form-control" id="classification" placeholder="Enter Pokemon classification" required>
-                <input type="text" value="" name="ability" class="form-control" id="ability" placeholder="Enter Pokemon ability" required>
-                <input type="text" value="" name="pokeGeneration" class="form-control" id="pokeGeneration" placeholder="Enter generation" required>
-                <input type="text" value="" name="pokeHeight" class="form-control" id="pokeHeight" placeholder="Enter height" required>
-                <input type="text" value="" name="pokeWeight" class="form-control" id="pokeWeight" placeholder="Enter weight" required>
+                <input type="text" value="<?php echo $pokemon['1']; ?>" name="pokeName" class="form-control" id="pokeName" placeholder="Enter Pokemon name" autofocus required>
+                <input type="text" value="<?php echo $pokemon['6']; ?>" name="classification" class="form-control" id="classification" placeholder="Enter Pokemon classification" required>
+                <input type="text" value="<?php echo $pokemon['5']; ?>" name="ability" class="form-control" id="ability" placeholder="Enter Pokemon ability" required>
+                <input type="text" value="<?php echo $pokemon['2']; ?>" name="pokeGeneration" class="form-control" id="pokeGeneration" placeholder="Enter generation" required>
+                <input type="text" value="<?php echo $pokemon['3']; ?>" name="pokeHeight" class="form-control" id="pokeHeight" placeholder="Enter height" required>
+                <input type="text" value="<?php echo $pokemon['4']; ?>" name="pokeWeight" class="form-control" id="pokeWeight" placeholder="Enter weight" required>
             </div>
     </div>
     <div class="row">
         <div class="col-md-4"></div>    
         <div class="col-md-4">
-            <button class="btn btn-light" type="submit" >Create</button>
+            <button class="btn btn-light" type="submit" >Edit</button>
         </div>
         <div class="col-md-4"></div>
     </div>
@@ -111,7 +111,7 @@ if(isset($_SESSION['email']))
                 editCustom($_POST['pokeName'], $_POST['pokeGeneration'], $_POST['pokeHeight'], $_POST['pokeWeight'],
                 $_POST['ability'], $_POST['classification'], $_POST['type1'], 
                 $_POST['type2'], $_POST['eggGroup'], $_POST['pokeSprite']);    
-                header('Location: pokeInfo');
+                header('Location: pokeInfo.php');
             }
         }
     ?>
