@@ -188,6 +188,19 @@ function checkSignUp($email){
    return sizeof($results);
 }
 
+function checkPassword($email, $password){
+   global $db;
+   $query = "SELECT * FROM User WHERE Email = :email";
+
+   $statement = $db->prepare($query);
+   $statement->bindValue(':email', $email);
+   $statement->execute();
+   $results = $statement->fetchAll();
+   $statement->closeCursor();
+
+   return password_verify($password, $results[0]["Password"]);
+}
+
 function addSignUp($email, $username, $password)
 {
    global $db;

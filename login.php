@@ -11,7 +11,10 @@ if(!isset($_SESSION['email']))
             <h2>Login</h2>
             <a href="register.php" class="register">Don't have an account? Register now</a>  
             <?php 
-            $reasons = array("password" => "An account with the entered email was not found.<br>Try again or <a style='color:#721c24;text-decoration:underline;' href='register.php'>create an account</a> instead.", "blank" => "You have left one or more fields blank."); 
+            $reasons = array("password" => "An account with the entered email was not found.<br>Try again or <a style='color:#721c24;text-decoration:underline;' href='register.php'>create an account</a> instead.", 
+                             "blank" => "You have left one or more fields blank.",
+                             "wrongpass" => "Password was incorrect. Try again."
+                            ); 
             if (isset($_GET["loginFailed"])) {
                 echo '<div class="alert alert-danger" role="alert">' . $reasons[$_GET["reason"]] . '</div>'; 
             }
