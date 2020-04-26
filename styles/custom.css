@@ -175,6 +175,26 @@ li a:hover {
     opacity:1;
 }
 
+.formContainer {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px 40px;
+}
+
+.form {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.register {
+    display: block;
+    margin: 5px 0;
+}
+
+.formSubmit {
+    text-align: center;
+}
+
 @media(max-width:768px) {
     #rLinks {
         float: none;
