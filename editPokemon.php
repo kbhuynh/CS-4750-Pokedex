@@ -4,7 +4,6 @@ if(isset($_SESSION['email']))
 {
 ?>
 
-<body>
     <div class="row">
         <div class="col-md-12">
             <h2>Edit Custom Pokemon</h2>

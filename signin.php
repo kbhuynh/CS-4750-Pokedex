@@ -1,8 +1,10 @@
 <?php
 session_start();
+require('dbcommands/functions.php');
+// require('../dbcommands/functions.php');
 
 if(!isset($_SESSION['email']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
-    if(strlen($_POST['email']) > 0)
+    if(strlen($_POST['email']) > 0 && checkSignUp($_POST['email']) != 0)
     {
         $user = trim($_POST['email']);
         if(isset($_POST['password']))
@@ -13,6 +15,8 @@ if(!isset($_SESSION['email']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['pwd'] = $hash_pwd;
             header('Location: home.php');
         }
+    } else { 
+        die(header("location:login.php?loginFailed=true&reason=password"));
     }
 }
 ?>

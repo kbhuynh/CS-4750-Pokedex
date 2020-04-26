@@ -4,8 +4,6 @@ if(isset($_SESSION['email']))
 {
 ?>
 
-<body>
-  
   <div class="container">
 
     <table class="table table-striped table-bordered">

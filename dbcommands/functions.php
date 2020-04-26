@@ -1,5 +1,6 @@
 <?php 
-require('../controller/connectdb.php');
+// require('../controller/connectdb.php');
+require('controller/connectdb.php');
 
 // Prepared statement (or parameterized statement) happens in 2 phases:
 //   1. prepare() sends a template to the server, the server analyzes the syntax
@@ -150,6 +151,19 @@ function getPokemonByLikes()
             WHERE P.pokedexNumber = 
                (SELECT L.pokedexNumber FROM Likes AS L 
                WHERE E.userEmail = $_SESSION[email])";
+
+   $statement = $db->prepare($query);
+   $statement->execute();
+   $results = $statement->fetchAll();
+   $statement->closeCursor();
+   
+   return $results;
+}
+
+function getPokemonCreatorEmail()
+{
+   global $db;
+   $query = "SELECT * FROM pokemon";
 
    $statement = $db->prepare($query);
    $statement->execute();
@@ -318,7 +332,7 @@ function addCustom($Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities
    $query = "INSERT INTO Design VALUES (:creatorEmail, :pokedexNumber)";
 
    $statement = $db->prepare($query);
-   $statement->bindValue(':creatorEmail', $_SESSION[email]);
+   $statement->bindValue(':creatorEmail', $_SESSION['email']);
    $statement->bindValue(':pokedexNumber', $num);
    $statement->execute();
    $statement->closeCursor();
@@ -364,12 +378,10 @@ function editCustom($pokedexNumber, $Pokemon_Name, $Generation, $Height_m, $Weig
 function getCustom()
 {
    global $db;
-   $query = "SELECT * FROM pokemon AS P 
-            WHERE P.pokedexNumber = 
-               (SELECT D.pokedexNumber FROM Design AS D 
-               WHERE D.creatorEmail = $_SESSION[email])";
+   $query = "SELECT * FROM pokemon NATURAL JOIN design WHERE creatorEmail= :email";
 
    $statement = $db->prepare($query);
+   $statement->bindValue(':email', $_SESSION['email']);
    $statement->execute();
    // fetchAll() returns an array for all of the rows in the result set
    $results = $statement->fetchAll();

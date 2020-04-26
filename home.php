@@ -1,7 +1,6 @@
 <?php
 include_once('templates/header.php');
 ?>
-<body>
     <h1>Pokédex</h1>
     <div class="row">
         <div class="col-md-12 wrapper">
@@ -30,7 +29,7 @@ include_once('templates/header.php');
                     foreach ($pokemon as $p): 
                 ?>
                     <div class="col-md-2 card" data-name=<?php echo strtolower($p['Pokemon_Name'])?>  data-number=<?php echo $p['pokedexNumber']?>>
-                        <a href="pokeInfo.php?pokedexNumber=<?php echo $p['pokedexNumber']?>" style="text-decoration:none; color: black;">
+                        <a href='pokeInfo.php' onclick="return pokeInfo(<?php echo $p['pokedexNumber']?>)" style="text-decoration:none; color: black;">
                             <div class="card-body">
                                 <h3><?php echo $p['Pokemon_Name'] ?></h3>
                                 <img class="sprite" src=<?php echo $p['sprite'] ?>>
@@ -44,7 +43,13 @@ include_once('templates/header.php');
     
     <!-- <a href="#" id="load">Load More</a> -->
     <a href="#" id="scroll" style="display: none;"><span></span></a>
-
+    <script>
+        function pokeInfo(pokedexNumber)
+        {
+            document.cookie = "pokedexNumber="+pokedexNumber;
+            return true;
+        }
+    </script>
 
     <script src="styles/search.js"></script>
 
