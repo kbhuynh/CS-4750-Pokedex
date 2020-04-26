@@ -44,7 +44,7 @@ if(isset($_SESSION['email']))
             <label for="p6">Pokemon 6</label>
             <input id="p6" list="pokemon" class="form-control custom-select" type="text" name="p6" placeholder="Enter or select a pokemon">
         </div>
-        <input type="hidden" name="action" value="Edit">
+        <input type="hidden" name="action" value="Add">
         <div class="form-group formSubmit">
             <button class="btn btn-lg btn-primary" type="submit" >Create</button>  
         </div>

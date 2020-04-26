@@ -1,7 +1,7 @@
 <?php
 session_start();
-// require('dbcommands/functions.php');
-require('../dbcommands/functions.php');
+require('dbcommands/functions.php');
+// require('../dbcommands/functions.php');
 
 if(!isset($_SESSION['email']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
     if(strlen($_POST['email']) > 0 && checkSignUp($_POST['email']) != 0)
