@@ -118,6 +118,12 @@ li a:hover {
     margin: 0 auto 50px auto;
 }
 
+.wrapper-md {
+    max-width:800px;
+    margin: 0 auto 0 auto;
+    align-items: center;
+}
+
 #wrapperParent {
     margin: 20px 0;
 }
