@@ -6,6 +6,8 @@ if(isset($_SESSION['email']))
 
 <?php 
     $pokemon = getPokemonByNumber($_COOKIE['pokedexNumber']);
+    $types = getTypeByNum($_COOKIE['pokedexNumber']);
+    $egg = getEggByNum($_COOKIE['pokedexNumber']);
 
     if($_SERVER['REQUEST_METHOD']=="POST")
     {
@@ -34,7 +36,7 @@ if(isset($_SESSION['email']))
                 </br></br>
                 <div class="form-group">
                     <select class="form-control" id="type1" name="type1">
-                        <option disabled selected>Type 1</option>    
+                        <option value="<?php echo ($types['0']) ?>" selected><?php echo ucfirst($types['0']) ?></option>    
                         <option value="normal">Normal</option>
                         <option value="grass">Grass</option>
                         <option value="fire">Fire</option>
@@ -56,7 +58,7 @@ if(isset($_SESSION['email']))
                 </div>
                 <div class="form-group">
                     <select class="form-control" id="type2" name="type2">
-                        <option disabled selected>Type 2</option>    
+                        <option value="<?php echo ($types['1']) ?>" selected><?php echo ucfirst($types['1']) ?></option>    
                         <option value="">None</option>
                         <option value="normal">Normal</option>
                         <option value="grass">Grass</option>
@@ -80,7 +82,7 @@ if(isset($_SESSION['email']))
                 </div>
                 <div class="form-group">
                     <select class="form-control" id="eggGroup" name="eggGroup">
-                        <option disabled selected>Egg Group</option>    
+                        <option value="<?php echo ($egg['0']['0'])?>" selected><?php echo ucfirst($egg['0']['0']) ?></option>    
                         <option value="monster">Monster</option>
                         <option value="water1">Water 1</option>
                         <option value="bug">Bug</option>
