@@ -35,7 +35,13 @@ if(isset($_SESSION['email']))
 
 <?php endforeach; ?>
 </div>
-
+<script>
+        function pokeInfo(pokedexNumber)
+        {
+            document.cookie = "pokedexNumber="+pokedexNumber;
+            return true;
+        }
+</script>
 </body>
 </html>
 <?php } else {
