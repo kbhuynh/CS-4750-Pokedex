@@ -102,16 +102,16 @@ function getPokemonByType($type)
    return $results;
 }
 
-function getPokemonByEgg($Egg_Group)
+function getPokemonByEgg($eggGroup)
 {
    global $db;
    $query = "SELECT * FROM pokemon AS P 
             WHERE P.pokedexNumber = 
                (SELECT E.pokedexNumber FROM Egg_Group AS E 
-               WHERE E.eggGroup = :Egg_Group)";
+               WHERE E.eggGroup = :eggGroup)";
 
    $statement = $db->prepare($query);
-   $statement->bindValue(':Egg_Group', $Egg_Group);
+   $statement->bindValue(':eggGroup', $eggGroup);
    $statement->execute();
    $results = $statement->fetchAll();
    $statement->closeCursor();
@@ -414,7 +414,7 @@ function editTeam($teamID, $userEmail, $teamName, $pokemon1, $pokemon2, $pokemon
 
 ///******CUSTOM POKES******///
 ////////////////////////////////////////////////////////////////////////
-function addCustom($Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities, $Classification, $Type1, $Type2, $Egg_Group, $Sprite)
+function addCustom($Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities, $Classification, $Type1, $Type2, $eggGroup, $Sprite, $email)
 {
    global $db;
    $query = "INSERT INTO pokemon VALUES ('', :Pokemon_Name, :Generation, :Height_m, :Weight_kg, :Abilities, :Classification, :isCustom, :Sprite)";
@@ -442,11 +442,11 @@ function addCustom($Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities
    $num = $results[0];
 
    global $db;
-   $query = "INSERT INTO Egg_Group VALUES (:pokedexNumber, :Egg_Group)";
+   $query = "INSERT INTO Egg_Group VALUES (:pokedexNumber, :eggGroup)";
 
    $statement = $db->prepare($query);
    $statement->bindValue(':pokedexNumber', $num);
-   $statement->bindValue(':Egg_Group', $Egg_Group);
+   $statement->bindValue(':eggGroup', $eggGroup);
    $statement->execute();
    $statement->closeCursor();
 
@@ -464,13 +464,13 @@ function addCustom($Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities
    $query = "INSERT INTO Design VALUES (:creatorEmail, :pokedexNumber)";
 
    $statement = $db->prepare($query);
-   $statement->bindValue(':creatorEmail', $_SESSION['email']);
+   $statement->bindValue(':creatorEmail', $email);
    $statement->bindValue(':pokedexNumber', $num);
    $statement->execute();
    $statement->closeCursor();
 }
 
-function editCustom($pokedexNumber, $Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities, $Classification, $Type1, $Type2, $Egg_Group, $Sprite)
+function editCustom($pokedexNumber, $Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities, $Classification, $Type1, $Type2, $eggGroup, $Sprite)
 {
    global $db;
    $query = "UPDATE pokemon SET Pokemon_Name = :Pokemon_Name, Generation = :Generation, Height_m = :Height_m,
@@ -489,11 +489,11 @@ function editCustom($pokedexNumber, $Pokemon_Name, $Generation, $Height_m, $Weig
    $statement->closeCursor();
 
    global $db;
-   $query = "UPDATE Egg_Group SET eggGroup = :Egg_Group WHERE pokedexNumber = :pokedexNumber";
+   $query = "UPDATE Egg_Group SET eggGroup = :eggGroup WHERE pokedexNumber = :pokedexNumber";
 
    $statement = $db->prepare($query);
    $statement->bindValue(':pokedexNumber', $pokedexNumber);
-   $statement->bindValue(':Egg_Group', $Egg_Group);
+   $statement->bindValue(':eggGroup', $eggGroup);
    $statement->execute();
    $statement->closeCursor();
 
