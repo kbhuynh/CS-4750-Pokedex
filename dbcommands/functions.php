@@ -418,7 +418,7 @@ function editTeam($teamID, $userEmail, $teamName, $pokemon1, $pokemon2, $pokemon
 function addCustom($Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities, $Classification, $Type1, $Type2, $eggGroup, $Sprite, $email)
 {
    global $db;
-   $query = "INSERT INTO pokemon VALUES (NULL, :Pokemon_Name, :Generation, :Height_m, :Weight_kg, :Abilities, :Classification, :isCustom, :Sprite)";
+   $query = "INSERT INTO pokemon VALUES ('', :Pokemon_Name, :Generation, :Height_m, :Weight_kg, :Abilities, :Classification, :isCustom, :Sprite)";
    
    $statement = $db->prepare($query);
    $statement->bindValue(':Pokemon_Name', $Pokemon_Name);
@@ -475,7 +475,7 @@ function editCustom($pokedexNumber, $Pokemon_Name, $Generation, $Height_m, $Weig
 {
    global $db;
    $query = "UPDATE pokemon SET Pokemon_Name = :Pokemon_Name, Generation = :Generation, Height_m = :Height_m,
-   Weight_kg = :Weight_kg, Abilities = :Abilities, Abilities = :Classification, Sprite = :Sprite WHERE pokedexNumber = :pokedexNumber";
+   Weight_kg = :Weight_kg, Abilities = :Abilities, Classification = :Classification, Sprite = :Sprite WHERE pokedexNumber = :pokedexNumber";
    
    $statement = $db->prepare($query);
    $statement->bindValue(':pokedexNumber', $pokedexNumber);

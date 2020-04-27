@@ -11,6 +11,7 @@ if(isset($_SESSION['email']))
                 addCustom($_POST['pokeName'], $_POST['pokeGeneration'], $_POST['pokeHeight'], $_POST['pokeWeight'],
                 $_POST['ability'], $_POST['classification'], $_POST['type1'], 
                 $_POST['type2'], $_POST['eggGroup'], $_POST['pokeSprite'], $_SESSION['email']);    
+                
                 $results = getPokemonByName($_POST['pokeName']);
                 setcookie('pokedexNumber', $results[0]);
                 header('Location: pokeInfo.php');
