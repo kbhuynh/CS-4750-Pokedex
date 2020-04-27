@@ -212,6 +212,18 @@ li a:hover {
     text-align: center;
 }
 
+.like {
+    margin: -15px 0 15px 0;
+}
+
+.fa {
+    color: red;
+}
+
+.like:hover {
+    text-decoration: none;
+}
+
 @media(max-width:768px) {
     #rLinks {
         float: none;

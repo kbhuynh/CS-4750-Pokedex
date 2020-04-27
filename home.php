@@ -35,8 +35,18 @@ include_once('templates/header.php');
                                 <img class="sprite" src=<?php echo $p['sprite'] ?>>
                             </div>
                         </a>
+                        <form action="likes.php" method="post">
+                            <button id="like<?php echo $p['pokedexNumber']; ?>" name="like" class="like btn" value="<?php echo $p['pokedexNumber']; ?>" href="">
+                            <?php if(checkIfLiked($p['pokedexNumber'], $_SESSION['email']) > 0) { ?>    
+                                <i class="fa fa-heart" aria-hidden="true"></i>
+                            <?php } else { ?>
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                            <?php } ?>
+                            </button>
+                        </form>
                     </div>
                 <?php endforeach; ?>
+
             </div>
         </div>
     </div>
