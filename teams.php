@@ -22,7 +22,7 @@ if(isset($_SESSION['email']))
             {
                 editTeam($_POST['teamID'], $_SESSION['email'], $_POST['teamname'], $_POST['p1'], $_POST['p2'], $_POST['p3'], $_POST['p4'], $_POST['p5'], $_POST['p6']);
                 // Redirects to the same page. Header has HTML issues so this is the workaround!
-                echo '<script type="text/javascript"> window.location = "https://cs4750-268020.uk.r.appspot.com/teams.php" </script>';
+                echo '<script type="text/javascript"> window.location = "teams.php" </script>';
             } else {
                 echo "Something went wrong. Please try again";
             }
@@ -48,5 +48,5 @@ if(isset($_SESSION['email']))
 </html>
 <?php } else {
     // header('Location: login.php');
-    echo '<script type="text/javascript"> window.location = "https://cs4750-268020.uk.r.appspot.com/login.php" </script>';
+    echo '<script type="text/javascript"> window.location = "login.php" </script>';
 }?>
