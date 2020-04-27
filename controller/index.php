@@ -26,6 +26,9 @@ switch (@parse_url($_SERVER['REQUEST_URI'])['path']) {
     case '/customPokemon.php':
         require '../customPokemon.php';
         break; 
+    case '/editPokemon.php':
+        require '../editPokemon.php';
+        break;  
     case '/functions.php':
         require '../dbcommands/functions.php';
         break;
