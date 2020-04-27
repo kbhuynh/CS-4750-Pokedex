@@ -257,15 +257,15 @@ function getAllTeams($userEmail)
 	global $db;
 	$query = "SELECT * FROM Team WHERE userEmail = :userEmail";
 
+   $statement = $db->prepare($query);
    $statement->bindValue(':userEmail', $userEmail);
-	$statement = $db->prepare($query);
 	$statement->execute();
 	
 	// fetchAll() returns an array for all of the rows in the result set
 	$results = $statement->fetchAll();
 	
 	// closes the cursor and frees the connection to the server so other SQL statements may be issued
-	$statement->closecursor();
+	$statement->closeCursor();
 	
 	return $results;
 }

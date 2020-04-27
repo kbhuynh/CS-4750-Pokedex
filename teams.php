@@ -11,7 +11,7 @@ if(isset($_SESSION['email']))
 
     if ($_SERVER['REQUEST_METHOD'] == 'GET')
     {
-        $teams = getAllTeams($_SESSION['email');
+        $teams = getAllTeams($_SESSION['email']);
         include('viewTeam.php');        // default action
     }
     else if ($_SERVER['REQUEST_METHOD'] == 'POST')
