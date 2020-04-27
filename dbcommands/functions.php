@@ -234,7 +234,7 @@ function checkPassword($email, $password){
 function addSignUp($email, $username, $password)
 {
    global $db;
-   $query = "INSERT INTO User (email, username, password) VALUES (:email, :username, :password)";
+   $query = "INSERT INTO User VALUES (:email, :username, :password, 0)";
    $statement = $db->prepare($query);
    $statement->bindValue(':email', $email);
    $statement->bindValue(':username', $username);
@@ -252,18 +252,20 @@ function addSignUp($email, $username, $password)
 
 ///*****TEAMS*****///
 ////////////////////////////////////////////////////////////////////////
-function getAllTeams()
+function getAllTeams($userEmail)
 {
 	global $db;
-	$query = "SELECT * FROM Team";
-	$statement = $db->prepare($query);
+	$query = "SELECT * FROM Team WHERE userEmail = :userEmail";
+
+   $statement = $db->prepare($query);
+   $statement->bindValue(':userEmail', $userEmail);
 	$statement->execute();
 	
 	// fetchAll() returns an array for all of the rows in the result set
 	$results = $statement->fetchAll();
 	
 	// closes the cursor and frees the connection to the server so other SQL statements may be issued
-	$statement->closecursor();
+	$statement->closeCursor();
 	
 	return $results;
 }
@@ -324,7 +326,9 @@ function addTeam($userEmail, $teamName, $pokemon1, $pokemon2, $pokemon3, $pokemo
     }
 
    if($statement->execute()){
-      header("location: teams.php");
+
+      //header("location: teams.php");
+      echo '<script type="text/javascript"> window.location = "https://cs4750-268020.uk.r.appspot.com/teams.php" </script>';
    }
    else {
       echo "Something went wrong. Please try again later.";
