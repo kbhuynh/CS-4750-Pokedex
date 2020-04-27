@@ -1,6 +1,6 @@
 <?php
-require('../controller/connectdb.php');
-// require('controller/connectdb.php');
+// require('../controller/connectdb.php');
+require('controller/connectdb.php');
 
 ///*******CREATING/DELETING TABLES*******///
 function create_table()
@@ -417,7 +417,7 @@ function editTeam($teamID, $userEmail, $teamName, $pokemon1, $pokemon2, $pokemon
 function addCustom($Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities, $Classification, $Type1, $Type2, $Egg_Group, $Sprite)
 {
    global $db;
-   $query = "INSERT INTO pokemon VALUES ('', :Pokemon_Name, :Generation, :Height_m, :Weight_kg, :Abilities, :Classification, :isCustom, :Sprite)";
+   $query = "INSERT INTO pokemon VALUES (NULL, :Pokemon_Name, :Generation, :Height_m, :Weight_kg, :Abilities, :Classification, :isCustom, :Sprite)";
    
    $statement = $db->prepare($query);
    $statement->bindValue(':Pokemon_Name', $Pokemon_Name);

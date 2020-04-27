@@ -63,7 +63,7 @@ if(isset($_SESSION['email']))
                 </div>
                 <div class="form-group">
                     <select class="form-control" id="type2" name="type2">
-                        <option disabled selected>Type 2</option>    
+                        <option value="" disabled selected>Type 2</option>    
                         <option value="">None</option>
                         <option value="normal">Normal</option>
                         <option value="grass">Grass</option>
@@ -94,15 +94,15 @@ if(isset($_SESSION['email']))
                         <option value="flying">Flying</option>
                         <option value="ground">Ground</option>
                         <option value="fairy">Fairy</option>
-                        <option value="plant">Grass</option>
-                        <option value="humanshape">Human-like</option>
+                        <option value="plant">Plant</option>
+                        <option value="humanshape">Humanshape</option>
                         <option value="water3">Water 3</option>
                         <option value="mineral">Mineral</option>
-                        <option value="indeterminate">Amorphous</option>
+                        <option value="indeterminate">Indeterminate</option>
                         <option value="water2">Water 2</option>
                         <option value="ditto">Ditto</option>
                         <option value="dragon">Dragon</option>
-                        <option value="no-eggs">Undiscovered</option>
+                        <option value="no-eggs">No Eggs</option>
                     </select>
                 </div>
             </div>
