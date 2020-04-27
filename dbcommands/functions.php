@@ -136,9 +136,9 @@ function getPokemonByLikes($email)
 {
    global $db;
    $query = "SELECT * FROM pokemon AS P 
-            WHERE P.pokedexNumber = 
+            WHERE P.pokedexNumber IN 
                (SELECT L.pokedexNumber FROM Likes AS L 
-               WHERE L.userEmail = :email";
+               WHERE L.userEmail = :email)";
 
    $statement = $db->prepare($query);
    $statement->bindValue(':email', $email);
