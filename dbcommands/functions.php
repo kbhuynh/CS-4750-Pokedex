@@ -43,7 +43,7 @@ function getPokemon()
    return $results;
 }
 
-function getpokemonByNumber($pokedexNumber)
+function getPokemonByNumber($pokedexNumber)
 {
    global $db;
    $query = "SELECT * FROM pokemon WHERE pokedexNumber = :pokedexNumber";
