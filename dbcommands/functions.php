@@ -136,9 +136,9 @@ function getPokemonByLikes($email)
 {
    global $db;
    $query = "SELECT * FROM pokemon AS P 
-            WHERE P.pokedexNumber = 
+            WHERE P.pokedexNumber IN 
                (SELECT L.pokedexNumber FROM Likes AS L 
-               WHERE L.userEmail = :email";
+               WHERE L.userEmail = :email)";
 
    $statement = $db->prepare($query);
    $statement->bindValue(':email', $email);
@@ -475,7 +475,7 @@ function editCustom($pokedexNumber, $Pokemon_Name, $Generation, $Height_m, $Weig
 {
    global $db;
    $query = "UPDATE pokemon SET Pokemon_Name = :Pokemon_Name, Generation = :Generation, Height_m = :Height_m,
-   Weight_kg = :Weight_kg, Abilities = :Abilities, Abilities = :Classification, Sprite = :Sprite WHERE pokedexNumber = :pokedexNumber";
+   Weight_kg = :Weight_kg, Abilities = :Abilities, Classification = :Classification, Sprite = :Sprite WHERE pokedexNumber = :pokedexNumber";
    
    $statement = $db->prepare($query);
    $statement->bindValue(':pokedexNumber', $pokedexNumber);

@@ -9,12 +9,11 @@ include_once('templates/header.php');
     $egg = getEggByNum($_COOKIE['pokedexNumber']);
 ?>
 
-<div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-3">
+<div class= "formContainer wrapper-md row text-left">
+        <div class="col-md-6">
             <img src="<?php echo $pokemon['8']; ?>" style="width: 90%;">
         </div>
-        <div class="col-md-3">
+        <div class="col-md-6">
             <h2><?php echo $pokemon['1']; ?></h2>
             <h2>No. <?php echo $pokemon['0']; ?></h2>
             <h3>Classification: <?php echo $pokemon['6']; ?> </h3>
@@ -68,7 +67,6 @@ include_once('templates/header.php');
             <h3>Abilities: <?php echo $pokemon['5']; ?></h3>
             <h3>Egg Group: <?php echo ucfirst($egg['0']['0']); ?></h3>
         </div>
-        <div class="col-md-3"></div>
 </div>
 <?php
     if(!empty(getPokemonCreatorEmail($pokemon['0'])) && $_SESSION['email'] === getPokemonCreatorEmail($pokemon['0'])[0])

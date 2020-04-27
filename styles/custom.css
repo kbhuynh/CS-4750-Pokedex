@@ -46,10 +46,10 @@ h1 {
 h2 {
     font-size: 2em;
     font-weight: 700;
-    font-family: 'Space Mono', monospace;
+    /* font-family: 'Space Mono', monospace; */
 }
 
-h4 {
+p {
     font-size: 1em;
     font-weight: 700;
     font-family: 'Space Mono', monospace;
@@ -116,6 +116,12 @@ li a:hover {
 .wrapper-sm {
     max-width:600px;
     margin: 0 auto 50px auto;
+}
+
+.wrapper-md {
+    max-width:800px;
+    margin: 0 auto 0 auto;
+    align-items: center;
 }
 
 #wrapperParent {
