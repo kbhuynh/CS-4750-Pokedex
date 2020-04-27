@@ -35,6 +35,10 @@ include_once('templates/header.php');
                                 <img class="sprite" src=<?php echo $p['sprite'] ?>>
                             </div>
                         </a>
+                        <?php
+                        if(isset($_SESSION['email']))
+                        {
+                        ?>
                         <form action="likes.php" method="post">
                             <button id="like<?php echo $p['pokedexNumber']; ?>" name="like" class="like btn" value="<?php echo $p['pokedexNumber']; ?>" href="">
                             <?php if(checkIfLiked($p['pokedexNumber'], $_SESSION['email']) > 0) { ?>    
@@ -44,6 +48,7 @@ include_once('templates/header.php');
                             <?php } ?>
                             </button>
                         </form>
+                    <?php } ?>
                     </div>
                 <?php endforeach; ?>
 
