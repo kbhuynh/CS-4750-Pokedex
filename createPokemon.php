@@ -11,7 +11,7 @@ if(isset($_SESSION['email']))
                 addCustom($_POST['pokeName'], $_POST['pokeGeneration'], $_POST['pokeHeight'], $_POST['pokeWeight'],
                 $_POST['ability'], $_POST['classification'], $_POST['type1'], 
                 $_POST['type2'], $_POST['eggGroup'], $_POST['pokeSprite'], $_SESSION['email']);    
-                
+
                 $results = getPokemonByName($_POST['pokeName']);
                 setcookie('pokedexNumber', $results[0]);
                 header('Location: pokeInfo.php');
@@ -111,9 +111,9 @@ if(isset($_SESSION['email']))
                 <input type="text" name="pokeName" class="form-control" id="pokeName" placeholder="Enter Pokemon name" autofocus required>
                 <input type="text" name="classification" class="form-control" id="classification" placeholder="Enter Pokemon classification" required>
                 <input type="text" name="ability" class="form-control" id="ability" placeholder="Enter Pokemon ability" required>
-                <input type="text" name="pokeGeneration" class="form-control" id="pokeGeneration" placeholder="Enter generation" required>
-                <input type="text" name="pokeHeight" class="form-control" id="pokeHeight" placeholder="Enter height" required>
-                <input type="text" name="pokeWeight" class="form-control" id="pokeWeight" placeholder="Enter weight" required>
+                <input type="number" step="1" name="pokeGeneration" class="form-control" id="pokeGeneration" placeholder="Enter generation" required>
+                <input type="number" step="0.1"name="pokeHeight" class="form-control" id="pokeHeight" placeholder="Enter height" required>
+                <input type="number" step="0.1" name="pokeWeight" class="form-control" id="pokeWeight" placeholder="Enter weight" required>
             </div>
     </div>
     <div class="row">
