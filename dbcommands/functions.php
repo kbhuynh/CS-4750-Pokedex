@@ -132,15 +132,16 @@ function getPokemonByCustom()
    return $results;
 }
 
-function getPokemonByLikes()
+function getPokemonByLikes($email)
 {
    global $db;
    $query = "SELECT * FROM pokemon AS P 
             WHERE P.pokedexNumber = 
                (SELECT L.pokedexNumber FROM Likes AS L 
-               WHERE E.userEmail = $_SESSION[email])";
+               WHERE L.userEmail = :email";
 
    $statement = $db->prepare($query);
+   $statement->bindValue(':email', $email);
    $statement->execute();
    $results = $statement->fetchAll();
    $statement->closeCursor();
@@ -576,7 +577,7 @@ function addLike($pokedexNumber, $userEmail)
 function removeLike($pokedexNumber, $userEmail)
 {
    global $db;
-   $query = "DELETE FROM Likes VALUES (:pokedexNumber, :userEmail)";
+   $query = "DELETE FROM Likes WHERE pokedexNumber = :pokedexNumber AND userEmail = :userEmail";
    
    $statement = $db->prepare($query);
    $statement->bindValue(':pokedexNumber', $pokedexNumber);
@@ -649,5 +650,37 @@ function deleteFriend($name)
    $statement->closeCursor();
 }
 
+function likePokemon($pokedexNumber, $email) {
+   global $db;
+
+   $query = "INSERT INTO Likes VALUES (:pokedexNumber, :email)";
+   $statement = $db->prepare($query);
+   $statement->bindValue(':pokedexNumber', $pokedexNumber);
+   $statement->bindValue(':email', $email);
+
+   if($statement->execute()) {
+      header('Location: home.php');
+   } else {
+      return "unlike";
+   }
+   
+   $statement->closeCursor();
+
+}
+
+
+function checkIfLiked($pokedexNumber, $email) {
+   global $db;
+
+   $query = "SELECT * FROM Likes WHERE pokedexNumber = :pokedexNumber AND userEmail = :email";
+   $statement = $db->prepare($query);
+   $statement->bindValue(':pokedexNumber', $pokedexNumber);
+   $statement->bindValue(':email', $email);
+   $statement->execute();
+   $results = $statement->fetchAll();
+   $statement->closeCursor();
+
+   return sizeof($results);
+}
 
 ?>
