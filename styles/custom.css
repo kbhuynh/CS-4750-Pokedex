@@ -46,7 +46,7 @@ h1 {
 h2 {
     font-size: 2em;
     font-weight: 700;
-    font-family: 'Space Mono', monospace;
+    /* font-family: 'Space Mono', monospace; */
 }
 
 p {
