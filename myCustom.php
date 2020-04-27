@@ -1,7 +1,14 @@
 <?php
 include_once('templates/header.php');
 ?>
-    <h1>Pokédex</h1>
+<div class="row">
+    <div class="col-md-12 wrapper">
+    <h1>Custom Pokédex</h1>
+    <a href="createPokemon.php">
+        <button class="btn btn-lg btn-success" type="submit">Create A Pokemon</button>
+    </a>
+    </div>
+</div>
     <div class="row">
         <div class="col-md-12 wrapper">
             <div class="row">

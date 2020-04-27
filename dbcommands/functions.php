@@ -43,7 +43,7 @@ function getPokemon()
    return $results;
 }
 
-function getpokemonByNumber($pokedexNumber)
+function getPokemonByNumber($pokedexNumber)
 {
    global $db;
    $query = "SELECT * FROM pokemon WHERE pokedexNumber = :pokedexNumber";
@@ -234,7 +234,7 @@ function checkPassword($email, $password){
 function addSignUp($email, $username, $password)
 {
    global $db;
-   $query = "INSERT INTO User (email, username, password) VALUES (:email, :username, :password)";
+   $query = "INSERT INTO User VALUES (:email, :username, :password, 0)";
    $statement = $db->prepare($query);
    $statement->bindValue(':email', $email);
    $statement->bindValue(':username', $username);
