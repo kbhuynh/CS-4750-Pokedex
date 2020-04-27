@@ -1,6 +1,6 @@
 <?php
-// require('../controller/connectdb.php');
-require('controller/connectdb.php');
+require('../controller/connectdb.php');
+// require('controller/connectdb.php');
 
 ///*******CREATING/DELETING TABLES*******///
 function create_table()
@@ -107,8 +107,8 @@ function getPokemonByEgg($Egg_Group)
    global $db;
    $query = "SELECT * FROM pokemon AS P 
             WHERE P.pokedexNumber = 
-               (SELECT E.pokedexNumber FROM Egg_group AS E 
-               WHERE E.Egg_Group = :Egg_Group)";
+               (SELECT E.pokedexNumber FROM Egg_Group AS E 
+               WHERE E.eggGroup = :Egg_Group)";
 
    $statement = $db->prepare($query);
    $statement->bindValue(':Egg_Group', $Egg_Group);
@@ -151,7 +151,7 @@ function getPokemonByLikes()
 function getPokemonCreatorEmail($pokedexNumber)
 {
    global $db;
-   $query = "SELECT creatorEmail FROM design WHERE pokedexNumber = :pokedexNumber";
+   $query = "SELECT creatorEmail FROM Design WHERE pokedexNumber = :pokedexNumber";
 
    $statement = $db->prepare($query);
    $statement->bindValue(':pokedexNumber', $pokedexNumber);
@@ -442,7 +442,7 @@ function addCustom($Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities
    $num = $results[0];
 
    global $db;
-   $query = "INSERT INTO Egg_group VALUES (:pokedexNumber, :Egg_Group)";
+   $query = "INSERT INTO Egg_Group VALUES (:pokedexNumber, :Egg_Group)";
 
    $statement = $db->prepare($query);
    $statement->bindValue(':pokedexNumber', $num);
@@ -489,7 +489,7 @@ function editCustom($pokedexNumber, $Pokemon_Name, $Generation, $Height_m, $Weig
    $statement->closeCursor();
 
    global $db;
-   $query = "UPDATE Egg_group SET Egg_Group = :Egg_Group WHERE pokedexNumber = :pokedexNumber";
+   $query = "UPDATE Egg_Group SET eggGroup = :Egg_Group WHERE pokedexNumber = :pokedexNumber";
 
    $statement = $db->prepare($query);
    $statement->bindValue(':pokedexNumber', $pokedexNumber);
@@ -511,7 +511,7 @@ function editCustom($pokedexNumber, $Pokemon_Name, $Generation, $Height_m, $Weig
 function getCustom($email)
 {
    global $db;
-   $query = "SELECT * FROM pokemon NATURAL JOIN design WHERE creatorEmail= :email";
+   $query = "SELECT * FROM pokemon NATURAL JOIN Design WHERE creatorEmail = :email";
 
    $statement = $db->prepare($query);
    $statement->bindValue(':email', $email);
@@ -534,7 +534,7 @@ function deleteCustom($pokedexNumber)
    $statement->closeCursor();
    
    global $db;
-   $query = "DELETE FROM Egg_group WHERE pokedexNumber = :pokedexNumber";
+   $query = "DELETE FROM Egg_Group WHERE pokedexNumber = :pokedexNumber";
    
    $statement = $db->prepare($query);
    $statement->bindValue(':pokedexNumber', $pokedexNumber);

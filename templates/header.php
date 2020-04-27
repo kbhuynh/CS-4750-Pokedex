@@ -1,9 +1,9 @@
 <?php
     session_start();
-    //require('../controller/connectdb.php');
-    require('controller/connectdb.php');
-    // require('../dbcommands/functions.php');
-    require('dbcommands/functions.php');
+    require('../controller/connectdb.php');
+    // require('controller/connectdb.php');
+    require('../dbcommands/functions.php');
+    // require('dbcommands/functions.php');
     
     if(!isset($_SESSION['email']))
     {
