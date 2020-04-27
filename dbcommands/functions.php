@@ -1,6 +1,6 @@
 <?php
-// require('../controller/connectdb.php');
-require('controller/connectdb.php');
+require('../controller/connectdb.php');
+// require('controller/connectdb.php');
 
 ///*******CREATING/DELETING TABLES*******///
 function create_table()
