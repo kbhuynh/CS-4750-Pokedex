@@ -508,13 +508,13 @@ function editCustom($pokedexNumber, $Pokemon_Name, $Generation, $Height_m, $Weig
    $statement->closeCursor();
 }
 
-function getCustom()
+function getCustom($email)
 {
    global $db;
    $query = "SELECT * FROM pokemon NATURAL JOIN design WHERE creatorEmail= :email";
 
    $statement = $db->prepare($query);
-   $statement->bindValue(':email', $_SESSION['email']);
+   $statement->bindValue(':email', $email);
    $statement->execute();
    // fetchAll() returns an array for all of the rows in the result set
    $results = $statement->fetchAll();
