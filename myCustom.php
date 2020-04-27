@@ -1,7 +1,14 @@
 <?php
 include_once('templates/header.php');
 ?>
-    <h1>Pokédex</h1>
+<div class="row">
+    <div class="col-md-12 wrapper">
+    <h1>Custom Pokédex</h1>
+    <a href="createPokemon.php">
+        <button class="btn btn-lg btn-success" type="submit">Create A Pokemon</button>
+    </a>
+    </div>
+</div>
     <div class="row">
         <div class="col-md-12 wrapper">
             <div class="row">
@@ -25,7 +32,7 @@ include_once('templates/header.php');
         <div id="wrapperParent" class="col-md-12">
             <div id="wrapper" class="wrapper row d-flex justify-content-center">
                 <?php 
-                    $pokemon = getCustom();
+                    $pokemon = getCustom($_SESSION['email']);
                     foreach ($pokemon as $p): 
                 ?>
                     <div class="col-md-2 card" data-name=<?php echo strtolower($p['Pokemon_Name'])?>  data-number=<?php echo $p['pokedexNumber']?>>

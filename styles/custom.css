@@ -49,6 +49,12 @@ h2 {
     font-family: 'Space Mono', monospace;
 }
 
+h4 {
+    font-size: 1em;
+    font-weight: 700;
+    font-family: 'Space Mono', monospace;
+}
+
 .form-control {
     border-radius: 10rem;
 }
@@ -61,8 +67,8 @@ h2 {
     color: white;
 }
 
-.small-box-button {
-    border-radius: 0.5rem;
+.pokeInfoBtn {
+    margin-top: 1rem;
 }
 
 .box-button {

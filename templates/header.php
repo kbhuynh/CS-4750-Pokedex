@@ -1,9 +1,9 @@
 <?php
     session_start();
-    // require('../controller/connectdb.php');
-    require('controller/connectdb.php');
-    // require('../dbcommands/functions.php');
-    require('dbcommands/functions.php');
+    require('../controller/connectdb.php');
+    // require('controller/connectdb.php');
+    require('../dbcommands/functions.php');
+    // require('dbcommands/functions.php');
     
     if(!isset($_SESSION['email']))
     {
@@ -79,7 +79,7 @@
                 <li class="nav-item"><a href="home.php">Pokedex</a></li>
                 
                 <li class="nav-item"><a href="teams.php">Teams</a></li>
-                <li class="nav-item"><a href="customPokemon.php">Custom Pokemon</a></li>
+                <li class="nav-item"><a href="myCustom.php">Custom Pokemon</a></li>
             </ul>
             <span id="rLinks">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">

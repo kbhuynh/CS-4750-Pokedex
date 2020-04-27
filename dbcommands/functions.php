@@ -1,6 +1,6 @@
 <?php
-// require('../controller/connectdb.php');
-require('controller/connectdb.php');
+require('../controller/connectdb.php');
+// require('controller/connectdb.php');
 
 ///*******CREATING/DELETING TABLES*******///
 function create_table()
@@ -43,7 +43,7 @@ function getPokemon()
    return $results;
 }
 
-function getpokemonByNumber($pokedexNumber)
+function getPokemonByNumber($pokedexNumber)
 {
    global $db;
    $query = "SELECT * FROM pokemon WHERE pokedexNumber = :pokedexNumber";
@@ -102,16 +102,16 @@ function getPokemonByType($type)
    return $results;
 }
 
-function getPokemonByEgg($Egg_Group)
+function getPokemonByEgg($eggGroup)
 {
    global $db;
    $query = "SELECT * FROM pokemon AS P 
             WHERE P.pokedexNumber = 
-               (SELECT E.pokedexNumber FROM Egg_group AS E 
-               WHERE E.Egg_Group = :Egg_Group)";
+               (SELECT E.pokedexNumber FROM Egg_Group AS E 
+               WHERE E.eggGroup = :eggGroup)";
 
    $statement = $db->prepare($query);
-   $statement->bindValue(':Egg_Group', $Egg_Group);
+   $statement->bindValue(':eggGroup', $eggGroup);
    $statement->execute();
    $results = $statement->fetchAll();
    $statement->closeCursor();
@@ -152,7 +152,7 @@ function getPokemonByLikes($email)
 function getPokemonCreatorEmail($pokedexNumber)
 {
    global $db;
-   $query = "SELECT creatorEmail FROM design WHERE pokedexNumber = :pokedexNumber";
+   $query = "SELECT creatorEmail FROM Design WHERE pokedexNumber = :pokedexNumber";
 
    $statement = $db->prepare($query);
    $statement->bindValue(':pokedexNumber', $pokedexNumber);
@@ -346,7 +346,8 @@ function deleteTeam($teamID, $userEmail)
    $statement->bindValue(':teamID', $teamID);
    $statement->bindValue(':userEmail', $userEmail);
    if($statement->execute()){
-      header("location: myTeams.php");
+      // header("location: myTeams.php");
+      echo '<script type="text/javascript"> window.location = "https://cs4750-268020.uk.r.appspot.com/teams.php" </script>';
    }
    else {
       echo "Something went wrong. Please try again later.";
@@ -414,7 +415,7 @@ function editTeam($teamID, $userEmail, $teamName, $pokemon1, $pokemon2, $pokemon
 
 ///******CUSTOM POKES******///
 ////////////////////////////////////////////////////////////////////////
-function addCustom($Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities, $Classification, $Type1, $Type2, $Egg_Group, $Sprite)
+function addCustom($Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities, $Classification, $Type1, $Type2, $eggGroup, $Sprite, $email)
 {
    global $db;
    $query = "INSERT INTO pokemon VALUES ('', :Pokemon_Name, :Generation, :Height_m, :Weight_kg, :Abilities, :Classification, :isCustom, :Sprite)";
@@ -442,11 +443,11 @@ function addCustom($Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities
    $num = $results[0];
 
    global $db;
-   $query = "INSERT INTO Egg_group VALUES (:pokedexNumber, :Egg_Group)";
+   $query = "INSERT INTO Egg_Group VALUES (:pokedexNumber, :eggGroup)";
 
    $statement = $db->prepare($query);
    $statement->bindValue(':pokedexNumber', $num);
-   $statement->bindValue(':Egg_Group', $Egg_Group);
+   $statement->bindValue(':eggGroup', $eggGroup);
    $statement->execute();
    $statement->closeCursor();
 
@@ -464,13 +465,13 @@ function addCustom($Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities
    $query = "INSERT INTO Design VALUES (:creatorEmail, :pokedexNumber)";
 
    $statement = $db->prepare($query);
-   $statement->bindValue(':creatorEmail', $_SESSION['email']);
+   $statement->bindValue(':creatorEmail', $email);
    $statement->bindValue(':pokedexNumber', $num);
    $statement->execute();
    $statement->closeCursor();
 }
 
-function editCustom($pokedexNumber, $Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities, $Classification, $Type1, $Type2, $Egg_Group, $Sprite)
+function editCustom($pokedexNumber, $Pokemon_Name, $Generation, $Height_m, $Weight_kg, $Abilities, $Classification, $Type1, $Type2, $eggGroup, $Sprite)
 {
    global $db;
    $query = "UPDATE pokemon SET Pokemon_Name = :Pokemon_Name, Generation = :Generation, Height_m = :Height_m,
@@ -489,11 +490,11 @@ function editCustom($pokedexNumber, $Pokemon_Name, $Generation, $Height_m, $Weig
    $statement->closeCursor();
 
    global $db;
-   $query = "UPDATE Egg_group SET Egg_Group = :Egg_Group WHERE pokedexNumber = :pokedexNumber";
+   $query = "UPDATE Egg_Group SET eggGroup = :eggGroup WHERE pokedexNumber = :pokedexNumber";
 
    $statement = $db->prepare($query);
    $statement->bindValue(':pokedexNumber', $pokedexNumber);
-   $statement->bindValue(':Egg_Group', $Egg_Group);
+   $statement->bindValue(':eggGroup', $eggGroup);
    $statement->execute();
    $statement->closeCursor();
 
@@ -508,13 +509,13 @@ function editCustom($pokedexNumber, $Pokemon_Name, $Generation, $Height_m, $Weig
    $statement->closeCursor();
 }
 
-function getCustom()
+function getCustom($email)
 {
    global $db;
-   $query = "SELECT * FROM pokemon NATURAL JOIN design WHERE creatorEmail= :email";
+   $query = "SELECT * FROM pokemon NATURAL JOIN Design WHERE creatorEmail = :email";
 
    $statement = $db->prepare($query);
-   $statement->bindValue(':email', $_SESSION['email']);
+   $statement->bindValue(':email', $email);
    $statement->execute();
    // fetchAll() returns an array for all of the rows in the result set
    $results = $statement->fetchAll();
@@ -534,7 +535,7 @@ function deleteCustom($pokedexNumber)
    $statement->closeCursor();
    
    global $db;
-   $query = "DELETE FROM Egg_group WHERE pokedexNumber = :pokedexNumber";
+   $query = "DELETE FROM Egg_Group WHERE pokedexNumber = :pokedexNumber";
    
    $statement = $db->prepare($query);
    $statement->bindValue(':pokedexNumber', $pokedexNumber);

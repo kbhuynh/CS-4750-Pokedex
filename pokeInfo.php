@@ -32,9 +32,41 @@ include_once('templates/header.php');
             <h3>Generation: <?php echo $pokemon['2']; ?></h3>
             <h3>Height: <?php echo $pokemon['3']; ?> m</h3>
             <h3>Weight: <?php echo $pokemon['4']; ?> kg</h3>
-            <h3>Evolutionary Chain: [PLACEHOLDER]]</h3>
+            <?php 
+                if($evos == null) {
+            ?>
+                <h3>Evolutionary Chain: None</h3>
+            <?php 
+                } elseif($evos['2'] == "") {
+            ?>
+                Evolutionary Chain:
+                <a href='pokeInfo.php' onclick="return pokeInfo(<?php echo $evos['0']; ?>)">
+                    <?php echo getPokemonByNumber($evos['0'])['1']; ?>
+                </a>
+                &rarr;
+                <a href='pokeInfo.php' onclick="return pokeInfo(<?php echo $evos['1']; ?>)">
+                    <?php echo getPokemonByNumber($evos['1'])['1']; ?>
+                </a>
+            <?php 
+                } else {
+            ?>
+                Evolutionary Chain:
+                <a href='pokeInfo.php' onclick="return pokeInfo(<?php echo $evos['0']; ?>)">
+                    <?php echo getPokemonByNumber($evos['0'])['1']; ?>
+                </a>
+                &rarr;
+                <a href='pokeInfo.php' onclick="return pokeInfo(<?php echo $evos['1']; ?>)">
+                    <?php echo getPokemonByNumber($evos['1'])['1']; ?>
+                </a>
+                &rarr;
+                <a href='pokeInfo.php' onclick="return pokeInfo(<?php echo $evos['2']; ?>)">
+                    <?php echo getPokemonByNumber($evos['2'])['1']; ?>
+                </a>
+            <?php 
+                }
+            ?>
             <h3>Abilities: <?php echo $pokemon['5']; ?></h3>
-            <h3>Egg Groups: <?php echo $egg['0']['0']; ?></h3>
+            <h3>Egg Group: <?php echo ucfirst($egg['0']['0']); ?></h3>
         </div>
         <div class="col-md-3"></div>
 </div>
@@ -44,11 +76,11 @@ include_once('templates/header.php');
 ?>
 </br>
     <a href="editPokemon.php">
-        <button class="btn btn-primary small-box-button" type="" >Edit Pokemon</button>
+        <button class="btn btn-primary pokeInfoBtn" type="" >Edit Pokemon</button>
     </a>
     <form action="<?php $_SERVER['PHP_SELF'] ?>" id="delete" method="post"> 
         <a href="home.php">
-            <button class="btn btn-danger small-box-button" type="" >Delete Pokemon</button>
+            <button class="btn btn-danger pokeInfoBtn" type="" >Delete Pokemon</button>
         </a>
     </form>
 <?php
@@ -62,6 +94,14 @@ include_once('templates/header.php');
         header('Location: home.php');
     }
 ?>
+<script>
+    function pokeInfo($pokedexNumber)
+    {
+        console.log($pokedexNumber);
+        document.cookie = "pokedexNumber="+$pokedexNumber;
+        return true;
+    }
+</script>
 
 </body>
 </html>
