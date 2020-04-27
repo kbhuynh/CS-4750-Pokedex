@@ -29,6 +29,8 @@ try
 {
    $db = new PDO($dsn, $username, $password);   
    // echo "<p>You are connected to the database</p>";
+   $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
 }
 catch (PDOException $e)     // handle a PDO exception (errors thrown by the PDO library)
 {
