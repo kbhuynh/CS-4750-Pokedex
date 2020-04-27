@@ -234,7 +234,7 @@ function checkPassword($email, $password){
 function addSignUp($email, $username, $password)
 {
    global $db;
-   $query = "INSERT INTO User (email, username, password) VALUES (:email, :username, :password)";
+   $query = "INSERT INTO User VALUES (:email, :username, :password, 0)";
    $statement = $db->prepare($query);
    $statement->bindValue(':email', $email);
    $statement->bindValue(':username', $username);
@@ -257,8 +257,8 @@ function getAllTeams($userEmail)
 	global $db;
 	$query = "SELECT * FROM Team WHERE userEmail = :userEmail";
 
+   $statement = $db->prepare($query);
    $statement->bindValue(':userEmail', $userEmail);
-	$statement = $db->prepare($query);
 	$statement->execute();
 	
 	// fetchAll() returns an array for all of the rows in the result set
