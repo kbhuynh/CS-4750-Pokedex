@@ -15,6 +15,11 @@ if(isset($_SESSION['email']))
                 setcookie('pokedexNumber', $results[0]);
                 header('Location: pokeInfo.php');
             }
+            else 
+            {
+                echo "<p style='color:red; font-size: 1.5em; font-weight: 700;
+                font-family: 'Space Mono', monospace;'>Incorrect file format</p>";
+            }
         }
     ?>
     <div class="row">
@@ -28,7 +33,9 @@ if(isset($_SESSION['email']))
             <div class=col-md-4>
             <form action="<?php $_SERVER['PHP_SELF'] ?>" id="create" method="post"> 
                 </br>
+                    
                     <input type="text" name="pokeSprite" class="form-control" id="pokeSprite" placeholder="Enter URL to Pokemon sprite" required>
+                    <label for="pokeSprite">Image URL must be in jpg/png/gif format</label>
                 </br></br>
                 <div class="form-group">
                     <!-- <label for="type1">Type 1</label> -->
