@@ -131,6 +131,7 @@ li a:hover {
 .card {
     margin:2px;
     box-sizing: content-box;
+    justify-content: center;
 }
 
 #stuff {

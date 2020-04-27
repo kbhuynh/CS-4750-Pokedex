@@ -499,7 +499,7 @@ function editCustom($pokedexNumber, $Pokemon_Name, $Generation, $Height_m, $Weig
    $statement->closeCursor();
 
    global $db;
-   $query = "UPDATE Pokemon_Types SET type1 = :type1, type2 = :type2 WHERE pokedexNumber = :pokedexNumber)";
+   $query = "UPDATE Pokemon_Types SET type1 = :type1, type2 = :type2 WHERE pokedexNumber = :pokedexNumber";
 
    $statement = $db->prepare($query);
    $statement->bindValue(':pokedexNumber', $pokedexNumber);
