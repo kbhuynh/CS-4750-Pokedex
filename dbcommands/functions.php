@@ -1,6 +1,6 @@
 <?php
-// require('../controller/connectdb.php');
-require('controller/connectdb.php');
+require('../controller/connectdb.php');
+// require('controller/connectdb.php');
 
 ///*******CREATING/DELETING TABLES*******///
 function create_table()
@@ -345,7 +345,8 @@ function deleteTeam($teamID, $userEmail)
    $statement->bindValue(':teamID', $teamID);
    $statement->bindValue(':userEmail', $userEmail);
    if($statement->execute()){
-      header("location: myTeams.php");
+      // header("location: myTeams.php");
+      echo '<script type="text/javascript"> window.location = "https://cs4750-268020.uk.r.appspot.com/teams.php" </script>';
    }
    else {
       echo "Something went wrong. Please try again later.";
